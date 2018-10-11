@@ -9,10 +9,15 @@
 namespace controllers;
 
 
-class Posts extends App
+class PostsController extends App
 {
     public function add(){
         echo "Запущен метод Add страницы с постами";
+    }
+
+    public function getAll(){
+        $this->layout = 'main';
+        $this->view = 'allPosts';
     }
 
 }

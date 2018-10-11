@@ -12,7 +12,7 @@
     <title>Стандартный шаблон</title>
 </head>
 <body>
-<h1>Hello, world!</h1>
+<h1>Дефолтный шаблон</h1>
 
 <?php echo $content ?>
 

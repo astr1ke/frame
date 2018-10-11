@@ -1,6 +1,7 @@
 <?php
 
 namespace vendor\core;
+use view\View;
 
 class Router {
     protected static $routes = [];
@@ -45,17 +46,13 @@ class Router {
 
     public static function dispatch($url){
         if(self::matchRoute($url)){
-            $controller = 'controllers\\' . self::$route['controller'];
+            $controller = 'controllers\\' . self::$route['controller'] . 'Controller';
             if(class_exists($controller)){
                 $obj = new $controller(self::$route);
                 $action =  self::$route['action'];
                 if (method_exists($obj, $action)){
-
-
                     $obj->$action();
-
-
-
+                    $obj->getView();
                 }else{
                     echo 'Метод ' . $action . ' класса ' . $controller . ' не найден';
                 }

@@ -9,7 +9,7 @@
 namespace controllers;
 
 
-class PostAdd extends App{
+class PostAddController extends App{
     public function index()
     {
         echo 'Запущен метод Добавления статьи';

@@ -14,11 +14,17 @@ class View
     public function __construct($route, $layout = '', $view = ''){
         $this->route = $route;
         $this->view = $view;
-        $this->layout = $layout ?: LAYOUT;
+        if($layout === false){
+            $this->layout = false;
+        }else {
+            $this->layout = $layout ?: LAYOUT;
+        }
     }
 
-    public function render(){
-
+    public function render($vars){
+        if ($vars) {
+            extract($vars);
+        }
         ob_start();
             $file_view = ROOT . "/view/{$this->route['controller']}/{$this->view}.php";
             if (is_file($file_view)){
@@ -28,11 +34,15 @@ class View
             }
         $content = ob_get_clean();
 
-        $file_layout = ROOT . "/view/layout/{$this->layout}.php";
-        if(is_file($file_layout)){
-            require $file_layout;
+        if($this->layout !== false) {
+            $file_layout = ROOT . "/view/layout/{$this->layout}.php";
+            if (is_file($file_layout)) {
+                require $file_layout;
+            } else {
+                echo 'Файл Шаблона ' . $file_layout . ' не найден';
+            }
         }else{
-            echo 'Файл Шаблона ' . $file_layout . ' не найден';
+            echo $content;
         }
 
 
