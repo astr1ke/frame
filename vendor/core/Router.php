@@ -1,7 +1,6 @@
 <?php
 
 namespace vendor\core;
-use view\View;
 
 class Router {
     protected static $routes = [];
@@ -30,7 +29,6 @@ class Router {
                         }
                     }
                     if(!isset(self::$route['action'])) self::$route['action'] = 'index';
-
                 }else{
                     foreach($route as $k => $v){
                         self::$route[$k] = $v;

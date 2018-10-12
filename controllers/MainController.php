@@ -8,6 +8,8 @@
 
 namespace controllers;
 
+use model\Main;
+
 
 class MainController extends App{
 
@@ -22,6 +24,18 @@ class MainController extends App{
         $this->view = 'about';
         $company = 'ГазПром';
         $about = 'Мы лучшие';
+
+
+
+        Main::create(
+        [
+            'id' => '5',
+            'name' => 'yoo',
+            'password' => '32223',
+            'mail' => 'mail@mail.ru'
+            ]
+        );
+
         $this->setVars(['company'=>$company,'about'=>$about, 'all' => 'все супер']);
     }
 
