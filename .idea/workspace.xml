@@ -2,16 +2,637 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1f660860-4a48-4113-9d3a-30c8176d05f3" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/config/BD.php" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/model/Main.php" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/vendor/base/Model.php" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/.vagrant/machines/framework/virtualbox/action_set_name" afterPath="$PROJECT_DIR$/.vagrant/machines/framework/virtualbox/action_set_name" />
-      <change beforePath="$PROJECT_DIR$/controllers/MainController.php" afterPath="$PROJECT_DIR$/controllers/MainController.php" />
-      <change beforePath="$PROJECT_DIR$/vendor/core/Router.php" afterPath="$PROJECT_DIR$/vendor/core/Router.php" />
+      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.vagrant/rgloader/loader.rb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/SDK/Classes/CollectionMaker.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/SDK/Classes/CollectionObject.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/SDK/Classes/ResultControllerAndMethodObject.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/controllers/ArticleController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/controllers/MainController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/core/BaseController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/core/Model.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/core/View.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/core/app.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/core/router.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/libs/helpers.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/models/Article.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/models/Categorie.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/models/Comment.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/models/User.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/models/about.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/models/aboutMe.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/models/social.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/config/const.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/css/app.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/css/fontawesome-webfont.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/css/fontawesome-webfont.woff" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/css/style.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/fonts/fontAwesome/fontawesome-webfont.woff" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/IMG_0230.JPG" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/author4242.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/banner/five.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/banner/fon.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/banner/four.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/banner/one.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/banner/seven.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/banner/six.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/banner/three.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/banner/two.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/five.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/footer-bg7.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/footerLogo.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/four.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/logoMain.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/one.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/post-eight.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/post-five.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/post-four.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/post-seven.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/post-six (1).jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/post-six.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/post-three.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/post-two.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/profile.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/profiles/1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/profiles/2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/profiles/5.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/profiles/6.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/profiles/profile.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/signature-one.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/thumb/five.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/thumb/four.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/thumb/one.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/thumb/two.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/two.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/users/June2018/IEsKxIFoq6doKau0atUd.JPG" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/users/June2018/Ji3G8doA5cVm04NZ3j12.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/users/June2018/WqvYXj3zuFtJNF4YsCGT.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/users/June2018/jjwpzjsJ0tnXQzj1IIeY.JPG" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/js/bundle.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/js/scripts.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/storage/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/routes/routes.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/view/Article/articleCatalog.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/view/Article/articleView.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/view/Main/Contacts.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/view/layout/aboutMe.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/view/layout/footer.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/view/layout/header.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/view/layout/layout.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/view/layout/rigthColumn.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/view/layout/scripts.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/view/layout/styles.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.htaccess" beforeDir="false" afterPath="$PROJECT_DIR$/.htaccess" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.vagrant/machines/framework/virtualbox/action_provision" beforeDir="false" afterPath="$PROJECT_DIR$/.vagrant/machines/framework/virtualbox/action_provision" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.vagrant/machines/framework/virtualbox/action_set_name" beforeDir="false" afterPath="$PROJECT_DIR$/.vagrant/machines/framework/virtualbox/action_set_name" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.vagrant/machines/framework/virtualbox/box_meta" beforeDir="false" afterPath="$PROJECT_DIR$/.vagrant/machines/framework/virtualbox/box_meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.vagrant/machines/framework/virtualbox/creator_uid" beforeDir="false" afterPath="$PROJECT_DIR$/.vagrant/machines/framework/virtualbox/creator_uid" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.vagrant/machines/framework/virtualbox/id" beforeDir="false" afterPath="$PROJECT_DIR$/.vagrant/machines/framework/virtualbox/id" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.vagrant/machines/framework/virtualbox/index_uuid" beforeDir="false" afterPath="$PROJECT_DIR$/.vagrant/machines/framework/virtualbox/index_uuid" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.vagrant/machines/framework/virtualbox/private_key" beforeDir="false" afterPath="$PROJECT_DIR$/.vagrant/machines/framework/virtualbox/private_key" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.vagrant/machines/framework/virtualbox/synced_folders" beforeDir="false" afterPath="$PROJECT_DIR$/.vagrant/machines/framework/virtualbox/synced_folders" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.vagrant/machines/framework/virtualbox/vagrant_cwd" beforeDir="false" afterPath="$PROJECT_DIR$/.vagrant/machines/framework/virtualbox/vagrant_cwd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Homestead.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/Homestead.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Vagrantfile" beforeDir="false" afterPath="$PROJECT_DIR$/Vagrantfile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/aliases" beforeDir="false" afterPath="$PROJECT_DIR$/aliases" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/BD.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/BD.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/controllers/App.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/controllers/MainController.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/controllers/PostAddController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/PostAddController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/controllers/PostsController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/PostsController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/model/Main.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/Main.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/bootstrap/css/bootstrap-grid.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/bootstrap/css/bootstrap-grid.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/bootstrap/css/bootstrap-grid.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/public/bootstrap/css/bootstrap-grid.css.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/bootstrap/css/bootstrap-grid.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/bootstrap/css/bootstrap-grid.min.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/bootstrap/css/bootstrap-grid.min.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/public/bootstrap/css/bootstrap-grid.min.css.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/bootstrap/css/bootstrap-reboot.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/bootstrap/css/bootstrap-reboot.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/bootstrap/css/bootstrap-reboot.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/public/bootstrap/css/bootstrap-reboot.css.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/bootstrap/css/bootstrap-reboot.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/bootstrap/css/bootstrap-reboot.min.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/bootstrap/css/bootstrap-reboot.min.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/public/bootstrap/css/bootstrap-reboot.min.css.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/bootstrap/css/bootstrap.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/bootstrap/css/bootstrap.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/bootstrap/css/bootstrap.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/public/bootstrap/css/bootstrap.css.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/bootstrap/css/bootstrap.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/bootstrap/css/bootstrap.min.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/bootstrap/css/bootstrap.min.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/public/bootstrap/css/bootstrap.min.css.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/bootstrap/js/bootstrap.bundle.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/bootstrap/js/bootstrap.bundle.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/bootstrap/js/bootstrap.bundle.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/public/bootstrap/js/bootstrap.bundle.js.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/bootstrap/js/bootstrap.bundle.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/bootstrap/js/bootstrap.bundle.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/bootstrap/js/bootstrap.bundle.min.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/public/bootstrap/js/bootstrap.bundle.min.js.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/bootstrap/js/bootstrap.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/bootstrap/js/bootstrap.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/bootstrap/js/bootstrap.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/public/bootstrap/js/bootstrap.js.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/bootstrap/js/bootstrap.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/bootstrap/js/bootstrap.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/bootstrap/js/bootstrap.min.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/public/bootstrap/js/bootstrap.min.js.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/public/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/route/config.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/autoload.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/base/Controller.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/base/Model.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/bin/homestead" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/bin/homestead.bat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/composer/ClassLoader.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/composer/LICENSE" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/composer/autoload_classmap.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/composer/autoload_files.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/composer/autoload_namespaces.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/composer/autoload_psr4.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/composer/autoload_real.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/composer/autoload_static.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/composer/installed.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/core/Router.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/laravel/homestead/.editorconfig" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/laravel/homestead/.gitattributes" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/laravel/homestead/.github/ISSUE_TEMPLATE.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/laravel/homestead/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/laravel/homestead/.travis.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/laravel/homestead/CHANGELOG.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/laravel/homestead/LICENSE.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/laravel/homestead/Vagrantfile" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/laravel/homestead/bin/homestead" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/laravel/homestead/composer.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/laravel/homestead/composer.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/laravel/homestead/init.bat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/laravel/homestead/init.sh" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/laravel/homestead/phpunit.xml.dist" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/laravel/homestead/readme.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/laravel/homestead/resources/Homestead.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/laravel/homestead/resources/Homestead.yaml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/laravel/homestead/resources/after.sh" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/laravel/homestead/resources/aliases" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/laravel/homestead/resources/localized/Vagrantfile" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/laravel/homestead/resources/localized/aliases" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/laravel/homestead/scripts/blackfire.sh" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/laravel/homestead/scripts/clear-nginx.sh" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/laravel/homestead/scripts/clear-variables.sh" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/laravel/homestead/scripts/create-certificate.sh" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/laravel/homestead/scripts/create-couch.sh" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/laravel/homestead/scripts/create-influxdb.sh" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/laravel/homestead/scripts/create-minio-bucket.sh" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/laravel/homestead/scripts/create-mongo.sh" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/laravel/homestead/scripts/create-mysql.sh" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/laravel/homestead/scripts/create-ngrok.sh" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/laravel/homestead/scripts/create-postgres.sh" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/laravel/homestead/scripts/cron-schedule.sh" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/laravel/homestead/scripts/flip-webserver.sh" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/laravel/homestead/scripts/homestead.rb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/laravel/homestead/scripts/install-chronograf.sh" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/laravel/homestead/scripts/install-couch.sh" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/laravel/homestead/scripts/install-elasticsearch.sh" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/laravel/homestead/scripts/install-grafana.sh" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/laravel/homestead/scripts/install-influxdb.sh" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/laravel/homestead/scripts/install-maria.sh" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/laravel/homestead/scripts/install-minio.sh" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/laravel/homestead/scripts/install-mongo.sh" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/laravel/homestead/scripts/install-neo4j.sh" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/laravel/homestead/scripts/serve-apache.sh" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/laravel/homestead/scripts/serve-aspdotnetcore.sh" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/laravel/homestead/scripts/serve-crystal.sh" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/laravel/homestead/scripts/serve-elgg.sh" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/laravel/homestead/scripts/serve-laravel.sh" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/laravel/homestead/scripts/serve-pimcore.sh" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/laravel/homestead/scripts/serve-proxy.sh" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/laravel/homestead/scripts/serve-rails.sh" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/laravel/homestead/scripts/serve-silverstripe.sh" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/laravel/homestead/scripts/serve-spa.sh" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/laravel/homestead/scripts/serve-statamic.sh" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/laravel/homestead/scripts/serve-symfony2.sh" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/laravel/homestead/scripts/serve-symfony4.sh" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/laravel/homestead/scripts/serve-thinkphp.sh" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/laravel/homestead/scripts/serve-yii.sh" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/laravel/homestead/scripts/serve-zf.sh" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/laravel/homestead/src/MakeCommand.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/laravel/homestead/src/Settings/HomesteadSettings.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/laravel/homestead/src/Settings/JsonSettings.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/laravel/homestead/src/Settings/YamlSettings.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/laravel/homestead/src/Traits/GeneratesSlugs.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/laravel/homestead/tests/InitScriptTest.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/laravel/homestead/tests/MakeCommandTest.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/laravel/homestead/tests/Settings/JsonSettingsTest.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/laravel/homestead/tests/Settings/YamlSettingsTest.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/laravel/homestead/tests/Traits/GeneratesTestDirectory.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/libs/debug.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/console/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/console/Application.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/console/CHANGELOG.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/console/Command/Command.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/console/Command/HelpCommand.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/console/Command/ListCommand.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/console/Command/LockableTrait.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/console/CommandLoader/CommandLoaderInterface.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/console/CommandLoader/ContainerCommandLoader.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/console/CommandLoader/FactoryCommandLoader.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/console/ConsoleEvents.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/console/DependencyInjection/AddConsoleCommandPass.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/console/Descriptor/ApplicationDescription.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/console/Descriptor/Descriptor.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/console/Descriptor/DescriptorInterface.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/console/Descriptor/JsonDescriptor.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/console/Descriptor/MarkdownDescriptor.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/console/Descriptor/TextDescriptor.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/console/Descriptor/XmlDescriptor.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/console/Event/ConsoleCommandEvent.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/console/Event/ConsoleErrorEvent.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/console/Event/ConsoleEvent.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/console/Event/ConsoleTerminateEvent.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/console/EventListener/ErrorListener.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/console/Exception/CommandNotFoundException.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/console/Exception/ExceptionInterface.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/console/Exception/InvalidArgumentException.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/console/Exception/InvalidOptionException.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/console/Exception/LogicException.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/console/Exception/NamespaceNotFoundException.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/console/Exception/RuntimeException.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/console/Formatter/OutputFormatter.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/console/Formatter/OutputFormatterInterface.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/console/Formatter/OutputFormatterStyle.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/console/Formatter/OutputFormatterStyleInterface.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/console/Formatter/OutputFormatterStyleStack.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/console/Helper/DebugFormatterHelper.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/console/Helper/DescriptorHelper.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/console/Helper/FormatterHelper.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/console/Helper/Helper.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/console/Helper/HelperInterface.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/console/Helper/HelperSet.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/console/Helper/InputAwareHelper.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/console/Helper/ProcessHelper.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/console/Helper/ProgressBar.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/console/Helper/ProgressIndicator.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/console/Helper/QuestionHelper.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/console/Helper/SymfonyQuestionHelper.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/console/Helper/Table.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/console/Helper/TableCell.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/console/Helper/TableRows.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/console/Helper/TableSeparator.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/console/Helper/TableStyle.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/console/Input/ArgvInput.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/console/Input/ArrayInput.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/console/Input/Input.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/console/Input/InputArgument.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/console/Input/InputAwareInterface.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/console/Input/InputDefinition.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/console/Input/InputInterface.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/console/Input/InputOption.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/console/Input/StreamableInputInterface.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/console/Input/StringInput.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/console/LICENSE" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/console/Logger/ConsoleLogger.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/console/Output/BufferedOutput.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/console/Output/ConsoleOutput.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/console/Output/ConsoleOutputInterface.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/console/Output/ConsoleSectionOutput.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/console/Output/NullOutput.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/console/Output/Output.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/console/Output/OutputInterface.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/console/Output/StreamOutput.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/console/Question/ChoiceQuestion.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/console/Question/ConfirmationQuestion.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/console/Question/Question.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/console/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/console/Resources/bin/hiddeninput.exe" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/console/Style/OutputStyle.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/console/Style/StyleInterface.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/console/Style/SymfonyStyle.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/console/Terminal.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/console/Tester/ApplicationTester.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/console/Tester/CommandTester.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/console/Tester/TesterTrait.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/console/Tests/ApplicationTest.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/console/Tests/Command/CommandTest.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/console/Tests/Command/HelpCommandTest.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/console/Tests/Command/ListCommandTest.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/console/Tests/Command/LockableTraitTest.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/console/Tests/CommandLoader/ContainerCommandLoaderTest.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/console/Tests/CommandLoader/FactoryCommandLoaderTest.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/console/Tests/DependencyInjection/AddConsoleCommandPassTest.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/console/Tests/Descriptor/AbstractDescriptorTest.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/console/Tests/Descriptor/JsonDescriptorTest.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/console/Tests/Descriptor/MarkdownDescriptorTest.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/console/Tests/Descriptor/ObjectsProvider.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/console/Tests/Descriptor/TextDescriptorTest.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/console/Tests/Descriptor/XmlDescriptorTest.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/console/Tests/EventListener/ErrorListenerTest.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/console/Tests/Fixtures/BarBucCommand.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/console/Tests/Fixtures/DescriptorApplication1.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/console/Tests/Fixtures/DescriptorApplication2.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/console/Tests/Fixtures/DescriptorApplicationMbString.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/console/Tests/Fixtures/DescriptorCommand1.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/console/Tests/Fixtures/DescriptorCommand2.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/console/Tests/Fixtures/DescriptorCommand3.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/console/Tests/Fixtures/DescriptorCommand4.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/console/Tests/Fixtures/DescriptorCommandMbString.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/console/Tests/Fixtures/DummyOutput.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/console/Tests/Fixtures/Foo1Command.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/console/Tests/Fixtures/Foo2Command.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/console/Tests/Fixtures/Foo3Command.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/console/Tests/Fixtures/Foo4Command.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/console/Tests/Fixtures/Foo5Command.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/console/Tests/Fixtures/Foo6Command.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/console/Tests/Fixtures/FooCommand.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/console/Tests/Fixtures/FooLock2Command.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/console/Tests/Fixtures/FooLockCommand.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/console/Tests/Fixtures/FooOptCommand.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/console/Tests/Fixtures/FooSameCaseLowercaseCommand.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/console/Tests/Fixtures/FooSameCaseUppercaseCommand.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/console/Tests/Fixtures/FooSubnamespaced1Command.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/console/Tests/Fixtures/FooSubnamespaced2Command.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/console/Tests/Fixtures/FooWithoutAliasCommand.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/console/Tests/Fixtures/FoobarCommand.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/console/Tests/Fixtures/Style/SymfonyStyle/command/command_0.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/console/Tests/Fixtures/Style/SymfonyStyle/command/command_1.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/console/Tests/Fixtures/Style/SymfonyStyle/command/command_10.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/console/Tests/Fixtures/Style/SymfonyStyle/command/command_11.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/console/Tests/Fixtures/Style/SymfonyStyle/command/command_12.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/console/Tests/Fixtures/Style/SymfonyStyle/command/command_13.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/console/Tests/Fixtures/Style/SymfonyStyle/command/command_14.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/console/Tests/Fixtures/Style/SymfonyStyle/command/command_15.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/console/Tests/Fixtures/Style/SymfonyStyle/command/command_16.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/console/Tests/Fixtures/Style/SymfonyStyle/command/command_17.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/console/Tests/Fixtures/Style/SymfonyStyle/command/command_2.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/console/Tests/Fixtures/Style/SymfonyStyle/command/command_3.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/console/Tests/Fixtures/Style/SymfonyStyle/command/command_4.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/console/Tests/Fixtures/Style/SymfonyStyle/command/command_4_with_iterators.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/console/Tests/Fixtures/Style/SymfonyStyle/command/command_5.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/console/Tests/Fixtures/Style/SymfonyStyle/command/command_6.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/console/Tests/Fixtures/Style/SymfonyStyle/command/command_7.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/console/Tests/Fixtures/Style/SymfonyStyle/command/command_8.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/console/Tests/Fixtures/Style/SymfonyStyle/command/command_9.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/console/Tests/Fixtures/Style/SymfonyStyle/command/interactive_command_1.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/console/Tests/Fixtures/Style/SymfonyStyle/output/interactive_output_1.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/console/Tests/Fixtures/Style/SymfonyStyle/output/output_0.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/console/Tests/Fixtures/Style/SymfonyStyle/output/output_1.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/console/Tests/Fixtures/Style/SymfonyStyle/output/output_10.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/console/Tests/Fixtures/Style/SymfonyStyle/output/output_11.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/console/Tests/Fixtures/Style/SymfonyStyle/output/output_12.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/console/Tests/Fixtures/Style/SymfonyStyle/output/output_13.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/console/Tests/Fixtures/Style/SymfonyStyle/output/output_14.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/console/Tests/Fixtures/Style/SymfonyStyle/output/output_15.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/console/Tests/Fixtures/Style/SymfonyStyle/output/output_16.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/console/Tests/Fixtures/Style/SymfonyStyle/output/output_17.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/console/Tests/Fixtures/Style/SymfonyStyle/output/output_2.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/console/Tests/Fixtures/Style/SymfonyStyle/output/output_3.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/console/Tests/Fixtures/Style/SymfonyStyle/output/output_4.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/console/Tests/Fixtures/Style/SymfonyStyle/output/output_4_with_iterators.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/console/Tests/Fixtures/Style/SymfonyStyle/output/output_5.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/console/Tests/Fixtures/Style/SymfonyStyle/output/output_6.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/console/Tests/Fixtures/Style/SymfonyStyle/output/output_7.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/console/Tests/Fixtures/Style/SymfonyStyle/output/output_8.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/console/Tests/Fixtures/Style/SymfonyStyle/output/output_9.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/console/Tests/Fixtures/TestCommand.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/console/Tests/Fixtures/TestTiti.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/console/Tests/Fixtures/TestToto.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/console/Tests/Fixtures/application_1.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/console/Tests/Fixtures/application_1.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/console/Tests/Fixtures/application_1.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/console/Tests/Fixtures/application_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/console/Tests/Fixtures/application_2.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/console/Tests/Fixtures/application_2.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/console/Tests/Fixtures/application_2.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/console/Tests/Fixtures/application_2.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/console/Tests/Fixtures/application_filtered_namespace.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/console/Tests/Fixtures/application_gethelp.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/console/Tests/Fixtures/application_mbstring.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/console/Tests/Fixtures/application_mbstring.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/console/Tests/Fixtures/application_renderexception1.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/console/Tests/Fixtures/application_renderexception2.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/console/Tests/Fixtures/application_renderexception3.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/console/Tests/Fixtures/application_renderexception3decorated.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/console/Tests/Fixtures/application_renderexception4.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/console/Tests/Fixtures/application_renderexception_doublewidth1.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/console/Tests/Fixtures/application_renderexception_doublewidth1decorated.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/console/Tests/Fixtures/application_renderexception_doublewidth2.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/console/Tests/Fixtures/application_renderexception_escapeslines.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/console/Tests/Fixtures/application_renderexception_linebreaks.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/console/Tests/Fixtures/application_run1.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/console/Tests/Fixtures/application_run2.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/console/Tests/Fixtures/application_run3.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/console/Tests/Fixtures/application_run4.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/console/Tests/Fixtures/command_1.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/console/Tests/Fixtures/command_1.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/console/Tests/Fixtures/command_1.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/console/Tests/Fixtures/command_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/console/Tests/Fixtures/command_2.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/console/Tests/Fixtures/command_2.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/console/Tests/Fixtures/command_2.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/console/Tests/Fixtures/command_2.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/console/Tests/Fixtures/command_mbstring.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/console/Tests/Fixtures/command_mbstring.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/console/Tests/Fixtures/input_argument_1.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/console/Tests/Fixtures/input_argument_1.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/console/Tests/Fixtures/input_argument_1.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/console/Tests/Fixtures/input_argument_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/console/Tests/Fixtures/input_argument_2.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/console/Tests/Fixtures/input_argument_2.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/console/Tests/Fixtures/input_argument_2.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/console/Tests/Fixtures/input_argument_2.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/console/Tests/Fixtures/input_argument_3.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/console/Tests/Fixtures/input_argument_3.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/console/Tests/Fixtures/input_argument_3.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/console/Tests/Fixtures/input_argument_3.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/console/Tests/Fixtures/input_argument_4.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/console/Tests/Fixtures/input_argument_4.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/console/Tests/Fixtures/input_argument_4.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/console/Tests/Fixtures/input_argument_4.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/console/Tests/Fixtures/input_argument_with_default_inf_value.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/console/Tests/Fixtures/input_argument_with_default_inf_value.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/console/Tests/Fixtures/input_argument_with_default_inf_value.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/console/Tests/Fixtures/input_argument_with_default_inf_value.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/console/Tests/Fixtures/input_argument_with_style.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/console/Tests/Fixtures/input_argument_with_style.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/console/Tests/Fixtures/input_argument_with_style.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/console/Tests/Fixtures/input_argument_with_style.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/console/Tests/Fixtures/input_definition_1.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/console/Tests/Fixtures/input_definition_1.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/console/Tests/Fixtures/input_definition_1.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/console/Tests/Fixtures/input_definition_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/console/Tests/Fixtures/input_definition_2.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/console/Tests/Fixtures/input_definition_2.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/console/Tests/Fixtures/input_definition_2.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/console/Tests/Fixtures/input_definition_2.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/console/Tests/Fixtures/input_definition_3.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/console/Tests/Fixtures/input_definition_3.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/console/Tests/Fixtures/input_definition_3.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/console/Tests/Fixtures/input_definition_3.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/console/Tests/Fixtures/input_definition_4.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/console/Tests/Fixtures/input_definition_4.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/console/Tests/Fixtures/input_definition_4.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/console/Tests/Fixtures/input_definition_4.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/console/Tests/Fixtures/input_option_1.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/console/Tests/Fixtures/input_option_1.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/console/Tests/Fixtures/input_option_1.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/console/Tests/Fixtures/input_option_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/console/Tests/Fixtures/input_option_2.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/console/Tests/Fixtures/input_option_2.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/console/Tests/Fixtures/input_option_2.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/console/Tests/Fixtures/input_option_2.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/console/Tests/Fixtures/input_option_3.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/console/Tests/Fixtures/input_option_3.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/console/Tests/Fixtures/input_option_3.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/console/Tests/Fixtures/input_option_3.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/console/Tests/Fixtures/input_option_4.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/console/Tests/Fixtures/input_option_4.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/console/Tests/Fixtures/input_option_4.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/console/Tests/Fixtures/input_option_4.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/console/Tests/Fixtures/input_option_5.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/console/Tests/Fixtures/input_option_5.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/console/Tests/Fixtures/input_option_5.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/console/Tests/Fixtures/input_option_5.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/console/Tests/Fixtures/input_option_6.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/console/Tests/Fixtures/input_option_6.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/console/Tests/Fixtures/input_option_6.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/console/Tests/Fixtures/input_option_6.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/console/Tests/Fixtures/input_option_with_default_inf_value.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/console/Tests/Fixtures/input_option_with_default_inf_value.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/console/Tests/Fixtures/input_option_with_default_inf_value.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/console/Tests/Fixtures/input_option_with_default_inf_value.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/console/Tests/Fixtures/input_option_with_style.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/console/Tests/Fixtures/input_option_with_style.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/console/Tests/Fixtures/input_option_with_style.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/console/Tests/Fixtures/input_option_with_style.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/console/Tests/Fixtures/input_option_with_style_array.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/console/Tests/Fixtures/input_option_with_style_array.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/console/Tests/Fixtures/input_option_with_style_array.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/console/Tests/Fixtures/input_option_with_style_array.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/console/Tests/Formatter/OutputFormatterStyleStackTest.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/console/Tests/Formatter/OutputFormatterStyleTest.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/console/Tests/Formatter/OutputFormatterTest.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/console/Tests/Helper/AbstractQuestionHelperTest.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/console/Tests/Helper/FormatterHelperTest.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/console/Tests/Helper/HelperSetTest.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/console/Tests/Helper/HelperTest.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/console/Tests/Helper/ProcessHelperTest.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/console/Tests/Helper/ProgressBarTest.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/console/Tests/Helper/ProgressIndicatorTest.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/console/Tests/Helper/QuestionHelperTest.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/console/Tests/Helper/SymfonyQuestionHelperTest.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/console/Tests/Helper/TableStyleTest.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/console/Tests/Helper/TableTest.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/console/Tests/Input/ArgvInputTest.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/console/Tests/Input/ArrayInputTest.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/console/Tests/Input/InputArgumentTest.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/console/Tests/Input/InputDefinitionTest.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/console/Tests/Input/InputOptionTest.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/console/Tests/Input/InputTest.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/console/Tests/Input/StringInputTest.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/console/Tests/Logger/ConsoleLoggerTest.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/console/Tests/Output/ConsoleOutputTest.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/console/Tests/Output/ConsoleSectionOutputTest.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/console/Tests/Output/NullOutputTest.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/console/Tests/Output/OutputTest.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/console/Tests/Output/StreamOutputTest.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/console/Tests/Style/SymfonyStyleTest.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/console/Tests/TerminalTest.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/console/Tests/Tester/ApplicationTesterTest.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/console/Tests/Tester/CommandTesterTest.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/console/composer.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/console/phpunit.xml.dist" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/polyfill-ctype/Ctype.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/polyfill-ctype/LICENSE" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/polyfill-ctype/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/polyfill-ctype/bootstrap.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/polyfill-ctype/composer.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/polyfill-mbstring/LICENSE" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/polyfill-mbstring/Mbstring.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/polyfill-mbstring/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/polyfill-mbstring/Resources/unidata/lowerCase.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/polyfill-mbstring/Resources/unidata/titleCaseRegexp.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/polyfill-mbstring/Resources/unidata/upperCase.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/polyfill-mbstring/bootstrap.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/polyfill-mbstring/composer.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/process/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/process/CHANGELOG.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/process/Exception/ExceptionInterface.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/process/Exception/InvalidArgumentException.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/process/Exception/LogicException.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/process/Exception/ProcessFailedException.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/process/Exception/ProcessSignaledException.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/process/Exception/ProcessTimedOutException.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/process/Exception/RuntimeException.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/process/ExecutableFinder.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/process/InputStream.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/process/LICENSE" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/process/PhpExecutableFinder.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/process/PhpProcess.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/process/Pipes/AbstractPipes.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/process/Pipes/PipesInterface.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/process/Pipes/UnixPipes.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/process/Pipes/WindowsPipes.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/process/Process.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/process/ProcessUtils.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/process/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/process/Tests/ExecutableFinderTest.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/process/Tests/NonStopableProcess.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/process/Tests/PhpExecutableFinderTest.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/process/Tests/PhpProcessTest.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/process/Tests/PipeStdinInStdoutStdErrStreamSelect.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/process/Tests/ProcessFailedExceptionTest.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/process/Tests/ProcessTest.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/process/Tests/SignalListener.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/process/composer.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/process/phpunit.xml.dist" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/yaml/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/yaml/CHANGELOG.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/yaml/Command/LintCommand.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/yaml/Dumper.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/yaml/Escaper.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/yaml/Exception/DumpException.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/yaml/Exception/ExceptionInterface.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/yaml/Exception/ParseException.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/yaml/Exception/RuntimeException.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/yaml/Inline.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/yaml/LICENSE" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/yaml/Parser.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/yaml/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/yaml/Tag/TaggedValue.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/yaml/Tests/Command/LintCommandTest.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/yaml/Tests/DumperTest.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/yaml/Tests/Fixtures/YtsAnchorAlias.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/yaml/Tests/Fixtures/YtsBasicTests.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/yaml/Tests/Fixtures/YtsBlockMapping.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/yaml/Tests/Fixtures/YtsDocumentSeparator.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/yaml/Tests/Fixtures/YtsErrorTests.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/yaml/Tests/Fixtures/YtsFlowCollections.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/yaml/Tests/Fixtures/YtsFoldedScalars.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/yaml/Tests/Fixtures/YtsNullsAndEmpties.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/yaml/Tests/Fixtures/YtsSpecificationExamples.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/yaml/Tests/Fixtures/YtsTypeTransfers.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/yaml/Tests/Fixtures/arrow.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/yaml/Tests/Fixtures/booleanMappingKeys.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/yaml/Tests/Fixtures/embededPhp.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/yaml/Tests/Fixtures/escapedCharacters.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/yaml/Tests/Fixtures/index.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/yaml/Tests/Fixtures/multiple_lines_as_literal_block.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/yaml/Tests/Fixtures/multiple_lines_as_literal_block_leading_space_in_first_line.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/yaml/Tests/Fixtures/nonStringKeys.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/yaml/Tests/Fixtures/not_readable.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/yaml/Tests/Fixtures/nullMappingKey.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/yaml/Tests/Fixtures/numericMappingKeys.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/yaml/Tests/Fixtures/sfComments.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/yaml/Tests/Fixtures/sfCompact.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/yaml/Tests/Fixtures/sfMergeKey.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/yaml/Tests/Fixtures/sfObjects.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/yaml/Tests/Fixtures/sfQuotes.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/yaml/Tests/Fixtures/sfTests.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/yaml/Tests/Fixtures/unindentedCollections.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/yaml/Tests/InlineTest.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/yaml/Tests/ParseExceptionTest.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/yaml/Tests/ParserTest.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/yaml/Tests/YamlTest.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/yaml/Unescaper.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/yaml/Yaml.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/yaml/composer.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/yaml/phpunit.xml.dist" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/view/Main/Index.php" beforeDir="false" afterPath="$PROJECT_DIR$/view/Main/Index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/view/Main/about.php" beforeDir="false" afterPath="$PROJECT_DIR$/view/Main/about.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/view/Posts/AllPosts.php" beforeDir="false" afterPath="$PROJECT_DIR$/view/Posts/AllPosts.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/view/Posts/add.php" beforeDir="false" afterPath="$PROJECT_DIR$/view/Posts/add.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/view/View.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/view/layout/default.php" beforeDir="false" afterPath="$PROJECT_DIR$/view/layout/default.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/view/layout/main.php" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
-    <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -22,49 +643,44 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-      <file leaf-file-name="Model.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/vendor/base/Model.php">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/controllers/ArticleController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="744">
-              <caret line="88" column="0" lean-forward="true" selection-start-line="88" selection-start-column="0" selection-end-line="88" selection-end-column="0" />
+            <state relative-caret-position="588">
+              <caret line="46" column="29" selection-start-line="46" selection-start-column="29" selection-end-line="46" selection-end-column="29" />
               <folding>
-                <element signature="e#72#289#0#PHP" expanded="false" />
-                <element signature="e#295#514#0#PHP" expanded="false" />
-                <element signature="e#520#584#0#PHP" expanded="false" />
-                <element signature="e#590#947#0#PHP" expanded="false" />
-                <element signature="e#953#1348#0#PHP" expanded="false" />
-                <element signature="e#1354#1769#0#PHP" expanded="false" />
-                <marker date="1539384620653" expanded="true" signature="731:745" ph="SELECT * FRO... ${$table}" />
-                <marker date="1539384620653" expanded="true" signature="1098:1157" ph="SELECT * FRO... ${$table}" />
-                <marker date="1539384620653" expanded="true" signature="1513:1565" ph="SELECT * FRO... ${$table}" />
-                <marker date="1539384620653" expanded="true" signature="2097:2109" ph="INSERT INTO ${$table}... " />
-                <marker date="1539384620653" expanded="true" signature="2097:2125" ph="INSERT INTO ${$table}... " />
-                <marker date="1539384620653" expanded="true" signature="2097:2127" ph="INSERT INTO ${$table}... " />
-                <marker date="1539384620653" expanded="true" signature="2097:2161" ph="INSERT INTO ${$table}... " />
-                <marker date="1539384620653" expanded="true" signature="2097:2163" ph="INSERT INTO ${$table}... " />
-                <marker date="1539384620653" expanded="true" signature="2097:2190" ph="INSERT INTO ${$table}... " />
-                <marker date="1539384620653" expanded="true" signature="2097:2191" ph="INSERT INTO ${$table}... " />
+                <element signature="e#113#137#0#PHP" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Main.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/model/Main.php">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/view/layout/aboutMe.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="264">
-              <caret line="16" column="1" lean-forward="false" selection-start-line="16" selection-start-column="1" selection-end-line="16" selection-end-column="1" />
-              <folding />
+            <state relative-caret-position="187">
+              <caret line="11" column="59" selection-start-line="11" selection-start-column="59" selection-end-line="11" selection-end-column="59" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="MainController.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/controllers/MainController.php">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/view/layout/footer.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="696">
-              <caret line="34" column="35" lean-forward="false" selection-start-line="34" selection-start-column="35" selection-end-line="34" selection-end-column="35" />
-              <folding />
+            <state relative-caret-position="306">
+              <caret line="18" lean-forward="true" selection-start-line="18" selection-end-line="18" />
+              <folding>
+                <element signature="n#style#0;n#footer#0;n#!!top" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/core/Model.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="369">
+              <caret line="140" column="15" lean-forward="true" selection-start-line="140" selection-start-column="15" selection-end-line="140" selection-end-column="15" />
             </state>
           </provider>
         </entry>
@@ -75,6 +691,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="HTML File" />
+        <option value="package.json" />
       </list>
     </option>
   </component>
@@ -84,43 +701,65 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/.htassecc" />
-        <option value="$PROJECT_DIR$/public/.htaccess" />
-        <option value="$PROJECT_DIR$/public/index.php" />
-        <option value="$PROJECT_DIR$/.htaccess" />
-        <option value="$PROJECT_DIR$/vendor/libs/debug.php" />
-        <option value="$PROJECT_DIR$/public/404.html" />
-        <option value="$PROJECT_DIR$/controller/Posts.php" />
-        <option value="$PROJECT_DIR$/controller/Main.php" />
-        <option value="$PROJECT_DIR$/view/Main/Index.php" />
-        <option value="$PROJECT_DIR$/route/config.php" />
-        <option value="$PROJECT_DIR$/view/layout/main.php" />
-        <option value="$PROJECT_DIR$/view/layout/default.php" />
-        <option value="$PROJECT_DIR$/view/Posts/add.php" />
-        <option value="$PROJECT_DIR$/view/Posts/AllPosts.php" />
-        <option value="$PROJECT_DIR$/vendor/base/Controller.php" />
-        <option value="$PROJECT_DIR$/view/Main/about.php" />
-        <option value="$PROJECT_DIR$/view/View.php" />
-        <option value="$PROJECT_DIR$/controllers/Main.php" />
-        <option value="$PROJECT_DIR$/controllers/PostAdd.php" />
-        <option value="$PROJECT_DIR$/controllers/Posts.php" />
-        <option value="$PROJECT_DIR$/controllers/PostAddController.php" />
-        <option value="$PROJECT_DIR$/controllers/App.php" />
-        <option value="$PROJECT_DIR$/vendor/core/Router.php" />
+        <option value="$PROJECT_DIR$/app/SDK/Classes/BaseController.php" />
+        <option value="$PROJECT_DIR$/app/controllers/App.php" />
+        <option value="$PROJECT_DIR$/app/models/Main.php" />
+        <option value="$PROJECT_DIR$/composer.json" />
+        <option value="$PROJECT_DIR$/Docker-composer.yaml" />
+        <option value="$PROJECT_DIR$/DockerConf/nginx/app.conf" />
+        <option value="$PROJECT_DIR$/app/models/Article.php" />
+        <option value="$PROJECT_DIR$/app/models/Categorie.php" />
+        <option value="$PROJECT_DIR$/app/models/Comment.php" />
+        <option value="$PROJECT_DIR$/app/models/social.php" />
+        <option value="$PROJECT_DIR$/app/models/User.php" />
+        <option value="$PROJECT_DIR$/DockerConf/docker-compose.yaml" />
+        <option value="$PROJECT_DIR$/DockerConf/php/Dockerfile" />
+        <option value="$PROJECT_DIR$/DockerConf/nginx/conf.d/app.conf" />
+        <option value="$PROJECT_DIR$/DockerConf/php/php.ini" />
+        <option value="$PROJECT_DIR$/Dockerfile" />
+        <option value="$PROJECT_DIR$/docker-compose.yaml" />
         <option value="$PROJECT_DIR$/config/BD.php" />
-        <option value="$PROJECT_DIR$/model/Main.php" />
-        <option value="$PROJECT_DIR$/controllers/MainController.php" />
-        <option value="$PROJECT_DIR$/vendor/base/Model.php" />
+        <option value="$PROJECT_DIR$/Homestead.yaml" />
+        <option value="$PROJECT_DIR$/config/const.php" />
+        <option value="$PROJECT_DIR$/view/layout/rigthColumn.php" />
+        <option value="$PROJECT_DIR$/view/layout/header.php" />
+        <option value="$PROJECT_DIR$/app/SDK/Classes/view.php" />
+        <option value="$PROJECT_DIR$/app/SDK/Classes/ViewTrait.php" />
+        <option value="$PROJECT_DIR$/app/core/BaseController.php" />
+        <option value="$PROJECT_DIR$/app/models/aboutMe.php" />
+        <option value="$PROJECT_DIR$/app/models/about.php" />
+        <option value="$PROJECT_DIR$/app/SDK/Classes/ResultControllerAndMethodObject.php" />
+        <option value="$PROJECT_DIR$/view/Main/Index.php" />
+        <option value="$PROJECT_DIR$/view/layout/layout.php" />
+        <option value="$PROJECT_DIR$/app/core/View.php" />
+        <option value="$PROJECT_DIR$/view/layout/dsf.php" />
+        <option value="$PROJECT_DIR$/view/layout/DFSDF.php" />
+        <option value="$PROJECT_DIR$/view/Main/about.php" />
+        <option value="$PROJECT_DIR$/view/layout/styles.php" />
+        <option value="$PROJECT_DIR$/view/layout/scripts.php" />
+        <option value="$PROJECT_DIR$/view/Article/articleView.php" />
+        <option value="$PROJECT_DIR$/app/controllers/MainController.php" />
+        <option value="$PROJECT_DIR$/view/Main/Contacts.php" />
+        <option value="$PROJECT_DIR$/view/Article/articleCatalog.php" />
+        <option value="$PROJECT_DIR$/app/SDK/Classes/Collection.php" />
+        <option value="$PROJECT_DIR$/app/SDK/Classes/CollectionMaker.php" />
+        <option value="$PROJECT_DIR$/app/SDK/Classes/CollectionObject.php" />
+        <option value="$PROJECT_DIR$/routes/routes.php" />
+        <option value="$PROJECT_DIR$/app/core/router.php" />
+        <option value="$PROJECT_DIR$/app/core/app.php" />
+        <option value="$PROJECT_DIR$/app/core/Model.php" />
+        <option value="$PROJECT_DIR$/app/libs/helpers.php" />
+        <option value="$PROJECT_DIR$/app/controllers/ArticleController.php" />
+        <option value="$PROJECT_DIR$/view/layout/aboutMe.php" />
+        <option value="$PROJECT_DIR$/view/layout/footer.php" />
       </list>
     </option>
   </component>
-  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
-  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
-  <component name="JsGulpfileManager">
-    <detection-done>true</detection-done>
-    <sorting>DEFINITION_ORDER</sorting>
+  <component name="PhpServers">
+    <servers />
   </component>
-  <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true">
+  <component name="PhpWebServerValidation" path_to_validation_script="$PROJECT_DIR$" selected_validation_type="LOCAL" web_path_to_validation_script="localhost" />
+  <component name="PhpWorkspaceProjectConfiguration" interpreter_name="php:latest">
     <include_path>
       <path value="$PROJECT_DIR$/vendor/laravel/homestead" />
       <path value="$PROJECT_DIR$/vendor/composer" />
@@ -131,27 +770,16 @@
       <path value="$PROJECT_DIR$/vendor/symfony/console" />
     </include_path>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-8" />
-    <option name="y" value="-8" />
-    <option name="width" value="974" />
-    <option name="height" value="1047" />
+  <component name="ProjectFrameBounds">
+    <option name="y" value="23" />
+    <option name="width" value="1920" />
+    <option name="height" value="993" />
   </component>
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="2" id="Add" />
   </component>
   <component name="ProjectView">
-    <navigator currentView="ProjectPane" proportions="" version="1">
-      <flattenPackages />
-      <showMembers />
-      <showModules />
-      <showLibraryContents />
-      <hideEmptyPackages />
-      <abbreviatePackageNames />
-      <autoscrollToSource />
-      <autoscrollFromSource />
-      <sortByType />
-      <manualOrder />
+    <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
@@ -159,63 +787,103 @@
         <subPane>
           <expand>
             <path>
-              <item name="framework" type="b2602c69:ProjectViewProjectNode" />
-              <item name="framework" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Framework" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Framework" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="framework" type="b2602c69:ProjectViewProjectNode" />
-              <item name="framework" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="config" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Framework" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Framework" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="framework" type="b2602c69:ProjectViewProjectNode" />
-              <item name="framework" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="controllers" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Framework" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Framework" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="controllers" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="framework" type="b2602c69:ProjectViewProjectNode" />
-              <item name="framework" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="model" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Framework" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Framework" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="core" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="framework" type="b2602c69:ProjectViewProjectNode" />
-              <item name="framework" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="public" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Framework" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Framework" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="libs" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="framework" type="b2602c69:ProjectViewProjectNode" />
-              <item name="framework" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="route" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Framework" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Framework" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="SDK" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="framework" type="b2602c69:ProjectViewProjectNode" />
-              <item name="framework" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="vendor" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Framework" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Framework" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="SDK" type="462c0819:PsiDirectoryNode" />
+              <item name="Classes" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="framework" type="b2602c69:ProjectViewProjectNode" />
-              <item name="framework" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="vendor" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="base" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Framework" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Framework" type="462c0819:PsiDirectoryNode" />
+              <item name="routes" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Framework" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Framework" type="462c0819:PsiDirectoryNode" />
+              <item name="view" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Framework" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Framework" type="462c0819:PsiDirectoryNode" />
+              <item name="view" type="462c0819:PsiDirectoryNode" />
+              <item name="Article" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Framework" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Framework" type="462c0819:PsiDirectoryNode" />
+              <item name="view" type="462c0819:PsiDirectoryNode" />
+              <item name="layout" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Framework" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Framework" type="462c0819:PsiDirectoryNode" />
+              <item name="view" type="462c0819:PsiDirectoryNode" />
+              <item name="Main" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scratches" />
       <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
-    <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="editor.config.ad.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="nodejs_package_manager_path" value="npm" />
     <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
+    <property name="settings.editor.selected.configurable" value="reference.webide.settings.project.settings.php" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\oserver\OSPanel\domains\framework\vendor\core" />
+      <recent name="$PROJECT_DIR$" />
+      <recent name="$PROJECT_DIR$/view" />
+      <recent name="$PROJECT_DIR$/DockerConf" />
+      <recent name="$PROJECT_DIR$/app/core" />
+      <recent name="$PROJECT_DIR$/app" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
+      <recent name="$PROJECT_DIR$/DockerConf/nginx" />
+      <recent name="$PROJECT_DIR$/DockerConf" />
+      <recent name="$PROJECT_DIR$/app/models" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -230,8 +898,76 @@
       </list>
     </option>
   </component>
-  <component name="ShelveChangesManager" show_recycled="false">
-    <option name="remove_strategy" value="false" />
+  <component name="RunManager" selected="Docker.docker-compose.yaml.db: Compose Deployment">
+    <configuration name="docker-compose.yaml: Compose Deployment" type="docker-deploy" factoryName="docker-compose.yml" temporary="true" server-name="Docker">
+      <deployment type="docker-compose.yml">
+        <settings>
+          <option name="sourceFilePath" value="docker-compose.yaml" />
+        </settings>
+      </deployment>
+      <method v="2" />
+    </configuration>
+    <configuration name="docker-compose.yaml.app4: Compose Deployment" type="docker-deploy" factoryName="docker-compose.yml" temporary="true" server-name="Docker">
+      <deployment type="docker-compose.yml">
+        <settings>
+          <option name="services">
+            <list>
+              <option value="app4" />
+            </list>
+          </option>
+          <option name="sourceFilePath" value="docker-compose.yaml" />
+        </settings>
+      </deployment>
+      <method v="2" />
+    </configuration>
+    <configuration name="docker-compose.yaml.app5: Compose Deployment" type="docker-deploy" factoryName="docker-compose.yml" temporary="true" server-name="Docker">
+      <deployment type="docker-compose.yml">
+        <settings>
+          <option name="services">
+            <list>
+              <option value="app5" />
+            </list>
+          </option>
+          <option name="sourceFilePath" value="docker-compose.yaml" />
+        </settings>
+      </deployment>
+      <method v="2" />
+    </configuration>
+    <configuration name="docker-compose.yaml.application: Compose Deployment" type="docker-deploy" factoryName="docker-compose.yml" temporary="true" server-name="Docker">
+      <deployment type="docker-compose.yml">
+        <settings>
+          <option name="services">
+            <list>
+              <option value="application" />
+            </list>
+          </option>
+          <option name="sourceFilePath" value="docker-compose.yaml" />
+        </settings>
+      </deployment>
+      <method v="2" />
+    </configuration>
+    <configuration name="docker-compose.yaml.db: Compose Deployment" type="docker-deploy" factoryName="docker-compose.yml" temporary="true" server-name="Docker">
+      <deployment type="docker-compose.yml">
+        <settings>
+          <option name="services">
+            <list>
+              <option value="db" />
+            </list>
+          </option>
+          <option name="sourceFilePath" value="docker-compose.yaml" />
+        </settings>
+      </deployment>
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Docker.docker-compose.yaml.db: Compose Deployment" />
+        <item itemvalue="Docker.docker-compose.yaml: Compose Deployment" />
+        <item itemvalue="Docker.docker-compose.yaml.application: Compose Deployment" />
+        <item itemvalue="Docker.docker-compose.yaml.app5: Compose Deployment" />
+        <item itemvalue="Docker.docker-compose.yaml.app4: Compose Deployment" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -246,299 +982,440 @@
       <workItem from="1539179928082" duration="19925000" />
       <workItem from="1539240872451" duration="13399000" />
       <workItem from="1539366644779" duration="11606000" />
+      <workItem from="1553237678542" duration="4504000" />
+      <workItem from="1553242502211" duration="82043000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="44930000" />
+    <option name="totallyTimeSpent" value="131477000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <frame x="0" y="23" width="1920" height="993" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.15628357" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32918552" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32922733" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32922733" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32922733" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.15921193" />
+      <window_info id="Structure" order="1" weight="0.25" />
+      <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Inspection Results" weight="0.32963374" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32922733" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.32922733" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.39955604" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Docker" order="7" weight="0.32963374" />
+      <window_info anchor="bottom" id="Version Control" order="8" weight="0.32963374" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="9" visible="true" weight="0.32852387" />
+      <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" weight="0.32852387" />
+      <window_info anchor="bottom" id="Database Changes" order="11" />
+      <window_info anchor="right" id="Commander" order="0" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Database" order="3" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
-  <component name="VcsContentAnnotationSettings">
-    <option name="myLimit" value="2678400000" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager />
-    <watches-manager />
-  </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/vendor/core/Router.php">
+    <entry file="file://$USER_HOME$/Downloads/adminer-4.7.1-mysql.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="48">
-          <caret line="2" column="22" lean-forward="false" selection-start-line="2" selection-start-column="22" selection-end-line="2" selection-end-column="22" />
-          <folding />
+        <state relative-caret-position="-391">
+          <folding>
+            <element signature="e#64#71#0" expanded="true" />
+            <element signature="n#style#0;n#textarea#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#th#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#th#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#th#0;n#tr#0;n#thead#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/index.php">
+    <entry file="file:///Volumes/D:/Диск С/domains/framework/config/BD.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="24">
-          <caret line="1" column="0" lean-forward="false" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
-          <folding />
+        <state relative-caret-position="136">
+          <caret line="8" column="11" selection-start-line="2" selection-end-line="11" selection-end-column="2" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/core/Router.php">
+    <entry file="file://$PROJECT_DIR$/composer.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="384">
-          <caret line="16" column="0" lean-forward="false" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/route/config.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="384">
-          <caret line="16" column="23" lean-forward="false" selection-start-line="16" selection-start-column="23" selection-end-line="16" selection-end-column="23" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/base/Controller.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="216">
-          <caret line="14" column="8" lean-forward="false" selection-start-line="14" selection-start-column="8" selection-end-line="14" selection-end-column="8" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/.htassecc" />
-    <entry file="file://$PROJECT_DIR$/public/.htaccess">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="72">
-          <caret line="3" column="18" lean-forward="false" selection-start-line="3" selection-start-column="18" selection-end-line="3" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.htaccess">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="23" lean-forward="false" selection-start-line="0" selection-start-column="23" selection-end-line="0" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/libs/debug.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="48">
-          <caret line="2" column="48" lean-forward="true" selection-start-line="2" selection-start-column="48" selection-end-line="2" selection-end-column="48" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/404.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="168">
-          <caret line="7" column="34" lean-forward="false" selection-start-line="7" selection-start-column="34" selection-end-line="7" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/view/layout/main.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="432">
-          <caret line="18" column="0" lean-forward="true" selection-start-line="18" selection-start-column="0" selection-end-line="22" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/view/layout/default.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="336">
-          <caret line="14" column="20" lean-forward="false" selection-start-line="14" selection-start-column="20" selection-end-line="14" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/view/Main/Index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="48">
-          <caret line="2" column="34" lean-forward="false" selection-start-line="2" selection-start-column="34" selection-end-line="2" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/view/Posts/add.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="24">
-          <caret line="1" column="35" lean-forward="false" selection-start-line="1" selection-start-column="35" selection-end-line="1" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/view/Posts/AllPosts.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="24">
-          <caret line="1" column="37" lean-forward="false" selection-start-line="1" selection-start-column="37" selection-end-line="1" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/view/Main/about.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="5" column="0" lean-forward="false" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/view/View.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="528">
-          <caret line="31" column="18" lean-forward="true" selection-start-line="31" selection-start-column="18" selection-end-line="31" selection-end-column="18" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/controllers/PostsController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="144">
-          <caret line="11" column="21" lean-forward="false" selection-start-line="11" selection-start-column="21" selection-end-line="11" selection-end-column="21" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/controllers/PostAddController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="144">
-          <caret line="11" column="35" lean-forward="false" selection-start-line="11" selection-start-column="35" selection-end-line="11" selection-end-column="35" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/controllers/App.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="144">
-          <caret line="6" column="9" lean-forward="false" selection-start-line="6" selection-start-column="9" selection-end-line="6" selection-end-column="9" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/composer/autoload_real.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/composer/autoload_psr4.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/autoload.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/core/Router.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="48">
-          <caret line="2" column="22" lean-forward="false" selection-start-line="2" selection-start-column="22" selection-end-line="2" selection-end-column="22" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/base/Controller.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="15" column="27" lean-forward="true" selection-start-line="15" selection-start-column="27" selection-end-line="15" selection-end-column="27" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="24">
-          <caret line="1" column="0" lean-forward="false" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/route/config.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="10" column="0" lean-forward="true" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
-          <folding />
+        <state relative-caret-position="289">
+          <caret line="17" column="21" selection-start-line="17" selection-start-column="21" selection-end-line="17" selection-end-column="21" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Homestead.yaml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="6" lean-forward="false" selection-start-line="0" selection-start-column="5" selection-end-line="0" selection-end-column="17" />
-          <folding />
+        <state relative-caret-position="221">
+          <caret line="13" column="10" selection-start-line="13" selection-start-column="10" selection-end-line="13" selection-end-column="10" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/config/BD.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="96">
-          <caret line="4" column="23" lean-forward="false" selection-start-line="4" selection-start-column="23" selection-end-line="4" selection-end-column="23" />
-          <folding />
+        <state relative-caret-position="102">
+          <caret line="6" column="15" selection-start-line="6" selection-start-column="15" selection-end-line="6" selection-end-column="24" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/model/Main.php">
+    <entry file="file://$PROJECT_DIR$/app/models/Main.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="264">
-          <caret line="16" column="1" lean-forward="false" selection-start-line="16" selection-start-column="1" selection-end-line="16" selection-end-column="1" />
-          <folding />
+        <state relative-caret-position="187">
+          <caret line="16" column="1" lean-forward="true" selection-start-line="16" selection-start-column="1" selection-end-line="16" selection-end-column="1" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/controllers/MainController.php">
+    <entry file="file://$PROJECT_DIR$/app/models/User.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="696">
-          <caret line="34" column="35" lean-forward="false" selection-start-line="34" selection-start-column="35" selection-end-line="34" selection-end-column="35" />
-          <folding />
+        <state>
+          <caret column="5" selection-start-column="5" selection-end-column="5" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/base/Model.php">
+    <entry file="file:///Volumes/D:/Диск С/domains/framework/vendor/base/Model.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="744">
-          <caret line="88" column="0" lean-forward="true" selection-start-line="88" selection-start-column="0" selection-end-line="88" selection-end-column="0" />
+        <state relative-caret-position="697">
+          <caret line="44" column="5" lean-forward="true" selection-start-line="44" selection-start-column="5" selection-end-line="44" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///Volumes/D:/Диск С/domains/framework/view/View.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/const.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="24" selection-start-line="2" selection-start-column="24" selection-end-line="2" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///Volumes/D:/Диск С/domains/framework/view/layout/default.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/view/layout/default.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="14" column="20" selection-start-line="14" selection-start-column="20" selection-end-line="14" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///Volumes/D:/Диск С/domains/framework/public/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="2" lean-forward="true" selection-start-line="2" selection-start-column="2" selection-end-line="2" selection-end-column="2" />
           <folding>
-            <element signature="e#72#289#0#PHP" expanded="false" />
-            <element signature="e#295#514#0#PHP" expanded="false" />
-            <element signature="e#520#584#0#PHP" expanded="false" />
-            <element signature="e#590#947#0#PHP" expanded="false" />
-            <element signature="e#953#1348#0#PHP" expanded="false" />
-            <element signature="e#1354#1769#0#PHP" expanded="false" />
-            <marker date="1539384620653" expanded="true" signature="731:745" ph="SELECT * FRO... ${$table}" />
-            <marker date="1539384620653" expanded="true" signature="1098:1157" ph="SELECT * FRO... ${$table}" />
-            <marker date="1539384620653" expanded="true" signature="1513:1565" ph="SELECT * FRO... ${$table}" />
-            <marker date="1539384620653" expanded="true" signature="2097:2109" ph="INSERT INTO ${$table}... " />
-            <marker date="1539384620653" expanded="true" signature="2097:2125" ph="INSERT INTO ${$table}... " />
-            <marker date="1539384620653" expanded="true" signature="2097:2127" ph="INSERT INTO ${$table}... " />
-            <marker date="1539384620653" expanded="true" signature="2097:2161" ph="INSERT INTO ${$table}... " />
-            <marker date="1539384620653" expanded="true" signature="2097:2163" ph="INSERT INTO ${$table}... " />
-            <marker date="1539384620653" expanded="true" signature="2097:2190" ph="INSERT INTO ${$table}... " />
-            <marker date="1539384620653" expanded="true" signature="2097:2191" ph="INSERT INTO ${$table}... " />
+            <element signature="e#7#789#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///Volumes/D:/Диск С/domains/framework/route/web.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" column="37" lean-forward="true" selection-start-line="7" selection-start-column="37" selection-end-line="7" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///Volumes/D:/Диск С/domains/framework/vendor/core/Router.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-220" />
+      </provider>
+    </entry>
+    <entry file="file:///Volumes/D:/Диск С/domains/framework/controllers/MainController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="425">
+          <caret line="27" column="30" lean-forward="true" selection-start-line="27" selection-start-column="30" selection-end-line="27" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///Volumes/D:/Диск С/domains/framework/vendor/base/Controller.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/models/Article.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="8" column="15" selection-start-line="8" selection-start-column="15" selection-end-line="8" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/SDK/Classes/ViewTrait.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" column="11" selection-start-line="6" selection-start-column="11" selection-end-line="6" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/core/BaseController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="15" selection-start-line="2" selection-start-column="15" selection-end-line="2" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/models/aboutMe.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="13" column="28" selection-start-line="13" selection-start-column="28" selection-end-line="13" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/models/about.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" column="26" lean-forward="true" selection-start-line="8" selection-start-column="26" selection-end-line="8" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/App.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/SDK/Classes/ResultControllerAndMethodObject.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="23" column="1" lean-forward="true" selection-start-line="23" selection-start-column="1" selection-end-line="23" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/view/layout/header.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1122">
+          <caret line="66" column="116" selection-start-line="66" selection-start-column="116" selection-end-line="66" selection-end-column="116" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/view/layout/layout.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="12" selection-start-line="12" selection-end-line="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/view/layout/DFSDF.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="738">
+          <caret line="507" column="7" selection-start-line="507" selection-start-column="7" selection-end-line="507" selection-end-column="7" />
+          <folding>
+            <element signature="n#style#0;n#input#1;n#form#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#header#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#ul#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#header#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#a#0;n#ul#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#header#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#a#0;n#li#0;n#ul#0;n#div#0;n#nav#0;n#div#0;n#header#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#a#0;n#li#1;n#ul#0;n#div#0;n#nav#0;n#div#0;n#header#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#a#0;n#li#2;n#ul#0;n#div#0;n#nav#0;n#div#0;n#header#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#a#0;n#li#0;n#ul#0;n#li#2;n#ul#0;n#div#0;n#nav#0;n#div#0;n#header#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#a#0;n#li#1;n#ul#0;n#li#2;n#ul#0;n#div#0;n#nav#0;n#div#0;n#header#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#a#0;n#li#3;n#ul#0;n#div#0;n#nav#0;n#div#0;n#header#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#a#0;n#li#4;n#ul#0;n#div#0;n#nav#0;n#div#0;n#header#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#2;n#article#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#0;n#p#1;n#div#2;n#article#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#0;n#span#0;n#p#1;n#div#2;n#article#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="e#6874#6880#0#HTML" expanded="true" />
+            <element signature="n#style#0;n#div#2;n#article#1;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#footer#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/css/app.css">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/css/style.min.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <element signature="e#14299#14557#2" expanded="true" />
+            <element signature="e#14658#14916#2" expanded="true" />
+            <element signature="e#15057#15315#2" expanded="true" />
+            <element signature="e#15435#15693#2" expanded="true" />
+            <element signature="e#15813#16071#2" expanded="true" />
+            <element signature="e#16191#16449#2" expanded="true" />
+            <element signature="e#22289#23736#2" expanded="true" />
+            <element signature="e#23862#25306#2" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/view/layout/styles.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="13" selection-start-column="13" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/view/layout/scripts.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="10" column="18" lean-forward="true" selection-start-line="10" selection-start-column="18" selection-end-line="10" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/core/View.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="18" column="42" selection-start-line="18" selection-start-column="42" selection-end-line="18" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/view/layout/dsf.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="738">
+          <caret line="507" column="7" selection-start-line="507" selection-start-column="7" selection-end-line="507" selection-end-column="7" />
+          <folding>
+            <element signature="n#style#0;n#input#1;n#form#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#header#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#ul#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#header#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#a#0;n#ul#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#header#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#a#0;n#li#0;n#ul#0;n#div#0;n#nav#0;n#div#0;n#header#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#a#0;n#li#1;n#ul#0;n#div#0;n#nav#0;n#div#0;n#header#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#a#0;n#li#2;n#ul#0;n#div#0;n#nav#0;n#div#0;n#header#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#a#0;n#li#0;n#ul#0;n#li#2;n#ul#0;n#div#0;n#nav#0;n#div#0;n#header#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#a#0;n#li#1;n#ul#0;n#li#2;n#ul#0;n#div#0;n#nav#0;n#div#0;n#header#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#a#0;n#li#3;n#ul#0;n#div#0;n#nav#0;n#div#0;n#header#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#a#0;n#li#4;n#ul#0;n#div#0;n#nav#0;n#div#0;n#header#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#2;n#article#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#0;n#p#1;n#div#2;n#article#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#0;n#span#0;n#p#1;n#div#2;n#article#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="e#6874#6880#0#HTML" expanded="true" />
+            <element signature="n#style#0;n#div#2;n#article#1;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#footer#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/view/Main/about.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="15" column="23" selection-start-line="15" selection-start-column="23" selection-end-line="15" selection-end-column="52" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/MainController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="493">
+          <caret line="29" column="37" selection-start-line="29" selection-start-column="37" selection-end-line="29" selection-end-column="37" />
+          <folding>
+            <element signature="e#31#55#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/view/View.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/view/Main/Contacts.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="476">
+          <caret line="28" column="84" selection-start-line="28" selection-start-column="84" selection-end-line="28" selection-end-column="84" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/view/Article/articleView.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="602">
+          <caret line="118" lean-forward="true" selection-start-line="119" selection-start-column="14" selection-end-line="119" selection-end-column="74" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/view/Main/Index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="14" column="69" selection-start-line="14" selection-start-column="69" selection-end-line="14" selection-end-column="69" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/view/Article/articleCatalog.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="693">
+          <caret line="41" column="16" lean-forward="true" selection-start-line="41" selection-start-column="16" selection-end-line="41" selection-end-column="16" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#img#0;n#p#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#a#0;n#p#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/SDK/Classes/CollectionMaker.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="10" column="27" selection-start-line="10" selection-start-column="27" selection-end-line="10" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/core/router.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="303">
+          <caret line="33" column="65" selection-start-line="33" selection-start-column="65" selection-end-line="33" selection-end-column="65" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/SDK/Classes/CollectionObject.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="629">
+          <caret line="37" column="1" lean-forward="true" selection-start-line="37" selection-start-column="1" selection-end-line="37" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/routes/routes.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" selection-start-line="7" selection-end-line="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/core/app.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="699">
+          <caret line="56" lean-forward="true" selection-start-line="56" selection-end-line="56" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/core/Model.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="369">
+          <caret line="140" column="15" lean-forward="true" selection-start-line="140" selection-start-column="15" selection-end-line="140" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/libs/helpers.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" column="25" selection-start-line="3" selection-start-column="25" selection-end-line="3" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/view/layout/rigthColumn.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1972">
+          <caret line="116" column="41" selection-start-line="116" selection-start-column="41" selection-end-line="116" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/ArticleController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="588">
+          <caret line="46" column="29" selection-start-line="46" selection-start-column="29" selection-end-line="46" selection-end-column="29" />
+          <folding>
+            <element signature="e#113#137#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/view/layout/aboutMe.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="11" column="59" selection-start-line="11" selection-start-column="59" selection-end-line="11" selection-end-column="59" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/view/layout/footer.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="18" lean-forward="true" selection-start-line="18" selection-end-line="18" />
+          <folding>
+            <element signature="n#style#0;n#footer#0;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>

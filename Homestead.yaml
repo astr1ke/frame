@@ -6,14 +6,12 @@ authorize: ~/.ssh/id_rsa.pub
 keys:
     - ~/.ssh/id_rsa
 folders:
-    -
-        map: 'C:\oserver\OSPanel\domains\framework'
+    -   map: ~/PhpstormProjects/Framework/
         to: /home/vagrant/code
 sites:
-    -
-        map: frame.loc
+    -   map: frame.loc
         to: /home/vagrant/code/public
 databases:
     - frameDB
 name: framework
-hostname: framework
+hostname: framework.loc

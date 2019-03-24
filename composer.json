@@ -1,5 +1,24 @@
 {
+    "name": "astri/framework",
+    "description": "My Framework",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "astri",
+            "email": "mail.usa.va@gmail.com"
+        }
+    ],
+    "require": {},
+    "autoload": {
+        "psr-4": {
+            "Controllers\\": "app\\controllers",
+            "Core\\": "app\\core",
+            "SDK\\": "app\\SDK",
+            "Models\\": "app\\models"
+        }
+    },
     "require-dev": {
-        "laravel/homestead": "^7.18"
+        "laravel/homestead": "^8.2"
     }
 }
