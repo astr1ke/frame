@@ -6,6 +6,6 @@ use Core\Model;
 
 class about {
     use Model;
-    static $table = 'about';
+    static $table = 'about_me';
 
 }

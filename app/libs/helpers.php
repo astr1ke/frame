@@ -9,26 +9,16 @@ function debug ($arr) {
 }
 
 /**
- * создание объекта View со всеми параметрами
  * @param $view
- * @param null $params
- * @return \Core\View
+ * @param array $variables
+ * @return \SDK\Classes\ViewObject
  */
-function view ($view, $params = null) {
-    if (strpos($view,'.') == false) {
-        $viewFolder = false;
-        $viewFile   = $view;
-    } else {
-        $massiv = explode('.', trim($view));
-        $viewFolder = $massiv [0];
-        $viewFile   = $massiv [1];
-    }
+function view ($view, $variables = []) {
+    $viewInfo = [];
+    $viewInfo['view'] = $view;
+    $viewInfo['variables'] = $variables;
 
-    $viewObject = new \Core\View($viewFolder, $viewFile);
-    if ($params !== null) {
-        $viewObject->setVariables($params);
-    }
-    return $viewObject;
+    return new \SDK\Classes\ViewObject($viewInfo['view'], $viewInfo['variables']);
 }
 
 /**
@@ -55,4 +45,14 @@ function array_to_collectionObject (array $array) {
         $object->addField($key, $value);
     }
     return $object;
+}
+
+/**
+ * Вспомогательная функция правильно указывающая
+ * путь к необходимому файлу
+ * @param $fileOrFolder
+ * @return string
+ */
+function asset ($fileOrFolder) {
+    return '/' . $fileOrFolder;
 }

@@ -1,5 +1,5 @@
-<footer class="general-footer" style="background-image:url('/images/footerLogo.jpg'); margin-top: 50px" >
-    <div class="footer-mask"></div>
+<footer class="general-footer" style="background-image:url(/images/footerLogo.jpg); margin-top: 50px" >
+<div class="footer-mask"></div>
     <div class="footer-inner">
         <div class="container">
             <div class="row">
@@ -16,13 +16,10 @@
                             </div>
 
                             <div class="widget-content">
-
                                 <?php
-                                $aboutMeFooter = \Models\about::findOne(1);
+                                    $aboutMeFooter = \Models\aboutMe::find(1);
                                 ?>
-
-                                <p><?php $aboutMeFooter->title?></p>
-
+                                <p>{{$aboutMeFooter->title}}</p>
                             </div>
 
                             <div class="social-networks">
@@ -66,26 +63,24 @@
 
                             <?php
                             $popArticlesFooter = \Models\Article::all();//->sortByDesc('views');
-                            $i = 1;
-                            foreach($popArticlesFooter as $popArticle) {
-                                if ($i <= 4) {
-                                    $i++ ?>
-                                    <div class="widget-content">
-                                        <div class="widget-posts">
-                                            <div class="post-title">
-                                                <h5><a href="/article/<?php echo $popArticle->id ?>"><?php echo $popArticle->title?></a>
-                                                </h5>
-                                            </div>
-                                            <div class="posted-date">
-                                                <span><a href="/article/<?php echo $popArticle->id ?>"><?php  echo $popArticle->created_at ?  : '' ?></a></span>
+                            $i=1;
+                            ?>
+                            @foreach($popArticlesFooter as $popArticle)
+                                @if($i<=4)
+                                    <?php $i++?>
+                                        <div class="widget-content">
+                                            <div class="widget-posts">
+                                                <div class="post-title">
+                                                    <h5><a href="/article/{{$popArticle->id}}">{{$popArticle->title}}</a></h5>
+                                                </div>
+                                                <div class="posted-date">
+                                                    <span><a href="/article/{{$popArticle->id}}">{{ is_object($popArticle->created_at) ? $popArticle->created_at->format('d  F  Y  в  H:i') : ''}}</a></span>
+                                                </div>
                                             </div>
                                         </div>
-                                    </div>
-                                    <br>
-                                    <?php
-                                }
-                            }
-                            ?>
+                                        <br>
+                                @endif
+                            @endforeach
 
                         </div>
                     </div>

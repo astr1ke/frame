@@ -18,23 +18,19 @@
                         <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
                             <div class="social-networks">
                                 <ul class="social-links" style="font-size: 16px">
-
-
-                                   <!-- @if (\Illuminate\Support\Facades\Auth::check())
-                                    @if (\Illuminate\Support\Facades\Auth::user()->role_id == 1)
-                                    <a style="margin-right: 35px" href="/admin">{{\Illuminate\Support\Facades\Auth::user()->name}}</a>
-                                    <a style="margin-right: 35px" href="/logout">Выйти</a>
-                                    @else
-                                    <a style="margin-right: 35px">{{\Illuminate\Support\Facades\Auth::user()->name}}</a>
-                                    <a style="margin-right: 35px" href="/logout">Выйти</a>
-                                    @endif
-                                    @else
-                                    <a style="margin-right: 35px" href="/login">Войти на сайт</a>
-                                    @endif-->
-                                    <a style="margin-right: 35px" href="/login">Войти на сайт</a>
-
-                                    <script src="//ulogin.ru/js/ulogin.js"></script>
-                                    <a id="uLogin" data-ulogin="display=panel;theme=classic;fields=first_name,last_name,email,photo_big,city,photo;
+                                        {{--@if (\Illuminate\Support\Facades\Auth::check())--}}
+                                            {{--@if (\Illuminate\Support\Facades\Auth::user()->role_id == 1)--}}
+                                                {{--<a style="margin-right: 35px" href="/admin">{{\Illuminate\Support\Facades\Auth::user()->name}}</a>--}}
+                                                {{--<a style="margin-right: 35px" href="/logout">Выйти</a>--}}
+                                            {{--@else--}}
+                                                {{--<a style="margin-right: 35px">{{\Illuminate\Support\Facades\Auth::user()->name}}</a>--}}
+                                                {{--<a style="margin-right: 35px" href="/logout">Выйти</a>--}}
+                                            {{--@endif--}}
+                                        {{--@else--}}
+                                            <a style="margin-right: 35px" href="/login">Войти на сайт</a>
+                                        {{--@endif--}}
+                                            <script src="//ulogin.ru/js/ulogin.js"></script>
+                                            <a id="uLogin" data-ulogin="display=panel;theme=classic;fields=first_name,last_name,email,photo_big,city,photo;
                                             providers=vkontakte,odnoklassniki,mailru,facebook;hidden=other;redirect_uri={{'http://'. $_SERVER['HTTP_HOST']}}/ulogin;
                                             mobilebuttons=0;"></a>
                                 </ul>
@@ -62,11 +58,11 @@
                                 <ul>
                                     <?php
                                     $categoriesAll = \Models\Categorie::all();
-                                    foreach($categoriesAll as $cat){
-
-                                    echo "<li><a href=\"/articleCatalog/categorie/" . $cat->id . "\">"  . $cat->name . "</a></li>";
-                                    }
                                     ?>
+                                    @foreach($categoriesAll as $cat)
+                                        <li><a href="/articleCatalog/categorie/{{$cat->id}}">{{$cat->name}}</a></li>
+                                    @endforeach
+
                                 </ul>
                             </li>
                             <li><a style="font-size: 15px" href="/articleCatalog">Все статьи</a></li>
@@ -75,8 +71,11 @@
                     </li>
                     <li><a style="font-size: 15px" href="/contacts">Обратная связь</a></li>
 
-                    <li><a style="font-size: 15px" href="">Предложить статью</a></li>
-
+                    {{--@if (\Illuminate\Support\Facades\Auth::check() and \Illuminate\Support\Facades\Auth::user()->role_id==1)--}}
+                        {{--<li><a style="font-size: 15px" href="/articleCreate">Добавить статью</a></li>--}}
+                    {{--@else--}}
+                        <li><a style="font-size: 15px" href="">Предложить статью</a></li>
+                    {{--@endif--}}
                 </ul>
             </div>
         </nav>

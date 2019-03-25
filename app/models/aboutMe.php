@@ -11,6 +11,6 @@ use Core\Model;
 
 class aboutMe {
     use Model;
-    static $table = 'about_me';
+    static $table = 'about';
 
 }

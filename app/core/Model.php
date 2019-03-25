@@ -56,7 +56,7 @@ Trait Model {
      * @param string $field
      * @return CollectionObject
      */
-    static function findOne($id, $field = ''){
+    static function find($id, $field = ''){
         if (self::check()){
             $table = self::$table;
         }
@@ -91,7 +91,13 @@ Trait Model {
         }
         if (!isset($output)) $output = [];
         self::closeBD();
-        return $output;
+
+        $newCollectionObject = new CollectionObject();
+        foreach ($output as $key => $value) {
+            $newCollectionObject->addField($key, $value);
+        }
+
+        return $newCollectionObject;
     }
 
     static function create($items){

@@ -16,7 +16,7 @@ use SDK\Classes\CollectionObject;
 class ArticleController extends BaseController
 {
         public function viewArticle ($i) {
-            $article = Article::findOne($i);
+            $article = Article::find($i);
             $articleViews = $article->views;
             return view('Article.articleView', ['article' => $article, 'articleViews' => $articleViews]);
         }
@@ -30,7 +30,7 @@ class ArticleController extends BaseController
         public function findCategorie ($id) {
             $articles = (Article::orderBy('created_at','DESC'))->where('categorie_id',$id);//->paginate(30);
 
-            $categorie = Categorie::findOne($id);
+            $categorie = Categorie::find($id);
             $categorie = $categorie->name;
             $title = "Статьи с категорией $categorie";
             return view('Article.articleCatalog', ['articles'=>$articles,'title'=>$title]);

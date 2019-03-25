@@ -3,7 +3,7 @@
 namespace Controllers;
 
 use Core\BaseController;
-use Models\aboutMe;
+use Models\about;
 use Models\Article;
 
 class MainController extends BaseController {
@@ -14,15 +14,15 @@ class MainController extends BaseController {
      */
     public function index () {
         $articles = Article::All();
-        return view('Main.index',['articles' => $articles]);
+        return view('Main.main',['articles' => $articles]);
     }
 
     /**
      * Обображение страницы обо мне
-     * @return \Core\View
+     * @return
      */
     public function about () {
-        $aboutMe = aboutMe::findOne(1);
+        $aboutMe = about::find(1);
         return view('Main.about', ['aboutMe' => $aboutMe]);
     }
 

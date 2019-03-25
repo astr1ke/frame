@@ -9,7 +9,9 @@
             "email": "mail.usa.va@gmail.com"
         }
     ],
-    "require": {},
+    "require": {
+        "jenssegers/blade": "^1.1"
+    },
     "autoload": {
         "psr-4": {
             "Controllers\\": "app\\controllers",

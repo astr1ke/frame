@@ -1,6 +1,7 @@
 <?php
 
 use Core\Router;
+use Jenssegers\Blade\Blade;
 
 /* ------------------------------------------------------
  * Подключение сервисов и вспомогательных компонентов*/
@@ -56,9 +57,16 @@ if ($requestMethod == 'POST') {
 }
 
 
-//Обработка результата выполения операций в контроллере
-if (get_class($result) == 'Core\View') {
-    $result->render();
+
+//Обработка результата полученного из контроллера:
+
+//Если класс полученого объекта - класс View то...
+if (get_class($result) == 'SDK\Classes\ViewObject') {
+    $view = $result->viewFile;
+    $variables = $result->viewVariables;
+    $blade = new Blade(ROOT . '/view', ROOT . '/cache');
+
+    echo $blade->make($view, $variables);
 }
 
 
