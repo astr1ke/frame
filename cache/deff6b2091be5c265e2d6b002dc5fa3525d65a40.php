@@ -46,7 +46,7 @@
                                             <?php if(isset($articleUser)): ?>
                                                 <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
                                                     <div class="post-author">
-                                                        <span class="post-author"><a><?php echo e($articleUser->name); ?></a></span>
+                                                        <span class="post-author"><a><?php echo e($articleUser->username); ?></a></span>
                                                     </div>
                                                 </div>
                                             <?php endif; ?>

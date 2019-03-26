@@ -19,17 +19,18 @@
                         <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
                             <div class="social-networks">
                                 <ul class="social-links" style="font-size: 16px">
-                                        
+
+                                    <?php if($auth->isLoggedIn()): ?>
                                             
                                                 
                                                 
                                             
-                                                
-                                                
+                                                <a style="margin-right: 35px"><?php echo e($auth->getUsername()); ?></a>
+                                                <a style="margin-right: 35px" href="/logout">Выйти</a>
                                             
-                                        
+                                        <?php else: ?>
                                             <a style="margin-right: 35px" href="/login">Войти на сайт</a>
-                                        
+                                        <?php endif; ?>
                                             <script src="//ulogin.ru/js/ulogin.js"></script>
                                             <a id="uLogin" data-ulogin="display=panel;theme=classic;fields=first_name,last_name,email,photo_big,city,photo;
                                             providers=vkontakte,odnoklassniki,mailru,facebook;hidden=other;redirect_uri=<?php echo e('http://'. $_SERVER['HTTP_HOST']); ?>/ulogin;

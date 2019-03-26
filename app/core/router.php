@@ -11,12 +11,12 @@ class Router {
 
     public static function get($routeString, $routeData = []){
         $routeData['method'] = 'GET';
-        self::$allRoutes[$routeString] = $routeData;
+        self::$allRoutes[$routeData['method'] . '-' . $routeString] = $routeData;
     }
 
     public static function post($routeString, $routeData = []){
         $routeData['method'] = 'POST';
-        self::$allRoutes[$routeString] = $routeData;
+        self::$allRoutes[$routeData['method'] . '-' . $routeString] = $routeData;
     }
 
     public static function matchRoute($url, $method){
@@ -24,11 +24,11 @@ class Router {
         if ($url === '') {
             $url = '/';
         }
-
+        $url = $method . '-' . $url;
         //перебираем все елементы со строками роутов
         foreach (self::$allRoutes as $routeString => $route){
 
-            //если в строке нет элементов с димакическими элементами в скобках {}
+            //если в строке нет элементов с динамическими элементами в скобках {}
             if (strpos($routeString, '{') === false) {
 
                 //если строка с роутом равна строки из урла то...

@@ -53,11 +53,8 @@
                                                     $cat = $cat->name;
                                                     $us = \Models\User::find($article->user_id);
                                                     if(isset($us)){
-                                                        $user = $us -> name;
+                                                        $user = $us->username;
                                                         $ava =$us -> avatar;
-                                                        if (mb_substr($ava, 0,1) <> 'h'){
-                                                            $ava = '/storage/'.$ava;
-                                                        }
                                                     }
                                                     ?>
                                                     <?php if(isset($ava)): ?>

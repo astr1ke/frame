@@ -10,7 +10,9 @@
         }
     ],
     "require": {
-        "jenssegers/blade": "^1.1"
+        "jenssegers/blade": "^1.1",
+        "delight-im/auth": "^8.1",
+        "faapz/pdo": "^1.11"
     },
     "autoload": {
         "psr-4": {

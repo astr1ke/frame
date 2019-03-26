@@ -25,6 +25,16 @@ require '../routes/routes.php';
 
 
 /* ------------------------------------------------------
+ * Создание экземпляра Аутентификации*/
+$db = new \Delight\Db\PdoDsn('mysql:dbname=frameDB;host=192.168.10.10;port=3306;charset=utf8mb4',
+    'homestead', 'secret');
+$auth = new \Delight\Auth\Auth($db);
+
+/*------------------------------------------------------*/
+
+
+
+/* ------------------------------------------------------
  * Получение значения нужного контроллера и его метода*/
 $requestMethod = $_SERVER['REQUEST_METHOD'];
 $requestUri = rtrim(ltrim($_SERVER['REQUEST_URI'],'/'),'/');
@@ -64,8 +74,9 @@ if ($requestMethod == 'POST') {
 if (get_class($result) == 'SDK\Classes\ViewObject') {
     $view = $result->viewFile;
     $variables = $result->viewVariables;
-    $blade = new Blade(ROOT . '/view', ROOT . '/cache');
+    $variables['auth'] = $auth;
 
+    $blade = new Blade(ROOT . '/view', ROOT . '/cache');
     echo $blade->make($view, $variables);
 }
 

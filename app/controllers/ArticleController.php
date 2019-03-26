@@ -11,14 +11,19 @@ namespace Controllers;
 use Core\BaseController;
 use Models\Article;
 use Models\Categorie;
-use SDK\Classes\CollectionObject;
+use Models\Comment;
 
 class ArticleController extends BaseController
 {
-        public function viewArticle ($i) {
-            $article = Article::find($i);
-            $articleViews = $article->views;
-            return view('Article.articleView', ['article' => $article, 'articleViews' => $articleViews]);
+        public function viewArticle ($id) {
+            $articleV = Article::find($id);
+            $articleViews = $articleV->views;
+
+            $articlesAll = Article::all();
+            $articles = Article::find($id);
+            $id = $articles->id;
+            $cc = count(Comment::where('article_id',$id));//->get());
+            return view('Article.articleView',['articles'=>$articles,'id'=>$id, 'cc'=>$cc, 'articlesAll'=>$articlesAll,'articleViews'=>$articleViews]);
         }
 
         public function articleCatalogAll () {

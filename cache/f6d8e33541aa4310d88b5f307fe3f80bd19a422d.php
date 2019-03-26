@@ -1,5 +1,4 @@
 <?php /* /home/vagrant/code/view/layouts/layout.blade.php */ ?>
-
 <!DOCTYPE html>
 <html lang="en">
 

@@ -7,7 +7,13 @@
       <sourceFolder url="file://$MODULE_DIR$/app/core" isTestSource="false" packagePrefix="Core\" />
       <sourceFolder url="file://$MODULE_DIR$/app/controllers" isTestSource="false" packagePrefix="Controllers\" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/composer" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/delight-im/auth" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/delight-im/base64" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/delight-im/cookie" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/delight-im/db" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/delight-im/http" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/doctrine/inflector" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/faapz/pdo" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/illuminate/container" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/illuminate/contracts" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/illuminate/events" />

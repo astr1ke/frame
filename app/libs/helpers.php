@@ -4,7 +4,7 @@
  * Удобная функция дебага
  * @param $arr
  */
-function debug ($arr) {
+function debug($arr) {
     echo '<pre>' . print_r($arr, true) . '</pre>';
 }
 
@@ -13,7 +13,7 @@ function debug ($arr) {
  * @param array $variables
  * @return \SDK\Classes\ViewObject
  */
-function view ($view, $variables = []) {
+function view($view, $variables = []) {
     $viewInfo = [];
     $viewInfo['view'] = $view;
     $viewInfo['variables'] = $variables;
@@ -21,12 +21,16 @@ function view ($view, $variables = []) {
     return new \SDK\Classes\ViewObject($viewInfo['view'], $viewInfo['variables']);
 }
 
+function redirect($uri) {
+    header('Location: '. $uri);
+}
+
 /**
  * Объект в массив
  * @param $object
  * @return array
  */
-function object_to_array ($object) {
+function object_to_array($object) {
     $array = array();
     foreach ($object as $key => $value) {
         $array[$key] = $value;
@@ -39,7 +43,7 @@ function object_to_array ($object) {
  * @param array $array
  * @return \SDK\Classes\CollectionObject
  */
-function array_to_collectionObject (array $array) {
+function array_to_collectionObject(array $array) {
     $object = new \SDK\Classes\CollectionObject();
     foreach ($array as $key => $value) {
         $object->addField($key, $value);
@@ -53,6 +57,18 @@ function array_to_collectionObject (array $array) {
  * @param $fileOrFolder
  * @return string
  */
-function asset ($fileOrFolder) {
+function asset($fileOrFolder) {
     return '/' . $fileOrFolder;
+}
+
+/**
+ * Возвращает рандомную строку нужной длины
+ * @param int $length
+ * @return bool|string
+ */
+function quickRandom($length = 16)
+{
+    $pool = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
+
+    return substr(str_shuffle(str_repeat($pool, 5)), 0, $length);
 }

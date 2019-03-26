@@ -2,8 +2,8 @@
 
 namespace Core;
 
-use SDK\Classes\CollectionMaker;
 use SDK\Classes\CollectionObject;
+use SDK\Classes\ModelObject;
 
 Trait Model {
 
@@ -30,8 +30,7 @@ Trait Model {
     }
 
     /**
-     * Получение всех значений заданной модели
-     * @return array
+     * @return CollectionObject
      */
     static function All(){
         if (self::check()){
@@ -46,15 +45,14 @@ Trait Model {
         if (!isset($output)) $output = [];
         self::closeBD();
 
-        $outputObject = new CollectionMaker($output);
-        return $outputObject->getCollection();
+        return self::_createCollectionFromCollectionArray($output);
     }
 
     /**
      * Получение одного экземпляра модели по заданному ID
      * @param $id
      * @param string $field
-     * @return CollectionObject
+     * @return ModelObject
      */
     static function find($id, $field = ''){
         if (self::check()){
@@ -71,7 +69,7 @@ Trait Model {
         }
         self::closeBD();
 
-        $newCollectionObject = new CollectionObject();
+        $newCollectionObject = new ModelObject(self::$table);
         foreach ($output as $key => $value) {
             $newCollectionObject->addField($key, $value);
         }
@@ -92,10 +90,11 @@ Trait Model {
         if (!isset($output)) $output = [];
         self::closeBD();
 
-        $newCollectionObject = new CollectionObject();
+        $newCollectionObject = new ModelObject(self::$table);
         foreach ($output as $key => $value) {
             $newCollectionObject->addField($key, $value);
         }
+        $newCollectionObject->addField('table', self::$table);
 
         return $newCollectionObject;
     }
@@ -150,8 +149,7 @@ Trait Model {
         if (!isset($output)) $output = [];
         self::closeBD();
 
-        $outputObject = new CollectionMaker($output);;
-        return $outputObject->getCollection();
+        return self::_createCollectionFromCollectionArray($output);
     }
 
     /**
@@ -176,8 +174,8 @@ Trait Model {
         if ($sortMethod == 'DESC') {
             $output = array_reverse($output);
         }
-        $outputObject = new CollectionMaker($output);;
-        return $outputObject->getCollection();
+
+        return self::_createCollectionFromCollectionArray($output);
     }
 
     /**
@@ -194,5 +192,31 @@ Trait Model {
 
         array_multisort($sortArr, $array);
         return $array;
+    }
+
+    /**
+     * Создание коллекции из массива коллекций
+     * @param $output
+     * @return ModelObject
+     */
+    private static function _createCollectionFromCollectionArray($output) {
+        //массив с промежуточными данными(объектами коллекций)
+        $outputData = array();
+        foreach ($output as $element) {
+            if (is_array($element)){
+                $newCollectionObject = new ModelObject(self::$table);
+                foreach ($element as $key => $value) {
+                    $newCollectionObject->addField($key, $value);
+                }
+                $outputData[] = $newCollectionObject;
+            }
+        }
+
+        //создаем коллекцию состоящую из подколлекций
+        $collectionObject = new ModelObject(self::$table);
+        foreach ($outputData as $key => $value) {
+            $collectionObject->addField($key, $value);
+        }
+        return $collectionObject;
     }
 }

@@ -92,7 +92,7 @@
                                     <div class="single-page-other-information-holder">
                                         <div class="posted-category">
                                             <div class="post-meta-category">
-                                                <?php $categorie = \App\categorie::find($articles->categorie_id);
+                                                <?php $categorie = \Models\Categorie::find($articles->categorie_id);
                                                 $categorie = $categorie->name;?>
                                                 <span><a href="#">{{$categorie}}</a></span>
                                             </div>
@@ -107,19 +107,16 @@
                                                     <div class="post-author">
 
                                                         <?php
-                                                            $us = \App\User::find($articles->user_id);
+                                                            $us = \Models\User::find($articles->user_id);
                                                             if(isset($us)){
-                                                            $user = $us -> name;
-                                                            $ava =$us -> avatar;
-                                                            if (mb_substr($ava, 0,1) <> 'h'){
-                                                                $ava = '/storage/'.$ava;
-                                                            }
+                                                            $user = $us->username;
+                                                            $ava =$us->avatar;
                                                             }
                                                         ?>
 
                                                         @if(isset($ava))
                                                             @if(strpos($ava,'users'))
-                                                                <img src="storage/{{$ava}}" alt="...." style="max-height: 50px; max-width: 50px">
+                                                                <img src="{{$ava}}" alt="...." style="max-height: 50px; max-width: 50px">
                                                             @else
                                                                 <img src="{{$ava}}" alt="...." style="max-height: 50px; max-width: 50px">
                                                             @endif
@@ -155,31 +152,6 @@
                                     </div>
                                 </article>
 
-                             <!--   <div class="related-posts-wrapper">
-                                    <div class="related-posts-inner">
-                                        <div class="related-post-carousel owl-carousel">
-
-                                            @foreach($articlesAll as $articleOne)
-                                            <div class="grid-item item">
-                                                <article class="post-details-holder layout-three-post-details-holder wow fadeInUp">
-                                                    <div class="post-image">
-                                                        <img src="{{$articleOne->image}}" alt="..." style="max-height: 200px">
-                                                    </div>
-
-                                                    <div class="post-extra-details">
-                                                        <div class="post-title">
-                                                            <h2><a href="/article/{{$articleOne->id}}">{{$articleOne->title}}</a></h2>
-                                                        </div>
-                                                    </div>
-                                                </article>
-                                            </div>
-                                            @endforeach
-
-                                        </div>
-                                    </div>
-                                </div>-->
-
-
                                 <div class="comment-area-wrapper">
                                     <div class="comment-area-inner">
                                         <div class="comments">
@@ -188,7 +160,7 @@
                                                     <h4>Найдено коментариев: {{$cc}}</h4>
                                                 </div>
                                                 <div style="padding-bottom: 320px">
-                                                    @include('comments.comments_block', ['essence' => $articles])
+                                                    @include('comments.comments_block', ['article' => $articles])
                                                 </div>
                                             </div>
                                         </div>
