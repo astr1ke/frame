@@ -44,4 +44,29 @@ class ModelObject implements \Countable
         }
         return $newObject;
     }
+
+    public function delete() {
+        $table = $this->table;
+
+        foreach ($this as $record) {
+            if (is_object($record)) {
+                $id = $record->id;
+                $this->connectBD();
+                $query = 'DELETE FROM ' . $table . ' WHERE ID = ' . '\'' . $id . '\'';
+                $this->mysqli->query($query);
+                $this->closeBD();
+            }
+        }
+    }
+
+    public function reverse() {
+        $newObject = new ModelObject($this->table);
+        $tempArray = object_to_array($this);
+        $tempArray = array_reverse($tempArray);
+
+        foreach ($tempArray as $key => $element) {
+            $newObject->addField($key, $element);
+        }
+        return $newObject;
+    }
 }

@@ -11,11 +11,17 @@ class Router {
 
     public static function get($routeString, $routeData = []){
         $routeData['method'] = 'GET';
+        if ($routeString !== '/'){
+            $routeString = trim($routeString, '/');
+        }
         self::$allRoutes[$routeData['method'] . '-' . $routeString] = $routeData;
     }
 
     public static function post($routeString, $routeData = []){
         $routeData['method'] = 'POST';
+        if ($routeString !== '/'){
+            $routeString = trim($routeString, '/');
+        }
         self::$allRoutes[$routeData['method'] . '-' . $routeString] = $routeData;
     }
 

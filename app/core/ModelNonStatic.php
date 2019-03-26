@@ -126,7 +126,7 @@ trait ModelNonStatic
         }
     }
 
-    public function delete($id){
+    public function destroy($id){
         if ($this->check()){
             $table = $this->table;
         }

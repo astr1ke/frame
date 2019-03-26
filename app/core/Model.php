@@ -100,17 +100,17 @@ Trait Model {
     }
 
     static function create($items){
-        if (self::check()){
-            $table = self::$table;
-        }
+
+        $table = self::$table;
         self::connectBD();
         $key = '';
         $value = '';
         foreach ($items as $k => $item){
-            $key .= '' . $k . ', ';
+            $key .= "`" . $k . "`, ";
             $value .= '\'' . $item . '\', ';
         }
         $query = 'INSERT INTO ' . $table . ' ( ' . rtrim($key,', ') . ' ) VALUES ( ' . rtrim($value,', ') . ' )';
+        echo $query;
         $result = self::$mysqli->query($query);
         self::closeBD();
         if ($result){
@@ -118,7 +118,7 @@ Trait Model {
         }
     }
 
-    static function delete($id){
+    static function destroy($id){
         if (self::check()){
             $table = self::$table;
         }

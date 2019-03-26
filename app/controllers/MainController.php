@@ -13,7 +13,7 @@ class MainController extends BaseController {
      * @return \Core\View
      */
     public function index () {
-        $articles = Article::All();
+        $articles = Article::All()->reverse();
         return view('Main.main',['articles' => $articles]);
     }
 

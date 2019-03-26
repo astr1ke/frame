@@ -1,62 +1,897 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="1f660860-4a48-4113-9d3a-30c8176d05f3" name="Default" comment="Version 0.3">
-      <change afterPath="$PROJECT_DIR$/app/SDK/Classes/ModelObject.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/controllers/AdminController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/controllers/AuthController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/controllers/Mail/Mail.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/controllers/uLoginController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/core/ModelNonStatic.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/modules/comments/Comment.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/modules/comments/CommentController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/modules/comments/asset_html.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/modules/comments/comments_view/comment.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/modules/comments/comments_view/comments_block.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/modules/comments/comments_view/new_comment.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/modules/comments/css/asset_css.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/modules/comments/css/comments.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/modules/comments/images/icons/leave-comment.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/modules/comments/images/input_pattern.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/modules/comments/images/input_pattern_hover.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/modules/comments/js/asset js.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/modules/comments/js/comment-reply.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/modules/comments/js/comment-scripts.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/modules/comments/klisllaravel-comments.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/modules/comments/migrate/2017_06_26_095610_CreateCommentsTable.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/modules/comments/migrate/2017_06_26_194528_ChangeCommentsTable.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/modules/comments/route.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/auth/login.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/auth/passwords/email.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/auth/passwords/reset.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/auth/register.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/comments/comment.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/comments/comments_block.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/comments/new_comment.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/framework.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/framework.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
+    <list default="true" id="1f660860-4a48-4113-9d3a-30c8176d05f3" name="Default" comment="Version 0.3.5">
+      <change afterPath="$PROJECT_DIR$/public/modules/ckeditor/CHANGES.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/ckeditor/LICENSE.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/ckeditor/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/ckeditor/adapters/jquery.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/ckeditor/build-config.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/ckeditor/ckeditor.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/ckeditor/config.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/ckeditor/contents.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/ckeditor/lang/en.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/ckeditor/lang/ru.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/ckeditor/plugins/a11yhelp/dialogs/a11yhelp.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/ckeditor/plugins/a11yhelp/dialogs/lang/_translationstatus.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/ckeditor/plugins/a11yhelp/dialogs/lang/af.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/ckeditor/plugins/a11yhelp/dialogs/lang/ar.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/ckeditor/plugins/a11yhelp/dialogs/lang/az.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/ckeditor/plugins/a11yhelp/dialogs/lang/bg.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/ckeditor/plugins/a11yhelp/dialogs/lang/ca.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/ckeditor/plugins/a11yhelp/dialogs/lang/cs.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/ckeditor/plugins/a11yhelp/dialogs/lang/cy.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/ckeditor/plugins/a11yhelp/dialogs/lang/da.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/ckeditor/plugins/a11yhelp/dialogs/lang/de-ch.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/ckeditor/plugins/a11yhelp/dialogs/lang/de.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/ckeditor/plugins/a11yhelp/dialogs/lang/el.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/ckeditor/plugins/a11yhelp/dialogs/lang/en-au.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/ckeditor/plugins/a11yhelp/dialogs/lang/en-gb.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/ckeditor/plugins/a11yhelp/dialogs/lang/en.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/ckeditor/plugins/a11yhelp/dialogs/lang/eo.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/ckeditor/plugins/a11yhelp/dialogs/lang/es-mx.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/ckeditor/plugins/a11yhelp/dialogs/lang/es.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/ckeditor/plugins/a11yhelp/dialogs/lang/et.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/ckeditor/plugins/a11yhelp/dialogs/lang/eu.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/ckeditor/plugins/a11yhelp/dialogs/lang/fa.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/ckeditor/plugins/a11yhelp/dialogs/lang/fi.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/ckeditor/plugins/a11yhelp/dialogs/lang/fo.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/ckeditor/plugins/a11yhelp/dialogs/lang/fr-ca.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/ckeditor/plugins/a11yhelp/dialogs/lang/fr.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/ckeditor/plugins/a11yhelp/dialogs/lang/gl.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/ckeditor/plugins/a11yhelp/dialogs/lang/gu.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/ckeditor/plugins/a11yhelp/dialogs/lang/he.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/ckeditor/plugins/a11yhelp/dialogs/lang/hi.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/ckeditor/plugins/a11yhelp/dialogs/lang/hr.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/ckeditor/plugins/a11yhelp/dialogs/lang/hu.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/ckeditor/plugins/a11yhelp/dialogs/lang/id.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/ckeditor/plugins/a11yhelp/dialogs/lang/it.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/ckeditor/plugins/a11yhelp/dialogs/lang/ja.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/ckeditor/plugins/a11yhelp/dialogs/lang/km.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/ckeditor/plugins/a11yhelp/dialogs/lang/ko.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/ckeditor/plugins/a11yhelp/dialogs/lang/ku.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/ckeditor/plugins/a11yhelp/dialogs/lang/lt.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/ckeditor/plugins/a11yhelp/dialogs/lang/lv.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/ckeditor/plugins/a11yhelp/dialogs/lang/mk.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/ckeditor/plugins/a11yhelp/dialogs/lang/mn.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/ckeditor/plugins/a11yhelp/dialogs/lang/nb.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/ckeditor/plugins/a11yhelp/dialogs/lang/nl.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/ckeditor/plugins/a11yhelp/dialogs/lang/no.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/ckeditor/plugins/a11yhelp/dialogs/lang/oc.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/ckeditor/plugins/a11yhelp/dialogs/lang/pl.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/ckeditor/plugins/a11yhelp/dialogs/lang/pt-br.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/ckeditor/plugins/a11yhelp/dialogs/lang/pt.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/ckeditor/plugins/a11yhelp/dialogs/lang/ro.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/ckeditor/plugins/a11yhelp/dialogs/lang/ru.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/ckeditor/plugins/a11yhelp/dialogs/lang/si.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/ckeditor/plugins/a11yhelp/dialogs/lang/sk.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/ckeditor/plugins/a11yhelp/dialogs/lang/sl.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/ckeditor/plugins/a11yhelp/dialogs/lang/sq.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/ckeditor/plugins/a11yhelp/dialogs/lang/sr-latn.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/ckeditor/plugins/a11yhelp/dialogs/lang/sr.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/ckeditor/plugins/a11yhelp/dialogs/lang/sv.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/ckeditor/plugins/a11yhelp/dialogs/lang/th.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/ckeditor/plugins/a11yhelp/dialogs/lang/tr.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/ckeditor/plugins/a11yhelp/dialogs/lang/tt.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/ckeditor/plugins/a11yhelp/dialogs/lang/ug.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/ckeditor/plugins/a11yhelp/dialogs/lang/uk.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/ckeditor/plugins/a11yhelp/dialogs/lang/vi.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/ckeditor/plugins/a11yhelp/dialogs/lang/zh-cn.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/ckeditor/plugins/a11yhelp/dialogs/lang/zh.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/ckeditor/plugins/about/dialogs/about.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/ckeditor/plugins/about/dialogs/hidpi/logo_ckeditor.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/ckeditor/plugins/about/dialogs/logo_ckeditor.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/ckeditor/plugins/clipboard/dialogs/paste.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/ckeditor/plugins/colordialog/dialogs/colordialog.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/ckeditor/plugins/colordialog/dialogs/colordialog.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/ckeditor/plugins/copyformatting/cursors/cursor-disabled.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/ckeditor/plugins/copyformatting/cursors/cursor.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/ckeditor/plugins/copyformatting/styles/copyformatting.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/ckeditor/plugins/dialog/dialogDefinition.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/ckeditor/plugins/div/dialogs/div.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/ckeditor/plugins/find/dialogs/find.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/ckeditor/plugins/flash/dialogs/flash.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/ckeditor/plugins/flash/images/placeholder.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/ckeditor/plugins/forms/dialogs/button.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/ckeditor/plugins/forms/dialogs/checkbox.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/ckeditor/plugins/forms/dialogs/form.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/ckeditor/plugins/forms/dialogs/hiddenfield.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/ckeditor/plugins/forms/dialogs/radio.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/ckeditor/plugins/forms/dialogs/select.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/ckeditor/plugins/forms/dialogs/textarea.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/ckeditor/plugins/forms/dialogs/textfield.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/ckeditor/plugins/forms/images/hiddenfield.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/ckeditor/plugins/icons.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/ckeditor/plugins/icons_hidpi.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/ckeditor/plugins/iframe/dialogs/iframe.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/ckeditor/plugins/iframe/images/placeholder.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/ckeditor/plugins/image/dialogs/image.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/ckeditor/plugins/image/images/noimage.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/ckeditor/plugins/link/dialogs/anchor.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/ckeditor/plugins/link/dialogs/link.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/ckeditor/plugins/link/images/anchor.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/ckeditor/plugins/link/images/hidpi/anchor.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/ckeditor/plugins/liststyle/dialogs/liststyle.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/ckeditor/plugins/magicline/images/hidpi/icon-rtl.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/ckeditor/plugins/magicline/images/hidpi/icon.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/ckeditor/plugins/magicline/images/icon-rtl.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/ckeditor/plugins/magicline/images/icon.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/ckeditor/plugins/pagebreak/images/pagebreak.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/ckeditor/plugins/pastefromword/filter/default.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/ckeditor/plugins/preview/preview.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/ckeditor/plugins/scayt/CHANGELOG.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/ckeditor/plugins/scayt/LICENSE.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/ckeditor/plugins/scayt/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/ckeditor/plugins/scayt/dialogs/dialog.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/ckeditor/plugins/scayt/dialogs/options.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/ckeditor/plugins/scayt/dialogs/toolbar.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/ckeditor/plugins/scayt/skins/moono-lisa/scayt.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/ckeditor/plugins/showblocks/images/block_address.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/ckeditor/plugins/showblocks/images/block_blockquote.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/ckeditor/plugins/showblocks/images/block_div.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/ckeditor/plugins/showblocks/images/block_h1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/ckeditor/plugins/showblocks/images/block_h2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/ckeditor/plugins/showblocks/images/block_h3.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/ckeditor/plugins/showblocks/images/block_h4.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/ckeditor/plugins/showblocks/images/block_h5.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/ckeditor/plugins/showblocks/images/block_h6.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/ckeditor/plugins/showblocks/images/block_p.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/ckeditor/plugins/showblocks/images/block_pre.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/ckeditor/plugins/smiley/dialogs/smiley.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/ckeditor/plugins/smiley/images/angel_smile.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/ckeditor/plugins/smiley/images/angel_smile.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/ckeditor/plugins/smiley/images/angry_smile.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/ckeditor/plugins/smiley/images/angry_smile.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/ckeditor/plugins/smiley/images/broken_heart.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/ckeditor/plugins/smiley/images/broken_heart.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/ckeditor/plugins/smiley/images/confused_smile.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/ckeditor/plugins/smiley/images/confused_smile.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/ckeditor/plugins/smiley/images/cry_smile.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/ckeditor/plugins/smiley/images/cry_smile.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/ckeditor/plugins/smiley/images/devil_smile.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/ckeditor/plugins/smiley/images/devil_smile.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/ckeditor/plugins/smiley/images/embaressed_smile.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/ckeditor/plugins/smiley/images/embarrassed_smile.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/ckeditor/plugins/smiley/images/embarrassed_smile.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/ckeditor/plugins/smiley/images/envelope.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/ckeditor/plugins/smiley/images/envelope.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/ckeditor/plugins/smiley/images/heart.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/ckeditor/plugins/smiley/images/heart.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/ckeditor/plugins/smiley/images/kiss.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/ckeditor/plugins/smiley/images/kiss.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/ckeditor/plugins/smiley/images/lightbulb.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/ckeditor/plugins/smiley/images/lightbulb.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/ckeditor/plugins/smiley/images/omg_smile.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/ckeditor/plugins/smiley/images/omg_smile.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/ckeditor/plugins/smiley/images/regular_smile.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/ckeditor/plugins/smiley/images/regular_smile.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/ckeditor/plugins/smiley/images/sad_smile.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/ckeditor/plugins/smiley/images/sad_smile.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/ckeditor/plugins/smiley/images/shades_smile.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/ckeditor/plugins/smiley/images/shades_smile.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/ckeditor/plugins/smiley/images/teeth_smile.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/ckeditor/plugins/smiley/images/teeth_smile.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/ckeditor/plugins/smiley/images/thumbs_down.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/ckeditor/plugins/smiley/images/thumbs_down.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/ckeditor/plugins/smiley/images/thumbs_up.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/ckeditor/plugins/smiley/images/thumbs_up.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/ckeditor/plugins/smiley/images/tongue_smile.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/ckeditor/plugins/smiley/images/tongue_smile.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/ckeditor/plugins/smiley/images/tounge_smile.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/ckeditor/plugins/smiley/images/whatchutalkingabout_smile.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/ckeditor/plugins/smiley/images/whatchutalkingabout_smile.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/ckeditor/plugins/smiley/images/wink_smile.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/ckeditor/plugins/smiley/images/wink_smile.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/ckeditor/plugins/specialchar/dialogs/lang/_translationstatus.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/ckeditor/plugins/specialchar/dialogs/lang/af.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/ckeditor/plugins/specialchar/dialogs/lang/ar.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/ckeditor/plugins/specialchar/dialogs/lang/az.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/ckeditor/plugins/specialchar/dialogs/lang/bg.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/ckeditor/plugins/specialchar/dialogs/lang/ca.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/ckeditor/plugins/specialchar/dialogs/lang/cs.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/ckeditor/plugins/specialchar/dialogs/lang/cy.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/ckeditor/plugins/specialchar/dialogs/lang/da.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/ckeditor/plugins/specialchar/dialogs/lang/de-ch.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/ckeditor/plugins/specialchar/dialogs/lang/de.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/ckeditor/plugins/specialchar/dialogs/lang/el.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/ckeditor/plugins/specialchar/dialogs/lang/en-au.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/ckeditor/plugins/specialchar/dialogs/lang/en-ca.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/ckeditor/plugins/specialchar/dialogs/lang/en-gb.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/ckeditor/plugins/specialchar/dialogs/lang/en.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/ckeditor/plugins/specialchar/dialogs/lang/eo.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/ckeditor/plugins/specialchar/dialogs/lang/es-mx.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/ckeditor/plugins/specialchar/dialogs/lang/es.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/ckeditor/plugins/specialchar/dialogs/lang/et.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/ckeditor/plugins/specialchar/dialogs/lang/eu.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/ckeditor/plugins/specialchar/dialogs/lang/fa.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/ckeditor/plugins/specialchar/dialogs/lang/fi.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/ckeditor/plugins/specialchar/dialogs/lang/fr-ca.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/ckeditor/plugins/specialchar/dialogs/lang/fr.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/ckeditor/plugins/specialchar/dialogs/lang/gl.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/ckeditor/plugins/specialchar/dialogs/lang/he.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/ckeditor/plugins/specialchar/dialogs/lang/hr.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/ckeditor/plugins/specialchar/dialogs/lang/hu.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/ckeditor/plugins/specialchar/dialogs/lang/id.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/ckeditor/plugins/specialchar/dialogs/lang/it.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/ckeditor/plugins/specialchar/dialogs/lang/ja.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/ckeditor/plugins/specialchar/dialogs/lang/km.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/ckeditor/plugins/specialchar/dialogs/lang/ko.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/ckeditor/plugins/specialchar/dialogs/lang/ku.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/ckeditor/plugins/specialchar/dialogs/lang/lt.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/ckeditor/plugins/specialchar/dialogs/lang/lv.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/ckeditor/plugins/specialchar/dialogs/lang/nb.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/ckeditor/plugins/specialchar/dialogs/lang/nl.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/ckeditor/plugins/specialchar/dialogs/lang/no.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/ckeditor/plugins/specialchar/dialogs/lang/oc.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/ckeditor/plugins/specialchar/dialogs/lang/pl.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/ckeditor/plugins/specialchar/dialogs/lang/pt-br.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/ckeditor/plugins/specialchar/dialogs/lang/pt.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/ckeditor/plugins/specialchar/dialogs/lang/ro.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/ckeditor/plugins/specialchar/dialogs/lang/ru.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/ckeditor/plugins/specialchar/dialogs/lang/si.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/ckeditor/plugins/specialchar/dialogs/lang/sk.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/ckeditor/plugins/specialchar/dialogs/lang/sl.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/ckeditor/plugins/specialchar/dialogs/lang/sq.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/ckeditor/plugins/specialchar/dialogs/lang/sv.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/ckeditor/plugins/specialchar/dialogs/lang/th.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/ckeditor/plugins/specialchar/dialogs/lang/tr.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/ckeditor/plugins/specialchar/dialogs/lang/tt.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/ckeditor/plugins/specialchar/dialogs/lang/ug.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/ckeditor/plugins/specialchar/dialogs/lang/uk.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/ckeditor/plugins/specialchar/dialogs/lang/vi.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/ckeditor/plugins/specialchar/dialogs/lang/zh-cn.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/ckeditor/plugins/specialchar/dialogs/lang/zh.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/ckeditor/plugins/specialchar/dialogs/specialchar.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/ckeditor/plugins/table/dialogs/table.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/ckeditor/plugins/tableselection/styles/tableselection.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/ckeditor/plugins/tabletools/dialogs/tableCell.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/ckeditor/plugins/templates/dialogs/templates.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/ckeditor/plugins/templates/dialogs/templates.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/ckeditor/plugins/templates/templates/default.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/ckeditor/plugins/templates/templates/images/template1.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/ckeditor/plugins/templates/templates/images/template2.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/ckeditor/plugins/templates/templates/images/template3.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/ckeditor/plugins/widget/images/handle.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/ckeditor/plugins/wsc/LICENSE.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/ckeditor/plugins/wsc/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/ckeditor/plugins/wsc/dialogs/ciframe.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/ckeditor/plugins/wsc/dialogs/tmpFrameset.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/ckeditor/plugins/wsc/dialogs/wsc.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/ckeditor/plugins/wsc/dialogs/wsc.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/ckeditor/plugins/wsc/dialogs/wsc_ie.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/ckeditor/plugins/wsc/skins/moono-lisa/wsc.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/ckeditor/samples/css/samples.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/ckeditor/samples/img/github-top.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/ckeditor/samples/img/header-bg.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/ckeditor/samples/img/header-separator.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/ckeditor/samples/img/logo.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/ckeditor/samples/img/logo.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/ckeditor/samples/img/navigation-tip.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/ckeditor/samples/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/ckeditor/samples/js/sample.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/ckeditor/samples/js/sf.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/ckeditor/samples/old/ajax.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/ckeditor/samples/old/api.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/ckeditor/samples/old/appendto.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/ckeditor/samples/old/assets/inlineall/logo.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/ckeditor/samples/old/assets/outputxhtml/outputxhtml.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/ckeditor/samples/old/assets/posteddata.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/ckeditor/samples/old/assets/sample.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/ckeditor/samples/old/assets/uilanguages/languages.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/ckeditor/samples/old/datafiltering.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/ckeditor/samples/old/dialog/assets/my_dialog.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/ckeditor/samples/old/dialog/dialog.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/ckeditor/samples/old/divreplace.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/ckeditor/samples/old/enterkey/enterkey.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/ckeditor/samples/old/htmlwriter/assets/outputforflash/outputforflash.fla" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/ckeditor/samples/old/htmlwriter/assets/outputforflash/outputforflash.swf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/ckeditor/samples/old/htmlwriter/assets/outputforflash/swfobject.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/ckeditor/samples/old/htmlwriter/outputforflash.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/ckeditor/samples/old/htmlwriter/outputhtml.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/ckeditor/samples/old/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/ckeditor/samples/old/inlineall.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/ckeditor/samples/old/inlinebycode.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/ckeditor/samples/old/inlinetextarea.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/ckeditor/samples/old/jquery.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/ckeditor/samples/old/magicline/magicline.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/ckeditor/samples/old/readonly.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/ckeditor/samples/old/replacebyclass.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/ckeditor/samples/old/replacebycode.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/ckeditor/samples/old/sample.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/ckeditor/samples/old/sample.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/ckeditor/samples/old/sample_posteddata.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/ckeditor/samples/old/tabindex.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/ckeditor/samples/old/toolbar/toolbar.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/ckeditor/samples/old/uicolor.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/ckeditor/samples/old/uilanguages.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/ckeditor/samples/old/wysiwygarea/fullpage.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/ckeditor/samples/old/xhtmlstyle.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/ckeditor/samples/toolbarconfigurator/css/fontello.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/ckeditor/samples/toolbarconfigurator/font/LICENSE.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/ckeditor/samples/toolbarconfigurator/font/config.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/ckeditor/samples/toolbarconfigurator/font/fontello.eot" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/ckeditor/samples/toolbarconfigurator/font/fontello.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/ckeditor/samples/toolbarconfigurator/font/fontello.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/ckeditor/samples/toolbarconfigurator/font/fontello.woff" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/ckeditor/samples/toolbarconfigurator/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/ckeditor/samples/toolbarconfigurator/js/abstracttoolbarmodifier.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/ckeditor/samples/toolbarconfigurator/js/fulltoolbareditor.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/ckeditor/samples/toolbarconfigurator/js/toolbarmodifier.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/ckeditor/samples/toolbarconfigurator/js/toolbartextmodifier.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/ckeditor/samples/toolbarconfigurator/lib/codemirror/LICENSE" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/ckeditor/samples/toolbarconfigurator/lib/codemirror/codemirror.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/ckeditor/samples/toolbarconfigurator/lib/codemirror/codemirror.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/ckeditor/samples/toolbarconfigurator/lib/codemirror/javascript.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/ckeditor/samples/toolbarconfigurator/lib/codemirror/neo.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/ckeditor/samples/toolbarconfigurator/lib/codemirror/show-hint.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/ckeditor/samples/toolbarconfigurator/lib/codemirror/show-hint.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/ckeditor/skins/kama/dialog.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/ckeditor/skins/kama/dialog_ie.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/ckeditor/skins/kama/dialog_ie7.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/ckeditor/skins/kama/dialog_ie8.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/ckeditor/skins/kama/dialog_iequirks.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/ckeditor/skins/kama/editor.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/ckeditor/skins/kama/editor_ie.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/ckeditor/skins/kama/editor_ie7.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/ckeditor/skins/kama/editor_ie8.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/ckeditor/skins/kama/editor_iequirks.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/ckeditor/skins/kama/icons.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/ckeditor/skins/kama/icons_hidpi.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/ckeditor/skins/kama/images/dialog_sides.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/ckeditor/skins/kama/images/dialog_sides.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/ckeditor/skins/kama/images/dialog_sides_rtl.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/ckeditor/skins/kama/images/mini.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/ckeditor/skins/kama/images/spinner.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/ckeditor/skins/kama/images/sprites.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/ckeditor/skins/kama/images/sprites_ie6.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/ckeditor/skins/kama/images/toolbar_start.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/ckeditor/skins/kama/readme.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/ckeditor/styles.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/fancybox/ajax.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/fancybox/example/10_b.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/fancybox/example/10_s.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/fancybox/example/11_b.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/fancybox/example/11_s.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/fancybox/example/12_b.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/fancybox/example/12_s.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/fancybox/example/1_b.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/fancybox/example/1_s.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/fancybox/example/2_b.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/fancybox/example/2_s.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/fancybox/example/3_b.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/fancybox/example/3_s.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/fancybox/example/4_b.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/fancybox/example/4_s.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/fancybox/example/5_b.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/fancybox/example/5_s.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/fancybox/example/6_b.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/fancybox/example/6_s.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/fancybox/example/7_b.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/fancybox/example/7_s.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/fancybox/example/8_b.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/fancybox/example/8_s.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/fancybox/example/9_b.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/fancybox/example/9_s.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/fancybox/fancybox/blank.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/fancybox/fancybox/fancy_close.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/fancybox/fancybox/fancy_loading.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/fancybox/fancybox/fancy_nav_left.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/fancybox/fancybox/fancy_nav_right.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/fancybox/fancybox/fancy_shadow_e.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/fancybox/fancybox/fancy_shadow_n.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/fancybox/fancybox/fancy_shadow_ne.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/fancybox/fancybox/fancy_shadow_nw.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/fancybox/fancybox/fancy_shadow_s.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/fancybox/fancybox/fancy_shadow_se.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/fancybox/fancybox/fancy_shadow_sw.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/fancybox/fancybox/fancy_shadow_w.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/fancybox/fancybox/fancy_title_left.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/fancybox/fancybox/fancy_title_main.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/fancybox/fancybox/fancy_title_over.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/fancybox/fancybox/fancy_title_right.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/fancybox/fancybox/fancybox-x.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/fancybox/fancybox/fancybox-y.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/fancybox/fancybox/fancybox.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/fancybox/fancybox/jquery.easing-1.3.pack.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/fancybox/fancybox/jquery.fancybox-1.3.4.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/fancybox/fancybox/jquery.fancybox-1.3.4.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/fancybox/fancybox/jquery.fancybox-1.3.4.pack.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/fancybox/fancybox/jquery.mousewheel-3.0.4.pack.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/fancybox/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/fancybox/jquery-1.4.3.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/fancybox/style.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/kcfinder/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/kcfinder/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/kcfinder/browse.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/kcfinder/cache/.htaccess" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/kcfinder/cache/base.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/kcfinder/cache/base.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/kcfinder/cache/theme_dark.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/kcfinder/cache/theme_dark.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/kcfinder/cache/theme_default.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/kcfinder/cache/theme_default.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/kcfinder/conf/.htaccess" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/kcfinder/conf/config.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/kcfinder/conf/upload.htaccess" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/kcfinder/core/.htaccess" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/kcfinder/core/autoload.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/kcfinder/core/bootstrap.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/kcfinder/core/class/browser.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/kcfinder/core/class/minifier.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/kcfinder/core/class/uploader.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/kcfinder/core/types/type_img.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/kcfinder/core/types/type_mime.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/kcfinder/css/000.base.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/kcfinder/css/999.agent.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/kcfinder/css/index.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/kcfinder/doc/.htaccess" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/kcfinder/doc/Changelog" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/kcfinder/doc/LICENSE.GPL" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/kcfinder/doc/LICENSE.LGPL" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/kcfinder/favicon.ico" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/kcfinder/index.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/kcfinder/integration/.htaccess" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/kcfinder/integration/BolmerCMS.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/kcfinder/integration/drupal.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/kcfinder/js/000._jquery.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/kcfinder/js/002._jqueryui.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/kcfinder/js/006.jquery.uniform.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/kcfinder/js/010.jquery.fixes.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/kcfinder/js/020.jquery.rightClick.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/kcfinder/js/021.jquery.taphold.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/kcfinder/js/029.jquery.agent.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/kcfinder/js/030.jquery.helper.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/kcfinder/js/031.jquery.md5.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/kcfinder/js/040.object.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/kcfinder/js/041.dialogs.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/kcfinder/js/050.init.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/kcfinder/js/060.toolbar.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/kcfinder/js/070.settings.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/kcfinder/js/080.files.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/kcfinder/js/090.folders.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/kcfinder/js/091.menus.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/kcfinder/js/091.viewImage.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/kcfinder/js/100.clipboard.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/kcfinder/js/110.dropUpload.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/kcfinder/js/120.misc.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/kcfinder/js/index.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/kcfinder/js_localize.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/kcfinder/lang/.htaccess" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/kcfinder/lang/af.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/kcfinder/lang/bg.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/kcfinder/lang/ca.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/kcfinder/lang/cs.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/kcfinder/lang/da.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/kcfinder/lang/de.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/kcfinder/lang/el.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/kcfinder/lang/en.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/kcfinder/lang/es.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/kcfinder/lang/et.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/kcfinder/lang/fa.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/kcfinder/lang/fi.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/kcfinder/lang/fr.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/kcfinder/lang/he.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/kcfinder/lang/hu.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/kcfinder/lang/id.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/kcfinder/lang/it.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/kcfinder/lang/ja.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/kcfinder/lang/lt.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/kcfinder/lang/lv.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/kcfinder/lang/nl.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/kcfinder/lang/no.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/kcfinder/lang/pl.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/kcfinder/lang/pt-br.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/kcfinder/lang/pt.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/kcfinder/lang/ro.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/kcfinder/lang/ru.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/kcfinder/lang/sk.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/kcfinder/lang/sv.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/kcfinder/lang/tr.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/kcfinder/lang/uk.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/kcfinder/lang/vi.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/kcfinder/lang/zh-cn.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/kcfinder/lib/.htaccess" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/kcfinder/lib/class_fastImage.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/kcfinder/lib/class_image.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/kcfinder/lib/class_image_gd.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/kcfinder/lib/class_image_gmagick.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/kcfinder/lib/class_image_imagick.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/kcfinder/lib/class_zipFolder.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/kcfinder/lib/helper_dir.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/kcfinder/lib/helper_file.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/kcfinder/lib/helper_httpCache.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/kcfinder/lib/helper_path.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/kcfinder/lib/helper_text.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/kcfinder/themes/dark/01.ui.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/kcfinder/themes/dark/02.misc.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/kcfinder/themes/dark/README" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/kcfinder/themes/dark/css.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/kcfinder/themes/dark/img/bg_transparent.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/kcfinder/themes/dark/img/files/big/..png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/kcfinder/themes/dark/img/files/big/.image.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/kcfinder/themes/dark/img/files/big/avi.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/kcfinder/themes/dark/img/files/big/bat.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/kcfinder/themes/dark/img/files/big/bmp.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/kcfinder/themes/dark/img/files/big/bz2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/kcfinder/themes/dark/img/files/big/ccd.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/kcfinder/themes/dark/img/files/big/cgi.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/kcfinder/themes/dark/img/files/big/com.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/kcfinder/themes/dark/img/files/big/csh.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/kcfinder/themes/dark/img/files/big/cue.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/kcfinder/themes/dark/img/files/big/deb.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/kcfinder/themes/dark/img/files/big/dll.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/kcfinder/themes/dark/img/files/big/doc.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/kcfinder/themes/dark/img/files/big/docx.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/kcfinder/themes/dark/img/files/big/exe.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/kcfinder/themes/dark/img/files/big/fla.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/kcfinder/themes/dark/img/files/big/flv.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/kcfinder/themes/dark/img/files/big/fon.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/kcfinder/themes/dark/img/files/big/gif.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/kcfinder/themes/dark/img/files/big/gz.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/kcfinder/themes/dark/img/files/big/htm.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/kcfinder/themes/dark/img/files/big/html.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/kcfinder/themes/dark/img/files/big/ini.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/kcfinder/themes/dark/img/files/big/iso.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/kcfinder/themes/dark/img/files/big/jar.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/kcfinder/themes/dark/img/files/big/java.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/kcfinder/themes/dark/img/files/big/jpeg.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/kcfinder/themes/dark/img/files/big/jpg.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/kcfinder/themes/dark/img/files/big/js.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/kcfinder/themes/dark/img/files/big/mds.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/kcfinder/themes/dark/img/files/big/mdx.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/kcfinder/themes/dark/img/files/big/mid.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/kcfinder/themes/dark/img/files/big/midi.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/kcfinder/themes/dark/img/files/big/mkv.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/kcfinder/themes/dark/img/files/big/mov.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/kcfinder/themes/dark/img/files/big/mp3.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/kcfinder/themes/dark/img/files/big/mp4.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/kcfinder/themes/dark/img/files/big/mpeg.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/kcfinder/themes/dark/img/files/big/mpg.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/kcfinder/themes/dark/img/files/big/nfo.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/kcfinder/themes/dark/img/files/big/nrg.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/kcfinder/themes/dark/img/files/big/ogg.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/kcfinder/themes/dark/img/files/big/pdf.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/kcfinder/themes/dark/img/files/big/php.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/kcfinder/themes/dark/img/files/big/phps.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/kcfinder/themes/dark/img/files/big/pl.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/kcfinder/themes/dark/img/files/big/pm.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/kcfinder/themes/dark/img/files/big/png.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/kcfinder/themes/dark/img/files/big/ppt.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/kcfinder/themes/dark/img/files/big/pptx.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/kcfinder/themes/dark/img/files/big/psd.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/kcfinder/themes/dark/img/files/big/qt.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/kcfinder/themes/dark/img/files/big/rar.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/kcfinder/themes/dark/img/files/big/rpm.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/kcfinder/themes/dark/img/files/big/rtf.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/kcfinder/themes/dark/img/files/big/sh.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/kcfinder/themes/dark/img/files/big/sql.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/kcfinder/themes/dark/img/files/big/srt.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/kcfinder/themes/dark/img/files/big/sub.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/kcfinder/themes/dark/img/files/big/swf.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/kcfinder/themes/dark/img/files/big/tgz.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/kcfinder/themes/dark/img/files/big/tif.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/kcfinder/themes/dark/img/files/big/tiff.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/kcfinder/themes/dark/img/files/big/torrent.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/kcfinder/themes/dark/img/files/big/ttf.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/kcfinder/themes/dark/img/files/big/txt.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/kcfinder/themes/dark/img/files/big/wav.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/kcfinder/themes/dark/img/files/big/wma.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/kcfinder/themes/dark/img/files/big/xls.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/kcfinder/themes/dark/img/files/big/xlsx.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/kcfinder/themes/dark/img/files/big/zip.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/kcfinder/themes/dark/img/files/small/..png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/kcfinder/themes/dark/img/files/small/.image.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/kcfinder/themes/dark/img/files/small/avi.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/kcfinder/themes/dark/img/files/small/bat.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/kcfinder/themes/dark/img/files/small/bmp.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/kcfinder/themes/dark/img/files/small/bz2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/kcfinder/themes/dark/img/files/small/ccd.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/kcfinder/themes/dark/img/files/small/cgi.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/kcfinder/themes/dark/img/files/small/com.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/kcfinder/themes/dark/img/files/small/csh.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/kcfinder/themes/dark/img/files/small/cue.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/kcfinder/themes/dark/img/files/small/deb.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/kcfinder/themes/dark/img/files/small/dll.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/kcfinder/themes/dark/img/files/small/doc.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/kcfinder/themes/dark/img/files/small/docx.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/kcfinder/themes/dark/img/files/small/exe.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/kcfinder/themes/dark/img/files/small/fla.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/kcfinder/themes/dark/img/files/small/flv.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/kcfinder/themes/dark/img/files/small/fon.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/kcfinder/themes/dark/img/files/small/gif.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/kcfinder/themes/dark/img/files/small/gz.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/kcfinder/themes/dark/img/files/small/htm.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/kcfinder/themes/dark/img/files/small/html.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/kcfinder/themes/dark/img/files/small/ini.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/kcfinder/themes/dark/img/files/small/iso.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/kcfinder/themes/dark/img/files/small/jar.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/kcfinder/themes/dark/img/files/small/java.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/kcfinder/themes/dark/img/files/small/jpeg.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/kcfinder/themes/dark/img/files/small/jpg.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/kcfinder/themes/dark/img/files/small/js.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/kcfinder/themes/dark/img/files/small/mds.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/kcfinder/themes/dark/img/files/small/mdx.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/kcfinder/themes/dark/img/files/small/mid.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/kcfinder/themes/dark/img/files/small/midi.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/kcfinder/themes/dark/img/files/small/mkv.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/kcfinder/themes/dark/img/files/small/mov.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/kcfinder/themes/dark/img/files/small/mp3.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/kcfinder/themes/dark/img/files/small/mp4.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/kcfinder/themes/dark/img/files/small/mpeg.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/kcfinder/themes/dark/img/files/small/mpg.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/kcfinder/themes/dark/img/files/small/nfo.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/kcfinder/themes/dark/img/files/small/nrg.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/kcfinder/themes/dark/img/files/small/ogg.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/kcfinder/themes/dark/img/files/small/pdf.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/kcfinder/themes/dark/img/files/small/php.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/kcfinder/themes/dark/img/files/small/phps.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/kcfinder/themes/dark/img/files/small/pl.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/kcfinder/themes/dark/img/files/small/pm.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/kcfinder/themes/dark/img/files/small/png.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/kcfinder/themes/dark/img/files/small/ppt.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/kcfinder/themes/dark/img/files/small/pptx.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/kcfinder/themes/dark/img/files/small/psd.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/kcfinder/themes/dark/img/files/small/qt.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/kcfinder/themes/dark/img/files/small/rar.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/kcfinder/themes/dark/img/files/small/rpm.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/kcfinder/themes/dark/img/files/small/rtf.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/kcfinder/themes/dark/img/files/small/sh.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/kcfinder/themes/dark/img/files/small/sql.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/kcfinder/themes/dark/img/files/small/srt.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/kcfinder/themes/dark/img/files/small/sub.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/kcfinder/themes/dark/img/files/small/swf.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/kcfinder/themes/dark/img/files/small/tgz.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/kcfinder/themes/dark/img/files/small/tif.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/kcfinder/themes/dark/img/files/small/tiff.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/kcfinder/themes/dark/img/files/small/torrent.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/kcfinder/themes/dark/img/files/small/ttf.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/kcfinder/themes/dark/img/files/small/txt.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/kcfinder/themes/dark/img/files/small/wav.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/kcfinder/themes/dark/img/files/small/wma.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/kcfinder/themes/dark/img/files/small/xls.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/kcfinder/themes/dark/img/files/small/xlsx.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/kcfinder/themes/dark/img/files/small/zip.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/kcfinder/themes/dark/img/icons/about.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/kcfinder/themes/dark/img/icons/clipboard-add.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/kcfinder/themes/dark/img/icons/clipboard-clear.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/kcfinder/themes/dark/img/icons/clipboard.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/kcfinder/themes/dark/img/icons/copy.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/kcfinder/themes/dark/img/icons/delete.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/kcfinder/themes/dark/img/icons/download.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/kcfinder/themes/dark/img/icons/folder-new.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/kcfinder/themes/dark/img/icons/maximize.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/kcfinder/themes/dark/img/icons/move.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/kcfinder/themes/dark/img/icons/refresh.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/kcfinder/themes/dark/img/icons/rename.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/kcfinder/themes/dark/img/icons/select.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/kcfinder/themes/dark/img/icons/settings.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/kcfinder/themes/dark/img/icons/upload.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/kcfinder/themes/dark/img/icons/view.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/kcfinder/themes/dark/img/kcf_logo.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/kcfinder/themes/dark/img/loading.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/kcfinder/themes/dark/img/tree/denied.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/kcfinder/themes/dark/img/tree/folder.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/kcfinder/themes/dark/img/tree/minus.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/kcfinder/themes/dark/img/tree/plus.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/kcfinder/themes/dark/img/ui-icons_black.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/kcfinder/themes/dark/img/ui-icons_grey.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/kcfinder/themes/dark/img/ui-icons_white.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/kcfinder/themes/dark/init.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/kcfinder/themes/dark/js.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/kcfinder/themes/default/01.ui.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/kcfinder/themes/default/02.misc.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/kcfinder/themes/default/README" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/kcfinder/themes/default/css.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/kcfinder/themes/default/img/bg_transparent.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/kcfinder/themes/default/img/files/big/..png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/kcfinder/themes/default/img/files/big/.image.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/kcfinder/themes/default/img/files/big/avi.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/kcfinder/themes/default/img/files/big/bat.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/kcfinder/themes/default/img/files/big/bmp.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/kcfinder/themes/default/img/files/big/bz2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/kcfinder/themes/default/img/files/big/ccd.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/kcfinder/themes/default/img/files/big/cgi.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/kcfinder/themes/default/img/files/big/com.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/kcfinder/themes/default/img/files/big/csh.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/kcfinder/themes/default/img/files/big/cue.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/kcfinder/themes/default/img/files/big/deb.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/kcfinder/themes/default/img/files/big/dll.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/kcfinder/themes/default/img/files/big/doc.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/kcfinder/themes/default/img/files/big/docx.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/kcfinder/themes/default/img/files/big/exe.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/kcfinder/themes/default/img/files/big/fla.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/kcfinder/themes/default/img/files/big/flv.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/kcfinder/themes/default/img/files/big/fon.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/kcfinder/themes/default/img/files/big/gif.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/kcfinder/themes/default/img/files/big/gz.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/kcfinder/themes/default/img/files/big/htm.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/kcfinder/themes/default/img/files/big/html.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/kcfinder/themes/default/img/files/big/ini.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/kcfinder/themes/default/img/files/big/iso.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/kcfinder/themes/default/img/files/big/jar.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/kcfinder/themes/default/img/files/big/java.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/kcfinder/themes/default/img/files/big/jpeg.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/kcfinder/themes/default/img/files/big/jpg.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/kcfinder/themes/default/img/files/big/js.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/kcfinder/themes/default/img/files/big/mds.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/kcfinder/themes/default/img/files/big/mdx.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/kcfinder/themes/default/img/files/big/mid.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/kcfinder/themes/default/img/files/big/midi.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/kcfinder/themes/default/img/files/big/mkv.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/kcfinder/themes/default/img/files/big/mov.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/kcfinder/themes/default/img/files/big/mp3.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/kcfinder/themes/default/img/files/big/mp4.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/kcfinder/themes/default/img/files/big/mpeg.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/kcfinder/themes/default/img/files/big/mpg.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/kcfinder/themes/default/img/files/big/nfo.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/kcfinder/themes/default/img/files/big/nrg.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/kcfinder/themes/default/img/files/big/ogg.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/kcfinder/themes/default/img/files/big/pdf.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/kcfinder/themes/default/img/files/big/php.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/kcfinder/themes/default/img/files/big/phps.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/kcfinder/themes/default/img/files/big/pl.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/kcfinder/themes/default/img/files/big/pm.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/kcfinder/themes/default/img/files/big/png.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/kcfinder/themes/default/img/files/big/ppt.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/kcfinder/themes/default/img/files/big/pptx.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/kcfinder/themes/default/img/files/big/psd.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/kcfinder/themes/default/img/files/big/qt.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/kcfinder/themes/default/img/files/big/rar.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/kcfinder/themes/default/img/files/big/rpm.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/kcfinder/themes/default/img/files/big/rtf.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/kcfinder/themes/default/img/files/big/sh.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/kcfinder/themes/default/img/files/big/sql.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/kcfinder/themes/default/img/files/big/srt.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/kcfinder/themes/default/img/files/big/sub.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/kcfinder/themes/default/img/files/big/swf.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/kcfinder/themes/default/img/files/big/tgz.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/kcfinder/themes/default/img/files/big/tif.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/kcfinder/themes/default/img/files/big/tiff.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/kcfinder/themes/default/img/files/big/torrent.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/kcfinder/themes/default/img/files/big/ttf.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/kcfinder/themes/default/img/files/big/txt.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/kcfinder/themes/default/img/files/big/wav.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/kcfinder/themes/default/img/files/big/wma.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/kcfinder/themes/default/img/files/big/xls.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/kcfinder/themes/default/img/files/big/xlsx.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/kcfinder/themes/default/img/files/big/zip.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/kcfinder/themes/default/img/files/small/..png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/kcfinder/themes/default/img/files/small/.image.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/kcfinder/themes/default/img/files/small/avi.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/kcfinder/themes/default/img/files/small/bat.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/kcfinder/themes/default/img/files/small/bmp.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/kcfinder/themes/default/img/files/small/bz2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/kcfinder/themes/default/img/files/small/ccd.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/kcfinder/themes/default/img/files/small/cgi.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/kcfinder/themes/default/img/files/small/com.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/kcfinder/themes/default/img/files/small/csh.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/kcfinder/themes/default/img/files/small/cue.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/kcfinder/themes/default/img/files/small/deb.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/kcfinder/themes/default/img/files/small/dll.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/kcfinder/themes/default/img/files/small/doc.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/kcfinder/themes/default/img/files/small/docx.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/kcfinder/themes/default/img/files/small/exe.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/kcfinder/themes/default/img/files/small/fla.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/kcfinder/themes/default/img/files/small/flv.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/kcfinder/themes/default/img/files/small/fon.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/kcfinder/themes/default/img/files/small/gif.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/kcfinder/themes/default/img/files/small/gz.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/kcfinder/themes/default/img/files/small/htm.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/kcfinder/themes/default/img/files/small/html.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/kcfinder/themes/default/img/files/small/ini.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/kcfinder/themes/default/img/files/small/iso.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/kcfinder/themes/default/img/files/small/jar.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/kcfinder/themes/default/img/files/small/java.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/kcfinder/themes/default/img/files/small/jpeg.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/kcfinder/themes/default/img/files/small/jpg.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/kcfinder/themes/default/img/files/small/js.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/kcfinder/themes/default/img/files/small/mds.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/kcfinder/themes/default/img/files/small/mdx.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/kcfinder/themes/default/img/files/small/mid.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/kcfinder/themes/default/img/files/small/midi.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/kcfinder/themes/default/img/files/small/mkv.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/kcfinder/themes/default/img/files/small/mov.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/kcfinder/themes/default/img/files/small/mp3.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/kcfinder/themes/default/img/files/small/mp4.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/kcfinder/themes/default/img/files/small/mpeg.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/kcfinder/themes/default/img/files/small/mpg.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/kcfinder/themes/default/img/files/small/nfo.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/kcfinder/themes/default/img/files/small/nrg.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/kcfinder/themes/default/img/files/small/ogg.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/kcfinder/themes/default/img/files/small/pdf.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/kcfinder/themes/default/img/files/small/php.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/kcfinder/themes/default/img/files/small/phps.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/kcfinder/themes/default/img/files/small/pl.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/kcfinder/themes/default/img/files/small/pm.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/kcfinder/themes/default/img/files/small/png.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/kcfinder/themes/default/img/files/small/ppt.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/kcfinder/themes/default/img/files/small/pptx.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/kcfinder/themes/default/img/files/small/psd.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/kcfinder/themes/default/img/files/small/qt.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/kcfinder/themes/default/img/files/small/rar.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/kcfinder/themes/default/img/files/small/rpm.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/kcfinder/themes/default/img/files/small/rtf.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/kcfinder/themes/default/img/files/small/sh.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/kcfinder/themes/default/img/files/small/sql.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/kcfinder/themes/default/img/files/small/srt.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/kcfinder/themes/default/img/files/small/sub.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/kcfinder/themes/default/img/files/small/swf.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/kcfinder/themes/default/img/files/small/tgz.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/kcfinder/themes/default/img/files/small/tif.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/kcfinder/themes/default/img/files/small/tiff.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/kcfinder/themes/default/img/files/small/torrent.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/kcfinder/themes/default/img/files/small/ttf.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/kcfinder/themes/default/img/files/small/txt.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/kcfinder/themes/default/img/files/small/wav.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/kcfinder/themes/default/img/files/small/wma.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/kcfinder/themes/default/img/files/small/xls.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/kcfinder/themes/default/img/files/small/xlsx.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/kcfinder/themes/default/img/files/small/zip.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/kcfinder/themes/default/img/icons/about.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/kcfinder/themes/default/img/icons/clipboard-add.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/kcfinder/themes/default/img/icons/clipboard-clear.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/kcfinder/themes/default/img/icons/clipboard.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/kcfinder/themes/default/img/icons/copy.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/kcfinder/themes/default/img/icons/delete.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/kcfinder/themes/default/img/icons/download.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/kcfinder/themes/default/img/icons/folder-new.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/kcfinder/themes/default/img/icons/maximize.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/kcfinder/themes/default/img/icons/move.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/kcfinder/themes/default/img/icons/refresh.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/kcfinder/themes/default/img/icons/rename.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/kcfinder/themes/default/img/icons/select.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/kcfinder/themes/default/img/icons/settings.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/kcfinder/themes/default/img/icons/upload.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/kcfinder/themes/default/img/icons/view.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/kcfinder/themes/default/img/kcf_logo.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/kcfinder/themes/default/img/loading.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/kcfinder/themes/default/img/tree/denied.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/kcfinder/themes/default/img/tree/folder.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/kcfinder/themes/default/img/tree/minus.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/kcfinder/themes/default/img/tree/plus.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/kcfinder/themes/default/img/ui-icons_black.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/kcfinder/themes/default/img/ui-icons_white.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/kcfinder/themes/default/init.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/kcfinder/themes/default/js.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/kcfinder/tpl/.htaccess" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/kcfinder/tpl/tpl_browser.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/kcfinder/tpl/tpl_css.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/kcfinder/tpl/tpl_javascript.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/kcfinder/upload.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/lightbox/images/1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/lightbox/images/1_sm.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/lightbox/images/2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/lightbox/images/2_sm.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/lightbox/images/3.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/lightbox/images/3_sm.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/lightbox/images/4.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/lightbox/images/4_sm.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/lightbox/images/blank.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/lightbox/images/loading.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/lightbox/images/next.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/lightbox/images/prev.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/lightbox/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/lightbox/jquery-lightbox.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/lightbox/scripts/jquery-1.4.2.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/lightbox/scripts/jquery-1.4.2.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/lightbox/scripts/jquery.color.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/lightbox/scripts/jquery.color.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/lightbox/scripts/jquery.lightbox.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/lightbox/scripts/jquery.lightbox.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/modules/lightbox/подключение.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/view/admin/articleCatalogAdmin.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/view/editor/aboutMeEdit.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/view/editor/aboutMePageEdit.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/view/editor/articleCreate.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/view/editor/articleEdit.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/SDK/Classes/CollectionMaker.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/SDK/Classes/ModelObject.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/SDK/Classes/ModelObject.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/controllers/ArticleController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/ArticleController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/controllers/MainController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/MainController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/core/Model.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/core/Model.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/core/app.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/core/app.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/core/ModelNonStatic.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/core/ModelNonStatic.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/core/router.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/core/router.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/libs/helpers.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/libs/helpers.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cache/3c523d71c76199e0d7130021942a8929ef9a9fc4.php" beforeDir="false" afterPath="$PROJECT_DIR$/cache/3c523d71c76199e0d7130021942a8929ef9a9fc4.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cache/4cfcc17e10e66cb42fdb15d776db393741fb8060.php" beforeDir="false" afterPath="$PROJECT_DIR$/cache/4cfcc17e10e66cb42fdb15d776db393741fb8060.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cache/deff6b2091be5c265e2d6b002dc5fa3525d65a40.php" beforeDir="false" afterPath="$PROJECT_DIR$/cache/deff6b2091be5c265e2d6b002dc5fa3525d65a40.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cache/f6d8e33541aa4310d88b5f307fe3f80bd19a422d.php" beforeDir="false" afterPath="$PROJECT_DIR$/cache/f6d8e33541aa4310d88b5f307fe3f80bd19a422d.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/const.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/const.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/routes.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/routes.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/Article/articleCatalog.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/view/Article/articleCatalog.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/Article/articleView.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/view/Article/articleView.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/Main/main.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/view/Main/main.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/layouts/app.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/view/layouts/app.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/layouts/header.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/view/layouts/header.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/layouts/layout.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/view/layouts/layout.blade.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -70,19 +905,10 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/routes/routes.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="578">
-              <caret line="34" column="101" lean-forward="true" selection-start-line="34" selection-start-column="90" selection-end-line="34" selection-end-column="104" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/controllers/AdminController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="667">
-              <caret line="57" column="24" lean-forward="true" selection-start-line="57" selection-start-column="24" selection-end-line="57" selection-end-column="24" />
+            <state relative-caret-position="714">
+              <caret line="53" column="5" selection-start-line="53" selection-start-column="5" selection-end-line="53" selection-end-column="5" />
               <folding>
                 <element signature="e#31#55#0#PHP" expanded="true" />
               </folding>
@@ -91,10 +917,43 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/SDK/Classes/ModelObject.php">
+        <entry file="file://$PROJECT_DIR$/view/admin/articleCatalogAdmin.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="595">
-              <caret line="35" column="57" selection-start-line="35" selection-start-column="57" selection-end-line="35" selection-end-column="57" />
+            <state relative-caret-position="296">
+              <caret line="49" column="61" selection-start-line="49" selection-start-column="61" selection-end-line="49" selection-end-column="61" />
+              <folding>
+                <element signature="e#2419#2480#0#HTML" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/routes/routes.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="633">
+              <caret line="41" column="15" selection-start-line="41" selection-start-column="15" selection-end-line="41" selection-end-column="28" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/controllers/MainController.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="255">
+              <caret line="15" column="42" selection-start-line="15" selection-start-column="42" selection-end-line="15" selection-end-column="42" />
+              <folding>
+                <element signature="e#31#55#0#PHP" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/core/router.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="391">
+              <caret line="23" column="9" selection-start-line="23" selection-start-column="9" selection-end-line="23" selection-end-column="9" />
             </state>
           </provider>
         </entry>
@@ -102,8 +961,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/core/Model.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="51">
-              <caret line="3" selection-start-line="3" selection-end-line="3" />
+            <state relative-caret-position="-1169">
+              <caret line="109" column="15" selection-start-line="108" selection-start-column="15" selection-end-line="109" selection-end-column="15" />
               <folding>
                 <element signature="e#25#58#0#PHP" expanded="true" />
               </folding>
@@ -114,11 +973,41 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/core/ModelNonStatic.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="379">
-              <caret line="213" column="13" lean-forward="true" selection-start-line="213" selection-start-column="13" selection-end-line="213" selection-end-column="13" />
+            <state relative-caret-position="245">
+              <caret line="129" column="28" selection-start-line="129" selection-start-column="28" selection-end-line="129" selection-end-column="28" />
               <folding>
                 <element signature="e#24#57#0#PHP" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/controllers/ArticleController.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="767">
+              <caret line="129" column="85" selection-start-line="129" selection-start-column="85" selection-end-line="129" selection-end-column="85" />
+              <folding>
+                <element signature="e#113#137#0#PHP" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/view/editor/articleEdit.blade.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="850">
+              <caret line="50" column="43" selection-start-line="50" selection-start-column="43" selection-end-line="50" selection-end-column="43" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/SDK/Classes/ModelObject.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="746">
+              <caret line="70" column="5" lean-forward="true" selection-start-line="70" selection-start-column="5" selection-end-line="70" selection-end-column="5" />
             </state>
           </provider>
         </entry>
@@ -145,11 +1034,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/app/core/View.php" />
-        <option value="$PROJECT_DIR$/view/layout/dsf.php" />
-        <option value="$PROJECT_DIR$/view/layout/DFSDF.php" />
-        <option value="$PROJECT_DIR$/view/Main/about.php" />
-        <option value="$PROJECT_DIR$/view/layout/styles.php" />
         <option value="$PROJECT_DIR$/view/layout/scripts.php" />
         <option value="$PROJECT_DIR$/view/Article/articleView.php" />
         <option value="$PROJECT_DIR$/view/Main/Contacts.php" />
@@ -176,11 +1060,9 @@
         <option value="$PROJECT_DIR$/composer.json" />
         <option value="$PROJECT_DIR$/view/auth/register.blade.php" />
         <option value="$PROJECT_DIR$/app/controllers/Mail/Mail.php" />
-        <option value="$PROJECT_DIR$/app/controllers/MainController.php" />
         <option value="$PROJECT_DIR$/view/auth/login.blade.php" />
         <option value="$PROJECT_DIR$/view/layouts/header.blade.php" />
         <option value="$PROJECT_DIR$/app/controllers/AuthController.php" />
-        <option value="$PROJECT_DIR$/app/core/router.php" />
         <option value="$PROJECT_DIR$/view/Main/main.blade.php" />
         <option value="$PROJECT_DIR$/view/comments/comment.blade.php" />
         <option value="$PROJECT_DIR$/view/comments/comments_block.blade.php" />
@@ -189,13 +1071,20 @@
         <option value="$PROJECT_DIR$/app/libs/helpers.php" />
         <option value="$PROJECT_DIR$/app/core/app.php" />
         <option value="$PROJECT_DIR$/app/controllers/uLoginController.php" />
-        <option value="$PROJECT_DIR$/routes/routes.php" />
         <option value="$PROJECT_DIR$/app/SDK/Classes/CollectionObject.php" />
-        <option value="$PROJECT_DIR$/app/SDK/Classes/ModelObject.php" />
+        <option value="$PROJECT_DIR$/app/controllers/AdminController.php" />
+        <option value="$PROJECT_DIR$/view/admin/articleCatalogAdmin.blade.php" />
+        <option value="$PROJECT_DIR$/routes/routes.php" />
+        <option value="$PROJECT_DIR$/app/core/ModelNonStatic.php" />
+        <option value="$PROJECT_DIR$/view/editor/aboutMeEdit.blade.php" />
+        <option value="$PROJECT_DIR$/view/editor/aboutMePageEdit.blade.php" />
+        <option value="$PROJECT_DIR$/view/editor/articleCreate.blade.php" />
+        <option value="$PROJECT_DIR$/view/editor/articleEdit.blade.php" />
+        <option value="$PROJECT_DIR$/app/core/router.php" />
         <option value="$PROJECT_DIR$/app/controllers/ArticleController.php" />
         <option value="$PROJECT_DIR$/app/core/Model.php" />
-        <option value="$PROJECT_DIR$/app/controllers/AdminController.php" />
-        <option value="$PROJECT_DIR$/app/core/ModelNonStatic.php" />
+        <option value="$PROJECT_DIR$/app/controllers/MainController.php" />
+        <option value="$PROJECT_DIR$/app/SDK/Classes/ModelObject.php" />
       </list>
     </option>
   </component>
@@ -290,18 +1179,6 @@
               <item name="Framework" type="b2602c69:ProjectViewProjectNode" />
               <item name="Framework" type="462c0819:PsiDirectoryNode" />
               <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="libs" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Framework" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Framework" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="models" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Framework" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Framework" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
               <item name="SDK" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -314,7 +1191,42 @@
             <path>
               <item name="Framework" type="b2602c69:ProjectViewProjectNode" />
               <item name="Framework" type="462c0819:PsiDirectoryNode" />
+              <item name="public" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Framework" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Framework" type="462c0819:PsiDirectoryNode" />
+              <item name="public" type="462c0819:PsiDirectoryNode" />
+              <item name="storage" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Framework" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Framework" type="462c0819:PsiDirectoryNode" />
+              <item name="public" type="462c0819:PsiDirectoryNode" />
+              <item name="storage" type="462c0819:PsiDirectoryNode" />
+              <item name="uploads" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Framework" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Framework" type="462c0819:PsiDirectoryNode" />
               <item name="routes" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Framework" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Framework" type="462c0819:PsiDirectoryNode" />
+              <item name="view" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Framework" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Framework" type="462c0819:PsiDirectoryNode" />
+              <item name="view" type="462c0819:PsiDirectoryNode" />
+              <item name="admin" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Framework" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Framework" type="462c0819:PsiDirectoryNode" />
+              <item name="view" type="462c0819:PsiDirectoryNode" />
+              <item name="editor" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -337,8 +1249,8 @@
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/public/modules" />
-      <recent name="$PROJECT_DIR$/public" />
       <recent name="$PROJECT_DIR$/view" />
+      <recent name="$PROJECT_DIR$/public" />
       <recent name="$PROJECT_DIR$/view/Main" />
       <recent name="$PROJECT_DIR$" />
     </key>
@@ -460,7 +1372,7 @@
       <workItem from="1553237678542" duration="4504000" />
       <workItem from="1553242502211" duration="83342000" />
       <workItem from="1553512151968" duration="2646000" />
-      <workItem from="1553514889194" duration="40932000" />
+      <workItem from="1553514889194" duration="46670000" />
     </task>
     <task id="LOCAL-00001" summary="Version 0.2">
       <created>1553436399973</created>
@@ -476,11 +1388,18 @@
       <option name="project" value="LOCAL" />
       <updated>1553525349662</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Version 0.3.5">
+      <created>1553589938869</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1553589938869</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="176354000" />
+    <option name="totallyTimeSpent" value="182092000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1920" height="993" extended-state="0" />
@@ -516,7 +1435,8 @@
     <option name="CHECK_NEW_TODO" value="false" />
     <MESSAGE value="Version 0.2" />
     <MESSAGE value="Version 0.3" />
-    <option name="LAST_COMMIT_MESSAGE" value="Version 0.3" />
+    <MESSAGE value="Version 0.3.5" />
+    <option name="LAST_COMMIT_MESSAGE" value="Version 0.3.5" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -526,100 +1446,30 @@
           <line>3</line>
           <option name="timeStamp" value="31" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/app/core/router.php</url>
+          <line>40</line>
+          <option name="timeStamp" value="74" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/app/core/router.php</url>
+          <line>44</line>
+          <option name="timeStamp" value="75" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/app/core/router.php</url>
+          <line>43</line>
+          <option name="timeStamp" value="76" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/app/core/router.php</url>
+          <line>46</line>
+          <option name="timeStamp" value="77" />
+        </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/vendor/jenssegers/blade/src/Blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="425">
-          <caret line="102" selection-start-line="102" selection-end-line="102" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/view/layouts/aboutMe.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-413">
-          <caret line="30" column="35" selection-start-line="30" selection-start-column="35" selection-end-line="30" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/view/layouts/rigthColumn.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="203">
-          <caret line="111" column="91" selection-start-line="111" selection-start-column="91" selection-end-line="111" selection-end-column="91" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/storage/avatars/Hm0x4eK7mcnd0PiMWvrsWDZLT8WIG9Nau7Yj94jy.jpeg">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/view/Main/about.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="16" column="36" lean-forward="true" selection-start-line="16" selection-start-column="36" selection-end-line="16" selection-end-column="36" />
-          <folding>
-            <element signature="e#192#272#0#HTML" expanded="true" />
-            <element signature="e#709#735#0#HTML" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/view/layouts/footer.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="19" column="68" selection-start-line="19" selection-start-column="68" selection-end-line="19" selection-end-column="68" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/core/View.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" column="15" lean-forward="true" selection-start-line="6" selection-start-column="12" selection-end-line="6" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/SDK/Classes/ResultControllerAndMethodObject.php">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/core/BaseController.php">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/view/Main/contacts.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1071">
-          <caret line="63" column="34" selection-start-line="63" selection-start-column="34" selection-end-line="63" selection-end-column="34" />
-          <folding>
-            <element signature="e#180#273#0#HTML" expanded="true" />
-            <element signature="e#506#530#0#HTML" expanded="true" />
-            <element signature="e#1018#1042#0#HTML" expanded="true" />
-            <element signature="e#1140#1180#0#HTML" expanded="true" />
-            <element signature="e#1407#1428#0#HTML" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/models/about.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" column="29" selection-start-line="8" selection-start-column="29" selection-end-line="8" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/models/aboutMe.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="13" column="26" selection-start-line="13" selection-start-column="26" selection-end-line="13" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/SDK/Classes/ViewObject.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="22" column="1" lean-forward="true" selection-start-line="22" selection-start-column="1" selection-end-line="22" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="17">
@@ -748,13 +1598,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="3" selection-start-line="3" selection-end-line="3" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$APPLICATION_HOME_DIR$/plugins/php/lib/php.jar!/stubs/password/password.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="428">
@@ -769,27 +1612,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/core/app.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="31" lean-forward="true" selection-start-line="31" selection-end-line="31" />
-          <folding>
-            <element signature="e#7#23#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/controllers/uLoginController.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="96">
           <caret line="10" column="21" lean-forward="true" selection-start-line="10" selection-start-column="21" selection-end-line="10" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/core/router.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="242">
-          <caret line="31" selection-start-line="31" selection-end-line="31" />
         </state>
       </provider>
     </entry>
@@ -804,25 +1630,8 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/routes/routes.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="578">
-          <caret line="34" column="101" lean-forward="true" selection-start-line="34" selection-start-column="90" selection-end-line="34" selection-end-column="104" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/models/Categorie.php">
       <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/MainController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="19" column="7" lean-forward="true" selection-start-line="19" selection-start-column="7" selection-end-line="19" selection-end-column="7" />
-          <folding>
-            <element signature="e#31#55#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/models/Article.php">
       <provider selected="true" editor-type-id="text-editor" />
@@ -841,10 +1650,123 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/public/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" selection-start-line="6" selection-end-line="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/view/admin/articleCatalogAdmin.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="296">
+          <caret line="49" column="61" selection-start-line="49" selection-start-column="61" selection-end-line="49" selection-end-column="61" />
+          <folding>
+            <element signature="e#2419#2480#0#HTML" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/view/editor/aboutMeEdit.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="680">
+          <caret line="40" column="63" selection-start-line="40" selection-start-column="63" selection-end-line="40" selection-end-column="63" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/view/editor/aboutMePageEdit.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="378">
+          <caret line="29" column="45" lean-forward="true" selection-start-line="29" selection-start-column="45" selection-end-line="29" selection-end-column="45" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/view/editor/articleEdit.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="850">
+          <caret line="50" column="43" selection-start-line="50" selection-start-column="43" selection-end-line="50" selection-end-column="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/core/router.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="391">
+          <caret line="23" column="9" selection-start-line="23" selection-start-column="9" selection-end-line="23" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/view/editor/articleCreate.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1265">
+          <caret line="107" column="92" lean-forward="true" selection-start-line="107" selection-start-column="92" selection-end-line="107" selection-end-column="92" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/routes/routes.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="633">
+          <caret line="41" column="15" selection-start-line="41" selection-start-column="15" selection-end-line="41" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/core/app.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-132">
+          <caret line="31" lean-forward="true" selection-start-line="31" selection-end-line="31" />
+          <folding>
+            <element signature="e#7#23#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/AdminController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="714">
+          <caret line="53" column="5" selection-start-line="53" selection-start-column="5" selection-end-line="53" selection-end-column="5" />
+          <folding>
+            <element signature="e#31#55#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/images/two.jpg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/images/five.jpg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/images/author4242.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/images/profiles/1.jpg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/images/thumb/five.jpg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/images/banner/one.jpg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/images/banner/four.jpg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/storage/uploads/6Ka0QS3LOsa4dcjL7LJilPLR6K3uSBmqyrGD8jLW.jpeg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/core/ModelNonStatic.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="245">
+          <caret line="129" column="28" selection-start-line="129" selection-start-column="28" selection-end-line="129" selection-end-column="28" />
+          <folding>
+            <element signature="e#24#57#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/controllers/ArticleController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="846">
-          <caret line="59" column="16" selection-start-line="59" selection-start-column="16" selection-end-line="59" selection-end-column="16" />
+        <state relative-caret-position="767">
+          <caret line="129" column="85" selection-start-line="129" selection-start-column="85" selection-end-line="129" selection-end-column="85" />
           <folding>
             <element signature="e#113#137#0#PHP" expanded="true" />
           </folding>
@@ -853,38 +1775,28 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/core/Model.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="3" selection-start-line="3" selection-end-line="3" />
+        <state relative-caret-position="-1169">
+          <caret line="109" column="15" selection-start-line="108" selection-start-column="15" selection-end-line="109" selection-end-column="15" />
           <folding>
             <element signature="e#25#58#0#PHP" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/core/ModelNonStatic.php">
+    <entry file="file://$PROJECT_DIR$/app/controllers/MainController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="379">
-          <caret line="213" column="13" lean-forward="true" selection-start-line="213" selection-start-column="13" selection-end-line="213" selection-end-column="13" />
+        <state relative-caret-position="255">
+          <caret line="15" column="42" selection-start-line="15" selection-start-column="42" selection-end-line="15" selection-end-column="42" />
           <folding>
-            <element signature="e#24#57#0#PHP" expanded="true" />
+            <element signature="e#31#55#0#PHP" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/SDK/Classes/ModelObject.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="595">
-          <caret line="35" column="57" selection-start-line="35" selection-start-column="57" selection-end-line="35" selection-end-column="57" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/AdminController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="667">
-          <caret line="57" column="24" lean-forward="true" selection-start-line="57" selection-start-column="24" selection-end-line="57" selection-end-column="24" />
-          <folding>
-            <element signature="e#31#55#0#PHP" expanded="true" />
-          </folding>
+        <state relative-caret-position="746">
+          <caret line="70" column="5" lean-forward="true" selection-start-line="70" selection-start-column="5" selection-end-line="70" selection-end-column="5" />
         </state>
       </provider>
     </entry>
