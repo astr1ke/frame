@@ -2,13 +2,12 @@
 
 namespace Controllers;
 
-use Core\BaseController;
 use Models\about;
 use Models\aboutMe;
 use Models\Article;
 use Models\social;
 
-class AdminController extends BaseController
+class AdminController
 {
     public function aboutMeEditPost($request) {
         $aboutMe = aboutMe::find(1);
@@ -59,5 +58,9 @@ class AdminController extends BaseController
             'text'=>$request->text,
         ]);
         return redirect('/about');
+    }
+
+    public function adminPanel() {
+        return view('admin.index');
     }
 }

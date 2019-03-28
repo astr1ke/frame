@@ -16,23 +16,4 @@ class Comment extends Model
      */
     protected $guarded = [];
 
-
-    /**
-     * Связь с моделью Post
-     * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
-     */
-    public function article()
-    {
-        return $this->belongsTo(article::class);
-    }
-
-    /**
-     * Связь с моделью User
-     * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
-     */
-    public function user()
-    {
-        return $this->belongsTo(user::class);
-    }
-
 }

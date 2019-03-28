@@ -31,6 +31,10 @@
       <path value="$PROJECT_DIR$/vendor/delight-im/cookie" />
       <path value="$PROJECT_DIR$/vendor/delight-im/auth" />
       <path value="$PROJECT_DIR$/vendor/faapz/pdo" />
+      <path value="$PROJECT_DIR$/vendor/intervention/image" />
+      <path value="$PROJECT_DIR$/vendor/ralouphie/getallheaders" />
+      <path value="$PROJECT_DIR$/vendor/guzzlehttp/psr7" />
+      <path value="$PROJECT_DIR$/vendor/psr/http-message" />
     </include_path>
   </component>
   <component name="PhpInterpreters">
@@ -90,4 +94,5 @@
     </phpInfoCache>
   </component>
   <component name="PhpProjectSharedConfiguration" php_language_level="7.3" />
+  <component name="PhpRuntimeConfiguration" default_stubs_path="$PROJECT_DIR$/../OsagoBackEndLaravel" />
 </project>

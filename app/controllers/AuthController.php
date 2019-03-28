@@ -2,13 +2,12 @@
 
 namespace Controllers;
 
-use Core\BaseController;
 use Delight\Auth\EmailNotVerifiedException;
 use Delight\Auth\InvalidEmailException;
 use Delight\Auth\InvalidPasswordException;
 use Delight\Auth\TooManyRequestsException;
 
-class AuthController extends BaseController
+class AuthController
 {
     public function login() {
         return view('auth.login');

@@ -28,9 +28,9 @@ jQuery(function($){
                     type: 'POST',
                     datatype: 'JSON', //формат данных которые должен передать сервер
                     //токен указанный в шапке (meta)
-                    headers: {
-                        'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
-                    },
+                    // headers: {
+                    //     'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+                    // },
 
                     success: function(html){
                         if(html.success){
@@ -79,7 +79,8 @@ jQuery(function($){
 
                             //Если ошибка
                         } else {
-                            $('.wrap_result').css('color', 'blue').append('<br><strong>Ошибка: </strong>' + html.error.join('<br>'))
+                            console.log(html)
+                            $('.wrap_result').css('color', 'blue').append('<br><strong>Ошибка: </strong>')// + html.error.join('<br>'))
                             $('.wrap_result').delay(3000).fadeOut(1000);
                         }
                     },

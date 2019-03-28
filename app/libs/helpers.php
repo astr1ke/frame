@@ -1,5 +1,7 @@
 <?php
 
+
+
 /**
  * Удобная функция дебага
  * @param $arr
@@ -71,4 +73,30 @@ function quickRandom($length = 16)
     $pool = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
 
     return substr(str_shuffle(str_repeat($pool, 5)), 0, $length);
+}
+
+function getFullFileNameFromRequestImage($request) {
+    return $request->image['name'];// . '.' . extensionFileFormRequest($request);
+}
+
+function getTempFilePathFromRequest($request) {
+    return $request->image['tmp_name'];
+}
+
+function extensionFileFormRequest($request) {
+    $imageExtension = trim($request->image['type']);
+    $imageExtension = explode('/', $imageExtension);
+    return  array_pop($imageExtension);
+}
+
+function getPDO() {
+    $dataBaseConfig = require ROOT.'/config/DataBase.php';
+    $dataBaseConfigString = 'mysql:dbname=' . $dataBaseConfig['dbName'] . ';host=' . $dataBaseConfig['ip'] . ';port=' . $dataBaseConfig['port'] . ';charset=' . $dataBaseConfig['charset'];
+
+    return new \Delight\Db\PdoDsn($dataBaseConfigString, 'homestead', 'secret');
+}
+
+function getAuth() {
+    $db = getPDO();
+    return new \Delight\Auth\Auth($db);
 }

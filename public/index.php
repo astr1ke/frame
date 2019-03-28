@@ -1,5 +1,4 @@
 <?php
-
 //Подключение автозагрузчика
 include '../vendor/autoload.php';
 

@@ -2,11 +2,11 @@
 
 namespace Controllers;
 
-use Core\BaseController;
 use Models\about;
 use Models\Article;
 
-class MainController extends BaseController {
+class MainController
+{
 
     /**
      * Отображение Главной страницы

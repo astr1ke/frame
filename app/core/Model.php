@@ -20,8 +20,8 @@ Trait Model {
     }
 
     static function connectBD(){
-        $db_config = require ROOT.'/config/BD.php';
-        self::$mysqli = new \mysqli($db_config['ip'],$db_config['user'],$db_config['password'],$db_config['bd'],$db_config['port']);
+        $db_config = require ROOT.'/config/DataBase.php';
+        self::$mysqli = new \mysqli($db_config['ip'],$db_config['user'],$db_config['password'],$db_config['dbName'],$db_config['port']);
         self::$mysqli->query('SET charset utf8');
     }
 

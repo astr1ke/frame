@@ -12,13 +12,16 @@ class ResultControllerAndMethodObject {
 
     public $controller;
 
-    public $method;
+    public $action;
 
     public $urlNumeric;
 
-    public function __construct($controller, $method, $urlNumeric = false) {
+    public $middleware;
+
+    public function __construct($controller, $action, $middleware = null, $urlNumeric = null) {
         $this->controller = $controller;
-        $this->method = $method;
+        $this->action = $action;
         $this->urlNumeric = $urlNumeric;
+        $this->middleware = $middleware;
     }
 }

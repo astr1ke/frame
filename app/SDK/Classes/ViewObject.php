@@ -9,6 +9,8 @@
 namespace SDK\Classes;
 
 
+use Jenssegers\Blade\Blade;
+
 class ViewObject {
 
     public $viewFile;
@@ -18,6 +20,14 @@ class ViewObject {
     public function __construct($viewFile, $viewVariables) {
         $this->viewFile = $viewFile;
         $this->viewVariables = $viewVariables;
+    }
+
+    public function render($viewObject) {
+        $view = $viewObject->viewFile;
+        $variables = $viewObject->viewVariables;
+
+        $blade = new Blade(ROOT . '/resources/view', ROOT . '/cache');
+        return $blade->make($view, $variables);
     }
 
 }

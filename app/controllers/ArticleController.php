@@ -8,22 +8,22 @@
 
 namespace Controllers;
 
-use Core\BaseController;
 use Models\Article;
 use Models\Categorie;
 use Models\Comment;
+use SDK\Classes\Request;
+use SDK\Facades\Image;
 
-class ArticleController extends BaseController
+class ArticleController
 {
     public function viewArticle ($id) {
         $articleV = Article::find($id);
         $articleViews = $articleV->views;
-
         $articlesAll = Article::all();
         $articles = Article::find($id);
         $id = $articles->id;
-        $cc = count(Comment::where('article_id',$id));//->get());
-        return view('Article.articleView',['articles'=>$articles,'id'=>$id, 'cc'=>$cc, 'articlesAll'=>$articlesAll,'articleViews'=>$articleViews]);
+
+        return view('Article.articleView',['articles'=>$articles,'id'=>$id, 'articlesAll'=>$articlesAll,'articleViews'=>$articleViews]);
     }
 
     public function articleCatalogAll () {
@@ -41,7 +41,7 @@ class ArticleController extends BaseController
         return view('Article.articleCatalog', ['articles'=>$articles,'title'=>$title]);
     }
 
-    public function search ($request) {
+    public function search (Request $request) {
         $articles1 = Article::findLike("%$request->srch%", 'title','articles');//->orWhere('text','LIKE',"%$request->srch%");//->paginate(30);
         $articles2 = Article::findLike("%$request->srch%", 'text','articles');
 
@@ -99,7 +99,7 @@ class ArticleController extends BaseController
         return view('editor.articleCreate',['categories'=>$categories]);
     }
 
-    public function createPost($request){
+    public function createPost(Request $request){
 //        $this->validate($request, [
 //            'title' =>'required|max:50',
 //            'categorie_id' =>'required',
@@ -124,23 +124,23 @@ class ArticleController extends BaseController
             ]);
 
         }else {
-            echo 'eee';
-//            $path = Storage::disk('public')->put('uploads', $request->image);
-//            $path = '/storage/' . $path;
-            $path = '/storage/uploads/6Ka0QS3LOsa4dcjL7LJilPLR6K3uSBmqyrGD8jLW.jpeg';
-            echo $request->user_id . '<br>';
-            echo $request->title . '<br>';
-            echo $request->categorie_id . '<br>';
-            echo $request->text. '<br>';
+            $imageTempPath = getTempFilePathFromRequest($request);
+            $randomString = rand(1000, 9999);
+            $imageNewPath = ROOT . '/public/storage/uploads/'. $randomString . getFullFileNameFromRequestImage($request);
+
+            Image::make($imageTempPath)->resize(780,520)->save($imageNewPath);
+
+            $pathImageForMySql = '/storage/uploads/' . $randomString . getFullFileNameFromRequestImage($request);
+
             Article::create([
                 'user_id' => $request->user_id,
                 'title' => $request->title,
                 'categorie_id' => $request->categorie_id,
                 'text' => $request->text,
-                'image' => $path,
+                'image' => $pathImageForMySql,
             ]);
         }
-        //return redirect('/');
+        return redirect('/');
     }
 
     public function catalog(){
@@ -199,15 +199,21 @@ class ArticleController extends BaseController
         } else {
 
             if (isset($request->image)) {
+                $imageTempPath = getTempFilePathFromRequest($request);
+                $randomString = rand(1000, 9999);
+                $imageNewPath = ROOT . '/public/storage/uploads/'. $randomString . getFullFileNameFromRequestImage($request);
 
-//                $path = Storage::disk('public')->put('uploads', $request->image);
-//                $path = '/storage/' . $path;
+                Image::make($imageTempPath)->resize(780,520)->save($imageNewPath);
+
+                $pathImageForMySql = '/storage/uploads/' . $randomString . getFullFileNameFromRequestImage($request);
+
+
                 $article->update([
                     'user_id' => $request->user_id,
                     'title' => $request->title,
                     'categorie_id' => $request->categorie_id,
                     'text' => $request->text,
-//                    'image' => $path,
+                    'image' => $pathImageForMySql,
                 ]);
 
             } else {

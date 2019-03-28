@@ -9,7 +9,7 @@
 namespace controllers;
 
 
-class PostsController extends App
+class PostsController
 {
     public function add(){
         echo "Запущен метод Add страницы с постами";
