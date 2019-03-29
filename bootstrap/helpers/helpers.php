@@ -113,7 +113,7 @@ function extensionFileFromRequest($request) {
  * @return \Delight\Db\PdoDsn
  */
 function getPDO() {
-    $dataBaseConfig = require ROOT.'/config/DataBase.php';
+    $dataBaseConfig = require ROOT.'/config/dataBase.php';
     $dataBaseConfigString = 'mysql:dbname=' . $dataBaseConfig['dbName'] . ';host=' . $dataBaseConfig['ip'] . ';port=' . $dataBaseConfig['port'] . ';charset=' . $dataBaseConfig['charset'];
 
     return new \Delight\Db\PdoDsn($dataBaseConfigString, $dataBaseConfig['user'], $dataBaseConfig['password']);
