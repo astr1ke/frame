@@ -56,14 +56,14 @@
                                 </p>
                                 <p>
                                     <label >Категория:</label>
-                                    <select class="sel" name="categorie_id" size="1">\
+                                    <select class="sel" name="category_id" size="1">\
                                         <?php
                                             $i=0;
-                                            $articleCategorie = \Models\Categorie::find($article->categorie_id);
+                                            $articleCategory = \Models\Category::find($article->category_id);
                                         ?>
-                                                <option selected value='{{$articleCategorie->id}}'>{{$articleCategorie->name}}</option>
+                                                <option selected value='{{$articleCategory->id}}'>{{$articleCategory->name}}</option>
                                         @foreach($categories as $cat)
-                                            @if($cat != $articleCategorie)
+                                            @if($cat != $articleCategory)
                                                 <option value='{{$cat->id}}'>{{$cat->name}}</option>
                                             @endif
                                         @endforeach

@@ -1,10 +1,11 @@
 <?php
 
+
 namespace Models;
 
-class User
+class Social
 {
     use Model;
 
-    static $table = 'users';
+    static $table = 'social';
 }

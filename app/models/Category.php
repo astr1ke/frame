@@ -1,14 +1,14 @@
 <?php
 /*
- * Модель Статей.
+ * Модель Категорий.
  * В объекте $table задается имя таблицы в базе
  */
 
 namespace Models;
 
-class Article
+class Category
 {
     use Model;
 
-    static $table = 'articles';
+    static $table = 'categories';
 }

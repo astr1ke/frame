@@ -1,3 +1,0 @@
-<!--Скрипты коментариев-->
-<script type="text/javascript" src="{{asset('comments/js')}}/comment-reply.js"></script>
-<script type="text/javascript" src="{{asset('comments/js')}}/comment-scripts.js"></script>

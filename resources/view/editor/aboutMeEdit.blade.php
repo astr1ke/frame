@@ -9,7 +9,7 @@
                         <div class="main-post-area-holder">
                                 <!--Редактирование Информации Обо мне-->
                                 <?php
-                                    $oldValue = \Models\aboutMe::find(1);
+                                    $oldValue = \Models\AboutMe::find(1);
                                 ?>
                                 <form action="/admin/aboutMeEdit" method="post" enctype="multipart/form-data">
                                     @csrf
@@ -38,7 +38,7 @@
 
                             <!--Редактирование информации о соц сетях-->
                                 <?php
-                                    $oldSocial = \Models\social::find(1);
+                                    $oldSocial = \Models\Social::find(1);
                                 ?>
                                 <form action="/admin/socialEdit" method="post" enctype="multipart/form-data">
                                     @csrf

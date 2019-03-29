@@ -1,1 +1,0 @@
-@include('comments.comments_block', ['essence' => $n])

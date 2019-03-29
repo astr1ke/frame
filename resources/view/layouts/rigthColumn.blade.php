@@ -17,7 +17,7 @@
                                 <div class="swiper-wrapper">
 
                                     <?php
-                                    $articlesRecent = \Models\Article::all();//->sortByDesc('created_at');
+                                    $articlesRecent = \Models\Article::all()->reverse();
                                     $i = 1;
                                     ?>
                                     @foreach($articlesRecent as $articleRecent)
@@ -61,7 +61,7 @@
                     </div>
                     <div class="widget-extra-info-holder">
                         <?php
-                        $popArticles = \Models\Article::all();//->sortByDesc('views');
+                        $popArticles = \Models\Article::all()->reverse();
                         $i = 1;
                         ?>
                         @foreach($popArticles as $popArticle)
@@ -90,22 +90,12 @@
                     </div>
                 </div>
             </div>
-            <!--<div class="widget widget-facebook-page-box wow fadeInUp">
-                <div class="widget-content">
-                    <div class="widget-title">
-                        <h2>Facebook page</h2>
-                    </div>
-                    <div class="widget-extra-info-holder">
-                        <iframe src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Fsparklewpthemes%2F&tabs=timeline&width=340&height=500&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true&appId=298774560483441" width="300" height="500" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true"></iframe>
-                    </div>
-                </div>
-            </div>-->
 
             <!--Подключаем колонку категории новостей-->
             <div class="widget widget-category wow fadeInUp">
                 <div class="widget-content">
                     <?php
-                    $categoriesColumn = \Models\Categorie::all();
+                    $categories = \Models\Category::all();
                     ?>
                     <div class="widget-title">
                         <h2>Все категории</h2>
@@ -114,13 +104,13 @@
                         <ul class="widget-category-listings">
                             <li><a href="/">Все категории</a></li>
 
-                            @foreach($categoriesColumn as $cat)
+                            @foreach($categories as $categoryColumn)
                                 <?php
-                                $c = \Models\Article::where('categorie_id', $cat->id);//->get();
-                                $c = count($c);
+                                $countColumn = \Models\Article::where('category_id', $categoryColumn->id);
+                                $countColumn = count($countColumn);
                                 ?>
-                                @if($c>0)
-                                    <li><a href="/categorie/{{$cat->id}}">{{$cat->name}}</a></li>
+                                @if($countColumn > 0)
+                                    <li><a href="/articleCatalog/category/{{$categoryColumn->id}}">{{$categoryColumn->name}}</a></li>
                                 @endif
                             @endforeach
 

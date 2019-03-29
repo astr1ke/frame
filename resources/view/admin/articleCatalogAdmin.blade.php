@@ -43,7 +43,7 @@
                                 @foreach($articles as $article)
                                     <div class="articleCatalog">
                                         <?php
-                                        $cat = \Models\Categorie::find($article->categorie_id);
+                                        $cat = \Models\Category::find($article->category_id);
                                         $cat = $cat->name;
                                         $us = \Models\User::find($article->user_id);
                                         if(isset($us)){

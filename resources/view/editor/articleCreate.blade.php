@@ -56,7 +56,7 @@
                                     </p>
                                     <p>
                                         <label >Категория:</label>
-                                        <select class="sel" name="categorie_id" size="1">\
+                                        <select class="sel" name="category_id" size="1">\
                                             <?php $i=0 ?>
                                             @foreach($categories as $cat)
                                                 @if($i==0)

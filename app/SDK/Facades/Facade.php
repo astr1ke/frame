@@ -1,13 +1,6 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: astri
- * Date: 2019-03-27
- * Time: 15:00
- */
 
 namespace SDK\Facades;
-
 
 abstract class Facade
 {

@@ -2,31 +2,34 @@
 
 namespace Controllers;
 
-use Models\about;
+use Models\About;
 use Models\Article;
 
 class MainController
 {
-
     /**
-     * Отображение Главной страницы
-     * @return \Core\View
+     * Главная страница
+     * @return \SDK\Classes\ViewObject
      */
-    public function index () {
+    public function index() {
         $articles = Article::All()->reverse();
-        return view('Main.main',['articles' => $articles]);
+        return view('main.index',['articles' => $articles]);
     }
 
     /**
-     * Обображение страницы обо мне
-     * @return
+     * Страница обо мне
+     * @return \SDK\Classes\ViewObject
      */
-    public function about () {
-        $aboutMe = about::find(1);
-        return view('Main.about', ['aboutMe' => $aboutMe]);
+    public function about() {
+        $aboutMe = About::find(1);
+        return view('main.about', ['aboutMe' => $aboutMe]);
     }
 
-    public function contacts () {
-        return view('Main.contacts');
+    /**
+     * Страница с контактами
+     * @return \SDK\Classes\ViewObject
+     */
+    public function contacts() {
+        return view('main.contacts');
     }
 }

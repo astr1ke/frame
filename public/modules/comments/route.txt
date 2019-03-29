@@ -1,3 +1,0 @@
-//Роут для комментариев
-Route::post('comment', 'CommentController@store')->name('comment');
-Route::any('commentDelete', 'CommentController@delete');

@@ -90,7 +90,7 @@
                         </tr>
                         </thead>
                         <tbody>
-                        <?php $social =\Models\social::all(); $n = 0;?>
+                        <?php $social =\Models\Social::all(); $n = 0;?>
                         @foreach($social as $soc)
                             <tr>
                                 <td>{{$soc->inst}}</td>

@@ -58,10 +58,10 @@
                             <li><a style="font-size: 15px">По категориям</a>
                                 <ul>
                                     <?php
-                                    $categoriesAll = \Models\Categorie::all();
+                                    $categoriesAll = \Models\Category::all();
                                     ?>
                                     @foreach($categoriesAll as $cat)
-                                        <li><a href="/articleCatalog/categorie/{{$cat->id}}">{{$cat->name}}</a></li>
+                                        <li><a href="/articleCatalog/category/{{$cat->id}}">{{$cat->name}}</a></li>
                                     @endforeach
 
                                 </ul>
@@ -72,7 +72,7 @@
                     </li>
                     <li><a style="font-size: 15px" href="/contacts">Обратная связь</a></li>
 
-                    @if ($auth->isLoggedIn() and $auth->getRoles()[1]=='ADMIN')
+                    @if ($auth->isLoggedIn() and $auth->hasRole(\Delight\Auth\Role::ADMIN))
                         <li><a style="font-size: 15px" href="/articleCreate">Добавить статью</a></li>
                     @else
                         <li><a style="font-size: 15px" href="">Предложить статью</a></li>

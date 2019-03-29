@@ -2,9 +2,9 @@
 
 namespace Models;
 
-class User
+class About
 {
     use Model;
 
-    static $table = 'users';
+    static $table = 'about_me';
 }

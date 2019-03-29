@@ -1,7 +1,7 @@
 <div class="widget widget-about-me wow fadeInUp">
     <div class="widget-content">
         <?php
-        $aboutMe = \Models\aboutMe::find(1);
+        $aboutMe = \Models\AboutMe::find(1);
         ?>
         <div class="widget-about-me-profile">
             <img src="{{asset('storage').'/'.$aboutMe->foto}}" alt="...">
@@ -23,7 +23,7 @@
 <div class="widget widget-social-links wow fadeInUp">
     <div class="widget-content">
         <?php
-        $social = \Models\social::find(1);
+        $social = \Models\Social::find(1);
         ?>
         <div class="widget-title">
             <h2>Мои соцсети:</h2>

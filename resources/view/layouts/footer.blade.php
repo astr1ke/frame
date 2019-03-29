@@ -17,7 +17,7 @@
 
                             <div class="widget-content">
                                 <?php
-                                    $aboutMeFooter = \Models\aboutMe::find(1);
+                                    $aboutMeFooter = \Models\AboutMe::find(1);
                                 ?>
                                 <p>{{$aboutMeFooter->title}}</p>
                             </div>

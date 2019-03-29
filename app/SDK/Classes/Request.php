@@ -4,6 +4,11 @@ namespace SDK\Classes;
 
 class Request implements \Countable
 {
+    /**
+     * Добавление нового свойства данного объекта.
+     * @param $key
+     * @param $value
+     */
     public function addField ($key, $value) {
         $this->$key = $value;
     }
@@ -25,8 +30,13 @@ class Request implements \Countable
         return $count;
     }
 
+    /**
+     * Отбор из коллекции данных заданых в условии.
+     * @param $findingName
+     * @param $findingValue
+     * @return CollectionObject
+     */
     public function where ($findingName, $findingValue) {
-
         $newObject = new CollectionObject();
         foreach (get_object_vars($this) as $element) {
             if ($element->$findingName == $findingValue) {

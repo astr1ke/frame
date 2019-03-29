@@ -4,6 +4,11 @@ namespace SDK\Classes;
 
 class CollectionObject implements \Countable
 {
+    /**
+     * Добавление нового свойства данного объекта.
+     * @param $key
+     * @param $value
+     */
     public function addField ($key, $value) {
        $this->$key = $value;
     }
@@ -22,11 +27,16 @@ class CollectionObject implements \Countable
         foreach (get_object_vars($this) as $e) {
             $count++;
         };
-        return $count;
+        return $count - 2;
     }
 
+    /**
+     * Отбор из коллекции данных заданых в условии.
+     * @param $findingName
+     * @param $findingValue
+     * @return CollectionObject
+     */
     public function where ($findingName, $findingValue) {
-
         $newObject = new CollectionObject();
         foreach (get_object_vars($this) as $element) {
             if ($element->$findingName == $findingValue) {

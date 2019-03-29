@@ -2,20 +2,32 @@
 
 namespace Controllers;
 
-use Models\about;
-use Models\aboutMe;
+use Models\About;
+use Models\AboutMe;
 use Models\Article;
-use Models\social;
+use Models\Social;
+use SDK\Classes\Request;
+use SDK\Facades\Image;
 
 class AdminController
 {
-    public function aboutMeEditPost($request) {
-        $aboutMe = aboutMe::find(1);
+    /**
+     * Внесение изменений в информацию "Обо мне".
+     * @param Request $request
+     * @return redirect
+     */
+    public function aboutMeEditPost(Request $request) {
+        $aboutMe = AboutMe::find(1);
         if (isset($request->foto)){
-            //$path = Storage::disk('public')->put('avatars',$request->foto);
+            $imageTempPath = getTempFilePathFromRequest($request, 'foto');
+            $randomString = rand(1000, 9999);
+            $imageNewPath = ROOT . '/public/storage/users/'. $randomString . getFullFileNameFromRequestImage($request);
+
+            Image::make($imageTempPath)->resize(780,480)->save($imageNewPath);
+            $pathImageForMySql = '/storage/users/' . $randomString . getFullFileNameFromRequestImage($request);
 
             $aboutMe->update([
-                //'foto'=>$path,
+                'foto'=>$pathImageForMySql,
                 'name'=>$request->name,
                 'title'=>$request->title,
                 'text'=>$request->text,
@@ -31,8 +43,13 @@ class AdminController
         return redirect('/admin/aboutMeEdit');
     }
 
-    public function socialEditPost($request) {
-        $social = social::find(1);
+    /**
+     * Внесение изменений в информацию о социальных сетях.
+     * @param Request $request
+     * @return redirect
+     */
+    public function socialEditPost(Request $request) {
+        $social = Social::find(1);
         $social->update([
             'ok'=>$request->ok,
             'vk'=>$request->vk,
@@ -42,24 +59,41 @@ class AdminController
         return redirect('/admin/aboutMeEdit');
     }
 
+    /**
+     * Вывод страницы с каталогом статей.
+     * @return \SDK\Classes\ViewObject
+     */
     public function articlesCatalog() {
         $articles = Article::orderBy('created_at','DESC');//->paginate(30);
         return view('admin.articleCatalogAdmin', ['articles'=>$articles]);
     }
 
+    /**
+     * Вывод страницы с редактированием информациеи "Обо мне".
+     * @return \SDK\Classes\ViewObject
+     */
     public function aboutMePageEdit() {
-        $aboutMe = about::find(1);
+        $aboutMe = About::find(1);
         return view('editor.aboutMePageEdit',['aboutMe'=>$aboutMe]);
     }
 
-    public function aboutMePagePost($request) {
-        $about = about::find(1);
+    /**
+     * Вывод страницы "Обо мне".
+     * @param Request $request
+     * @return redirect
+     */
+    public function aboutMePagePost(Request $request) {
+        $about = About::find(1);
         $about->update([
             'text'=>$request->text,
         ]);
         return redirect('/about');
     }
 
+    /**
+     * Вывод админской страницы
+     * @return \SDK\Classes\ViewObject
+     */
     public function adminPanel() {
         return view('admin.index');
     }

@@ -1,3 +1,6 @@
 .idea
 .vagrant
 /vendor/
+/cache/
+Vagrantfile
+Homestead.yaml

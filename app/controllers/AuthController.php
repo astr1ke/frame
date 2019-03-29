@@ -9,21 +9,39 @@ use Delight\Auth\TooManyRequestsException;
 
 class AuthController
 {
+    /**
+     * Логин в систему.
+     * @return \SDK\Classes\ViewObject
+     */
     public function login() {
         return view('auth.login');
     }
 
+    /**
+     * Логаут из системы.
+     * @return redirect
+     * @throws \Delight\Auth\AuthError
+     */
     public function logout() {
         global $auth;
         $auth->logOut();
         return redirect('/');
     }
 
-
+    /**
+     * Регистрация нового пользователя.
+     * \SDK\Classes\ViewObject
+     */
     public function register() {
         return view('auth.register');
     }
 
+    /**
+     * Переадресация на главную после логина.
+     * @return redirect
+     * @throws \Delight\Auth\AttemptCancelledException
+     * @throws \Delight\Auth\AuthError
+     */
     public function postLogin() {
         global $auth;
 
@@ -50,9 +68,13 @@ class AuthController
         catch (TooManyRequestsException $e) {
             die('Too many requests');
         }
-
     }
 
+    /**
+     * Переадресайия на главную после регистрации.
+     * @return redirect
+     * @throws \Delight\Auth\AuthError
+     */
     public function postRegister() {
         global $auth;
 

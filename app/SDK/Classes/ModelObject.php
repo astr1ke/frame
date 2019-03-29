@@ -4,14 +4,28 @@ namespace SDK\Classes;
 
 class ModelObject implements \Countable
 {
-    use \Core\ModelNonStatic;
+    use \SDK\Traits\ModelNonStatic;
 
+    /**
+     * Название таблицы данного объекта.
+     * ModelObject constructor.
+     * @param $table
+     */
     private $table;
 
+    /**
+     * ModelObject constructor.
+     * @param $table
+     */
     public function __construct($table) {
         $this->table = $table;
     }
 
+    /**
+     * Добавление нового свойства данного объекта.
+     * @param $key
+     * @param $value
+     */
     public function addField ($key, $value) {
         $this->$key = $value;
     }
@@ -30,9 +44,15 @@ class ModelObject implements \Countable
         foreach (get_object_vars($this) as $e) {
             $count++;
         };
-        return $count;
+        return $count - 2;
     }
 
+    /**
+     * Отбор из коллекции данных заданых в условии.
+     * @param $findingName
+     * @param $findingValue
+     * @return ModelObject
+     */
     public function where ($findingName, $findingValue) {
         $newObject = new ModelObject($this->table);
         foreach (get_object_vars($this) as $element) {
@@ -45,6 +65,9 @@ class ModelObject implements \Countable
         return $newObject;
     }
 
+    /**
+     * Удаление из таблицы элемента.
+     */
     public function delete() {
         $table = $this->table;
 
@@ -59,6 +82,10 @@ class ModelObject implements \Countable
         }
     }
 
+    /**
+     * Реверс елементов объекта.
+     * @return ModelObject
+     */
     public function reverse() {
         $newObject = new ModelObject($this->table);
         $tempArray = object_to_array($this);

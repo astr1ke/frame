@@ -1,48 +1,60 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: astri
- * Date: 2019-03-23
- * Time: 22:52
- */
 
 namespace Controllers;
 
 use Models\Article;
-use Models\Categorie;
-use Models\Comment;
+use Models\Category;
 use SDK\Classes\Request;
 use SDK\Facades\Image;
 
 class ArticleController
 {
-    public function viewArticle ($id) {
+    /**
+     * Отображение выбранной статьи.
+     * @param integer $id
+     * @return \SDK\Classes\ViewObject
+     */
+    public function articleView ($id) {
         $articleV = Article::find($id);
         $articleViews = $articleV->views;
         $articlesAll = Article::all();
         $articles = Article::find($id);
         $id = $articles->id;
 
-        return view('Article.articleView',['articles'=>$articles,'id'=>$id, 'articlesAll'=>$articlesAll,'articleViews'=>$articleViews]);
+        return view('article.articleView',['articles'=>$articles,'id'=>$id, 'articlesAll'=>$articlesAll,'articleViews'=>$articleViews]);
     }
 
-    public function articleCatalogAll () {
+    /**
+     * Отображение страницы каталога всех статей.
+     * @return \SDK\Classes\ViewObject
+     */
+    public function articleFullCatalog () {
         $articles = Article::orderBy('created_at','DESC');//->paginate(30);
         $title = "Каталог статей";
-        return view('Article.articleCatalog', ['articles'=>$articles,'title'=>$title]);
+        return view('article.articleCatalog', ['articles'=>$articles,'title'=>$title]);
     }
 
-    public function findCategorie ($id) {
-        $articles = (Article::orderBy('created_at','DESC'))->where('categorie_id',$id);//->paginate(30);
+    /**
+     * Отображение страницы с найдеными статьями.
+     * @param integer $id
+     * @return \SDK\Classes\ViewObject
+     */
+    public function findCategory ($id) {
+        $articles = (Article::orderBy('created_at','DESC'))->where('category_id',$id);//->paginate(30);
 
-        $categorie = Categorie::find($id);
-        $categorie = $categorie->name;
-        $title = "Статьи с категорией $categorie";
-        return view('Article.articleCatalog', ['articles'=>$articles,'title'=>$title]);
+        $category = Category::find($id);
+        $category = $category->name;
+        $title = "Статьи с категорией $category";
+        return view('article.articleCatalog', ['articles'=>$articles,'title'=>$title]);
     }
 
+    /**
+     * Поиск со заданной фразе.
+     * @param Request $request
+     * @return \SDK\Classes\ViewObject
+     */
     public function search (Request $request) {
-        $articles1 = Article::findLike("%$request->srch%", 'title','articles');//->orWhere('text','LIKE',"%$request->srch%");//->paginate(30);
+        $articles1 = Article::findLike("%$request->srch%", 'title','articles');//->paginate(30);
         $articles2 = Article::findLike("%$request->srch%", 'text','articles');
 
         $articles1 = object_to_array($articles1);
@@ -62,13 +74,135 @@ class ArticleController
         }else{
             $title = "По фразе: \"$request->srch\" ничего не найдено ";
         }
-        return view('Article.articleCatalog',['articles' => $articles,'title' => $title]);
+        return view('article.articleCatalog',['articles' => $articles,'title' => $title]);
     }
 
+    /**
+     * Отображение страницы редактора статьи.
+     * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View|\SDK\Classes\ViewObject
+     */
+    public function create(){
+        $categories = Category::all();
+        return view('editor.articleCreate',['categories'=>$categories]);
+    }
 
+    /**
+     * Запись статьи в базу.
+     * @param Request $request
+     * @return redirect
+     */
+    public function createPost(Request $request){
+        if (isset($request->checkType)){
+            if ($request->video != '') {
+                $path = $this->_makeUrlVideo($request->video);
+                $path = $path . '?rel=0&amp;showinfo=0';
+            }else{
+                $path = '';
+            }
+            Article::create([
+                'user_id'     => $request->user_id,
+                'title'       => $request->title,
+                'category_id' => $request->category_id,
+                'text'        => $request->text,
+                'image'       => $path,
+            ]);
+        }else {
+            $imageTempPath = getTempFilePathFromRequest($request);
+            $randomString = rand(1000, 9999);
+            $imageNewPath = ROOT . '/public/storage/uploads/'. $randomString . getFullFileNameFromRequestImage($request);
+            Image::make($imageTempPath)->resize(780,480)->save($imageNewPath);
 
-    private function makeUrlVideo($str){
-        //<iframe width="854" height="480" src="https://www.youtube.com/embed/LYg26_LBlZ8" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+            $pathImageForMySql = '/storage/uploads/' . $randomString . getFullFileNameFromRequestImage($request);
+            Article::create([
+                'user_id'     => $request->user_id,
+                'title'       => $request->title,
+                'category_id' => $request->category_id,
+                'text'        => $request->text,
+                'image'       => $pathImageForMySql,
+            ]);
+        }
+        return redirect('/');
+    }
+
+    /**
+     * Удаление нужной статьи.
+     * @param integer $id
+     * @return \SDK\Classes\ViewObject
+     */
+    public function delete($id){
+        Article::destroy($id);
+        $articles = article::orderBy('created_at','DESC');//->paginate(30);
+        return view('admin.articleCatalogAdmin', ['articles'=>$articles]);
+    }
+
+    /**
+     * Отображение страницы редактора статей.
+     * @param integer $id
+     * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View|\SDK\Classes\ViewObject
+     */
+    public function edit($id){
+        $article =  Article::find($id);
+        $categories = Category::all();
+        return view('editor.articleEdit',['article'=>$article,'categories'=>$categories]);
+    }
+
+    /**
+     * Сохранение статьи в базу.
+     * @param Request $request
+     * @return redirect
+     */
+    public function editPost(Request $request) {
+        $article = Article::find($request->article_id);
+        if (isset($request->checkType)) {
+
+            if ($request->video != '') {
+                $path = $this->_makeUrlVideo($request->video);
+                $path = $path . '?rel=0&amp;showinfo=0';
+
+            } else {
+                $path = '';
+            }
+            $article->update([
+                'user_id'     => $request->user_id,
+                'title'       => $request->title,
+                'category_id' => $request->category_id,
+                'text'        => $request->text,
+                'image'       => $path,
+            ]);
+        } else {
+            if (isset($request->image)) {
+                $imageTempPath = getTempFilePathFromRequest($request);
+                $randomString = rand(1000, 9999);
+                $imageNewPath = ROOT . '/public/storage/uploads/'. $randomString . getFullFileNameFromRequestImage($request);
+
+                Image::make($imageTempPath)->resize(780,480)->save($imageNewPath);
+                $pathImageForMySql = '/storage/uploads/' . $randomString . getFullFileNameFromRequestImage($request);
+
+                $article->update([
+                    'user_id'     => $request->user_id,
+                    'title'       => $request->title,
+                    'category_id' => $request->category_id,
+                    'text'        => $request->text,
+                    'image'       => $pathImageForMySql,
+                ]);
+            } else {
+                $article->update([
+                    'user_id'     => $request->user_id,
+                    'title'       => $request->title,
+                    'category_id' => $request->category_id,
+                    'text'        => $request->text,
+                ]);
+            }
+        }
+        return redirect('/admin/articles');
+    }
+
+    /**
+     * Вспомогательный метод подготавливающий URL нужного видео.
+     * @param string $str
+     * @return bool|string
+     */
+    private function _makeUrlVideo($str) {
         $mass = explode(" ", $str);
         foreach ($mass as $m){
             if(stristr($m, 'src="') == TRUE) {
@@ -78,154 +212,5 @@ class ArticleController
                 return $str;
             }
         }
-    }
-
-    public function view($id){
-        $articleV = Article::find($id);
-        $articleViews = $articleV->views;
-        $articleViews = $articleViews + 1;
-        $articleV -> views = $articleViews;
-        $articleV ->save();
-
-        $articlesAll = Article::all();
-        $articles = article::find($id);
-        $id = $articles->id;
-        $cc = count(Comment::where('article_id',$id));//->get());
-        return view('articleView',['articles'=>$articles,'id'=>$id, 'cc'=>$cc, 'articlesAll'=>$articlesAll,'articleViews'=>$articleViews]);
-    }
-
-    public function create(){
-        $categories = Categorie::all();
-        return view('editor.articleCreate',['categories'=>$categories]);
-    }
-
-    public function createPost(Request $request){
-//        $this->validate($request, [
-//            'title' =>'required|max:50',
-//            'categorie_id' =>'required',
-//            'text' =>'required'
-//        ]);
-
-        if (isset($request->checkType)){
-
-            if ($request->video != '') {
-                $path = $this->makeUrlVideo($request->video);
-                $path = $path . '?rel=0&amp;showinfo=0';
-
-            }else{
-                $path = '';
-            }
-            Article::create([
-                'user_id' => $request->user_id,
-                'title' => $request->title,
-                'categorie_id' => $request->categorie_id,
-                'text' => $request->text,
-                'image' => $path,
-            ]);
-
-        }else {
-            $imageTempPath = getTempFilePathFromRequest($request);
-            $randomString = rand(1000, 9999);
-            $imageNewPath = ROOT . '/public/storage/uploads/'. $randomString . getFullFileNameFromRequestImage($request);
-
-            Image::make($imageTempPath)->resize(780,520)->save($imageNewPath);
-
-            $pathImageForMySql = '/storage/uploads/' . $randomString . getFullFileNameFromRequestImage($request);
-
-            Article::create([
-                'user_id' => $request->user_id,
-                'title' => $request->title,
-                'categorie_id' => $request->categorie_id,
-                'text' => $request->text,
-                'image' => $pathImageForMySql,
-            ]);
-        }
-        return redirect('/');
-    }
-
-    public function catalog(){
-        $articles = Article::orderBy('created_at','DESC');//->paginate(30);
-        $title = "Каталог статей";
-        return view('articleCatalog', ['articles'=>$articles,'title'=>$title]);
-    }
-
-    public function catalogCategorie($id){
-        $articles = Article::orderBy('created_at','DESC')->where('categorie_id',$id)->paginate(30);
-        $cat = Categorie::find($id);
-        $cat = $cat->name;
-        $title = "Статьи с категорией $cat";
-        return view('articleCatalog', ['articles'=>$articles,'title'=>$title]);
-    }
-
-    public function delete($id){
-        Comment::where('article_id',$id)->delete();
-        Article::destroy($id);
-        $articles = article::orderBy('created_at','DESC');//->paginate(30);
-        return view('admin.articleCatalogAdmin', ['articles'=>$articles]);
-    }
-
-    public function edit($id){
-        $article =  Article::find($id);
-        $categories = Categorie::all();
-        return view('editor.articleEdit',['article'=>$article,'categories'=>$categories]);
-    }
-
-    public function editPost($request)
-    {
-//        $this->validate($request, [
-//            'title' => 'required|max:50',
-//            'categorie_id' => 'required',
-//            'text' => 'required'
-//        ]);
-        $article = Article::find($request->article_id);
-        if (isset($request->checkType)) {
-
-            if ($request->video != '') {
-                $path = $this->makeUrlVideo($request->video);
-                $path = $path . '?rel=0&amp;showinfo=0';
-
-            } else {
-                $path = '';
-            }
-            $article->update([
-                'user_id' => $request->user_id,
-                'title' => $request->title,
-                'categorie_id' => $request->categorie_id,
-                'text' => $request->text,
-                'image' => $path,
-            ]);
-
-
-        } else {
-
-            if (isset($request->image)) {
-                $imageTempPath = getTempFilePathFromRequest($request);
-                $randomString = rand(1000, 9999);
-                $imageNewPath = ROOT . '/public/storage/uploads/'. $randomString . getFullFileNameFromRequestImage($request);
-
-                Image::make($imageTempPath)->resize(780,520)->save($imageNewPath);
-
-                $pathImageForMySql = '/storage/uploads/' . $randomString . getFullFileNameFromRequestImage($request);
-
-
-                $article->update([
-                    'user_id' => $request->user_id,
-                    'title' => $request->title,
-                    'categorie_id' => $request->categorie_id,
-                    'text' => $request->text,
-                    'image' => $pathImageForMySql,
-                ]);
-
-            } else {
-
-                $article->update([
-                    'user_id' => $request->user_id,
-                    'title' => $request->title,
-                    'categorie_id' => $request->categorie_id,
-                    'text' => $request->text,
-                ]);
-            }
-        }
-        return redirect('/admin/articles');
     }
 }
